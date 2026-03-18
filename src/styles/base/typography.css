@@ -1,0 +1,640 @@
+/**
+ * ASP Global Marine Trading LLC - Enhanced Typography
+ * 
+ * Modern text styling with improved hierarchy and readability
+ * Professional font system for maritime corporate website
+ */
+
+/* Import Google Fonts - Professional Font Stack */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;600;700&family=Amsterdam+Signature&family=Birds+of+Paradise&display=swap");
+
+/* Professional Heading Font - Montserrat */
+/* Modern, clean, and professional - perfect for corporate maritime branding */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+
+/* Elegant Script Font - Amsterdam Signature */
+/* For hero headings and special emphasis */
+
+/* Fallback elegant script font for development */
+.signature-text {
+  font-family: "Amsterdam Signature", "Great Vibes", "Dancing Script", cursive;
+  font-size: 4rem;
+  font-weight: normal;
+  line-height: 1.2;
+  color: var(--white-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+/* Base Typography */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+}
+
+h5 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+h6 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+}
+
+/* Paragraphs */
+p {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-color);
+}
+
+/* Links */
+a {
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+/* Strong and Emphasis */
+strong,
+b {
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+/* Small Text */
+small {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+/* Blockquotes */
+blockquote {
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-lg);
+  font-style: italic;
+  line-height: 1.6;
+  margin: var(--spacing-xl) 0;
+  padding-left: var(--spacing-lg);
+  border-left: 4px solid var(--primary-color);
+  color: var(--text-muted);
+}
+
+/* Lists */
+ul,
+ol {
+  font-family: var(--font-family);
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-lg);
+}
+
+li {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Code */
+code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9em;
+  background-color: var(--light-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  color: var(--text-color);
+}
+
+pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  background-color: var(--light-bg);
+  padding: var(--spacing-md);
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: var(--spacing-md);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Professional Text Classes */
+.text-primary {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  font-family: var(--font-family-accent);
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.text-heading {
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.text-accent {
+  font-family: var(--font-family-accent);
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+/* Text Sizes */
+.text-xs {
+  font-size: var(--font-size-xs);
+}
+.text-sm {
+  font-size: var(--font-size-sm);
+}
+.text-base {
+  font-size: var(--font-size-base);
+}
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+.text-xl {
+  font-size: var(--font-size-xl);
+}
+.text-2xl {
+  font-size: var(--font-size-2xl);
+}
+.text-3xl {
+  font-size: var(--font-size-3xl);
+}
+.text-4xl {
+  font-size: var(--font-size-4xl);
+}
+
+/* Text Weights */
+.font-light {
+  font-weight: 300;
+}
+.font-normal {
+  font-weight: 400;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.font-bold {
+  font-weight: 700;
+}
+
+/* Responsive signature text */
+@media (max-width: 768px) {
+  .signature-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signature-text {
+    font-size: 2rem;
+  }
+}
+
+/* Base typography settings - Poppins throughout */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333333; /* Charcoal Gray */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced heading hierarchy with Montserrat */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0a1f44; /* Deep Navy */
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: var(--font-size-6xl);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-xl);
+}
+
+h2 {
+  font-size: var(--font-size-4xl);
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #0a1f44; /* Deep Navy */
+  position: relative;
+}
+
+/* All h2 underlines removed */
+h2::after {
+  display: none;
+}
+
+h3 {
+  font-size: var(--font-size-3xl);
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #0c4b65; /* Dark Teal */
+}
+
+h4 {
+  font-size: var(--font-size-2xl);
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #0a1f44; /* Deep Navy */
+}
+
+h5 {
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #0a1f44; /* Deep Navy */
+}
+
+h6 {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #0a1f44; /* Deep Navy */
+}
+
+/* Page title styles with underline removed */
+.page-title {
+  position: relative;
+}
+
+.page-title::after {
+  display: none;
+}
+
+/* Enhanced paragraph styling with Poppins */
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+  color: #333333; /* Charcoal Gray */
+  max-width: 65ch;
+  font-size: 16px; /* Base font size */
+}
+
+/* Enhanced link styling with Poppins */
+a {
+  font-family: "Poppins", sans-serif;
+  color: #0a1f44; /* Navy Blue */
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #2abaa3; /* Sea Green */
+  transition: width var(--transition-normal);
+}
+
+a:hover {
+  color: #2abaa3; /* Sea Green */
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* Button styling with Poppins */
+.btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2abaa3; /* Sea Green */
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #239f89; /* Darker Sea Green */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(42, 186, 163, 0.3);
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+/* Navigation styling with Poppins */
+.nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #0a1f44; /* Navy Blue */
+  transition: all var(--transition-normal);
+}
+
+.nav-link:hover {
+  color: #2abaa3; /* Sea Green */
+}
+
+.dropdown-item {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #333333; /* Charcoal Gray */
+  transition: all var(--transition-normal);
+}
+
+.dropdown-item:hover {
+  color: #2abaa3; /* Sea Green */
+}
+
+/* Special sections with Poppins */
+.text-highlight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #2abaa3; /* Sea Blue */
+}
+
+.text-accent {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #0c4b65; /* Accent Color */
+}
+
+.stat-number {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #2abaa3; /* Sea Blue */
+}
+
+.quote-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  color: #0c4b65; /* Accent Color */
+}
+
+/* Text utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-primary {
+  color: #0a1f44; /* Deep Navy */
+}
+
+.text-secondary {
+  color: #2abaa3; /* Sea Green */
+}
+
+.text-accent {
+  color: #0c4b65; /* Dark Teal */
+}
+
+.text-white {
+  color: var(--white-color);
+}
+
+.text-muted {
+  color: #5a6b7a;
+  opacity: 0.8;
+}
+
+.text-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Font sizes */
+.text-xs {
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+}
+
+.text-sm {
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+}
+
+.text-base {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+}
+
+.text-xl {
+  font-size: var(--font-size-xl);
+  line-height: 1.5;
+}
+
+.text-2xl {
+  font-size: var(--font-size-2xl);
+  line-height: 1.4;
+}
+
+.text-3xl {
+  font-size: var(--font-size-3xl);
+  line-height: 1.3;
+}
+
+.text-4xl {
+  font-size: var(--font-size-4xl);
+  line-height: 1.2;
+}
+
+/* Font weights */
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+/* Text transformations */
+.text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-no-underline {
+  text-decoration: none;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-break {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+/* Line height utilities */
+.leading-tight {
+  line-height: 1.25;
+}
+
+.leading-normal {
+  line-height: 1.5;
+}
+
+.leading-relaxed {
+  line-height: 1.75;
+}
+
+.leading-loose {
+  line-height: 2;
+}

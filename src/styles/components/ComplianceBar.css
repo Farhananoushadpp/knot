@@ -1,0 +1,190 @@
+/**
+ * ASP Global Marine Trading LLC - Compliance Bar Styles
+ * 
+ * Enhanced certification and authority section
+ * Senior Level: Builds psychological authority and trust
+ */
+
+.compliance-bar {
+  background: var(--primary-color);
+  padding: var(--spacing-6xl) 0;
+}
+
+.compliance-header {
+  text-align: center;
+  margin-bottom: var(--spacing-4xl);
+}
+
+.compliance-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--white-color);
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+}
+
+.compliance-title::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: var(--radius-full);
+}
+
+.compliance-subtitle {
+  font-size: var(--font-size-lg);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.compliance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-3xl);
+  margin-bottom: var(--spacing-4xl);
+}
+
+.certification-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  transition: all var(--transition-normal);
+}
+
+.certification-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.certification-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.certification-icon::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: var(--radius-lg);
+  background: var(--white-color);
+  z-index: -1;
+}
+
+.certification-content {
+  flex: 1;
+  z-index: 1;
+}
+
+.certification-label {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--white-color);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.2;
+}
+
+.certification-description {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.compliance-footer {
+  text-align: center;
+  padding-top: var(--spacing-4xl);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .compliance-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-2xl);
+  }
+
+  .certification-card {
+    padding: var(--spacing-xl);
+    gap: var(--spacing-lg);
+  }
+
+  .certification-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .compliance-bar {
+    padding: var(--spacing-4xl) 0;
+  }
+
+  .compliance-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .compliance-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .compliance-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .certification-card {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-xl);
+  }
+
+  .certification-icon {
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .compliance-bar {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .compliance-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .certification-card {
+    padding: var(--spacing-lg);
+  }
+
+  .certification-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .certification-label {
+    font-size: var(--font-size-lg);
+  }
+
+  .certification-description {
+    font-size: var(--font-size-xs);
+  }
+}

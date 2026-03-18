@@ -1,0 +1,142 @@
+/**
+ * ASP Global Marine Trading LLC - Commitment Section Styles
+ * 
+ * 4 icon boxes grid layout
+ * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
+ */
+
+.commitment {
+  padding: var(--spacing-5xl) 0;
+  position: relative;
+}
+
+.commitment::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-color),
+    transparent
+  );
+}
+
+.commitment .section-label {
+  display: block;
+  text-align: center;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: var(--spacing-md);
+}
+
+.commitment-headline {
+  text-align: center;
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.commitment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.commitment-card {
+  background: var(--white-color);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.commitment-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent-gradient);
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+}
+
+.commitment-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-color);
+}
+
+.commitment-card:hover::before {
+  transform: scaleX(1);
+}
+
+.commitment-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--background-color);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-lg);
+  transition: all var(--transition-normal);
+}
+
+.commitment-icon svg {
+  width: 32px;
+  height: 32px;
+  color: var(--secondary-color);
+  transition: all var(--transition-normal);
+}
+
+.commitment-card:hover .commitment-icon {
+  background: var(--accent-color);
+}
+
+.commitment-card:hover .commitment-icon svg {
+  color: var(--white-color);
+}
+
+.commitment-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.3;
+}
+
+.commitment-description {
+  font-size: var(--font-size-sm);
+  color: var(--dark-gray);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .commitment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .commitment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .commitment-headline {
+    font-size: var(--font-size-3xl);
+  }
+}

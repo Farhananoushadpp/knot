@@ -1,0 +1,501 @@
+/**
+ * ASP Global Marine Trading LLC - Engine Spares 2-Stroke Styles
+ *
+ * Exact replica of the product portfolio design
+ * Blue header, product grid with connectors, manufacturer table
+ */
+
+.engine-spares-page {
+  min-height: 100vh;
+  background: #87c7e0;
+}
+
+/* ============================================
+   PRODUCT PORTFOLIO HEADER
+   ============================================ */
+
+.portfolio-header {
+  position: relative;
+  height: 280px;
+  background: linear-gradient(180deg, #0b3c5d, #1f6f8b, #87c7e0);
+  overflow: hidden;
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"><rect fill="%231a5f9e" width="1000" height="300"/><path d="M0,200 Q250,150 500,180 T1000,160 L1000,300 L0,300 Z" fill="%231e6ba8" opacity="0.5"/><path d="M0,220 Q300,180 600,200 T1000,190 L1000,300 L0,300 Z" fill="%232a7ab8" opacity="0.3"/></svg>'),
+    linear-gradient(
+      180deg,
+      rgba(26, 95, 158, 0.9) 0%,
+      rgba(13, 58, 92, 0.95) 100%
+    );
+  background-size: cover;
+}
+
+.ship-container {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  width: 400px;
+  height: 200px;
+}
+
+.ship-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.header-overlay h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+/* ============================================
+   PORTFOLIO CONTENT
+   ============================================ */
+
+.portfolio-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #ffffff;
+}
+
+/* Section Header Bar */
+.section-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.blue-bar {
+  background: linear-gradient(135deg, #1a5f9e 0%, #0d3a5c 100%);
+  padding: 15px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(11, 47, 74, 0.3);
+}
+
+.blue-bar h2 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.ship-icon {
+  width: 80px;
+  height: 40px;
+}
+
+.mini-ship {
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================
+   PRODUCT GRID LAYOUT
+   ============================================ */
+
+.product-grid-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.grid-row {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.row-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.row-3-col {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.row-3-col-alt {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: #f8f9fa;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item.wide {
+  grid-column: 2;
+}
+
+.product-item.center-item {
+  flex-direction: column;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Blue Text Boxes */
+.blue-text-box {
+  background: linear-gradient(135deg, #1a5f9e 0%, #0d3a5c 100%);
+  color: #ffffff;
+  padding: 20px;
+  min-width: 180px;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blue-text-box p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.blue-text-box.left {
+  border-radius: 12px 0 0 12px;
+}
+
+.blue-text-box.right {
+  border-radius: 0 12px 12px 0;
+}
+
+/* Connectors */
+.connector {
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(135deg, #1a5f9e 0%, #0d3a5c 100%);
+  position: relative;
+}
+
+.left-connector {
+  clip-path: polygon(0 0, 100% 30%, 100% 70%, 0 100%);
+}
+
+.right-connector {
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 70%);
+}
+
+.right-connector-short {
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 70%);
+  width: 30px;
+}
+
+/* Image Containers */
+.image-container {
+  flex: 1;
+  height: 180px;
+  background: #e0e0e0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container.large {
+  height: 200px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-item.center-item .image-container {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.center-label {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #0d3a5c;
+  font-weight: 600;
+  text-align: center;
+  background: linear-gradient(135deg, #1a5f9e 0%, #0d3a5c 100%);
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+/* ============================================
+   MANUFACTURER TABLE
+   ============================================ */
+
+.manufacturer-table-section {
+  margin-bottom: 40px;
+  overflow-x: auto;
+}
+
+.manufacturer-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.manufacturer-table thead {
+  background: #0d3a5c;
+}
+
+.manufacturer-table thead th {
+  color: #ffffff;
+  font-weight: 700;
+  padding: 12px 8px;
+  text-align: left;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.manufacturer-table thead th:last-child {
+  border-right: none;
+}
+
+.col-manufacturer {
+  width: 180px;
+  font-weight: 700;
+}
+
+.col-type {
+  width: 140px;
+}
+
+.model-cell {
+  width: 70px;
+  text-align: center;
+}
+
+/* Table Body */
+.manufacturer-table tbody tr {
+}
+
+.manufacturer-table tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.manufacturer-table tbody tr:hover {
+  background: #e8f4f8;
+}
+
+.manufacturer-table tbody td {
+  padding: 10px 8px;
+  border-right: 1px solid #e0e0e0;
+  vertical-align: middle;
+}
+
+.manufacturer-table tbody td:last-child {
+  border-right: none;
+}
+
+.manufacturer-name {
+  font-weight: 700;
+  color: #0d3a5c;
+  background: #e8f4f8;
+}
+
+.sub-type {
+  font-weight: 600;
+  color: #1a5f9e;
+  font-size: 12px;
+}
+
+.model-value {
+  text-align: center;
+  font-weight: 500;
+  color: #333;
+}
+
+.empty-model {
+  background: #f0f0f0;
+}
+
+/* ============================================
+   BACK NAVIGATION
+   ============================================ */
+
+.back-navigation {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #1a5f9e 0%, #0d3a5c 100%);
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(11, 47, 74, 0.3);
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(11, 47, 74, 0.4);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .portfolio-content {
+    padding: 30px 15px;
+  }
+
+  .header-overlay h1 {
+    font-size: 36px;
+  }
+
+  .ship-container {
+    width: 300px;
+    height: 150px;
+  }
+
+  .row-2-col,
+  .row-3-col,
+  .row-3-col-alt {
+    grid-template-columns: 1fr;
+  }
+
+  .product-item {
+    flex-direction: column;
+  }
+
+  .blue-text-box.left,
+  .blue-text-box.right {
+    border-radius: 12px 12px 0 0;
+    width: 100%;
+    max-width: none;
+  }
+
+  .connector {
+    display: none;
+  }
+
+  .image-container {
+    width: 100%;
+  }
+
+  .manufacturer-table {
+    font-size: 11px;
+  }
+
+  .manufacturer-table thead th,
+  .manufacturer-table tbody td {
+    padding: 8px 4px;
+  }
+
+  .col-manufacturer {
+    width: 120px;
+  }
+
+  .col-type {
+    width: 100px;
+  }
+
+  .model-cell {
+    width: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-header {
+    height: 200px;
+  }
+
+  .header-overlay h1 {
+    font-size: 28px;
+  }
+
+  .ship-container {
+    display: none;
+  }
+
+  .blue-bar h2 {
+    font-size: 16px;
+  }
+
+  .section-header-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ship-icon {
+    display: none;
+  }
+
+  .manufacturer-table-section {
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-content {
+    padding: 20px 10px;
+  }
+
+  .blue-bar {
+    padding: 12px 20px;
+  }
+
+  .blue-bar h2 {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .image-container {
+    height: 150px;
+  }
+
+  .blue-text-box p {
+    font-size: 12px;
+  }
+}

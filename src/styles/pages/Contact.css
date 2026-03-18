@@ -1,0 +1,305 @@
+/**
+ * ASP Global Marine Trading LLC - Contact Page
+ * 
+ * Contact page specific styling
+ */
+
+.contact-page {
+  min-height: calc(100vh - 160px);
+}
+
+.page-header {
+  text-align: center;
+  padding: var(--spacing-4xl) 0;
+  margin-bottom: var(--spacing-4xl);
+}
+
+.page-title {
+  font-size: var(--font-size-6xl);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-lg);
+  font-weight: 700;
+}
+
+.page-subtitle {
+  font-size: var(--font-size-xl);
+  color: var(--secondary-color);
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.additional-contact-info {
+  background: var(--background-color);
+  padding: var(--spacing-6xl) 0;
+}
+
+.contact-grid-extended {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-3xl);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.contact-info-card {
+  background: var(--white-color);
+  padding: var(--spacing-3xl);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-normal);
+}
+
+.contact-info-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-info-card h3 {
+  color: var(--primary-color);
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.hours-list,
+.response-info {
+  margin-bottom: var(--spacing-lg);
+}
+
+.hours-item,
+.response-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--accent-color);
+  transition: all var(--transition-normal);
+}
+
+.hours-item:last-child,
+.response-item:last-child {
+  border-bottom: none;
+}
+
+.hours-item:hover,
+.response-item:hover {
+  padding-left: var(--spacing-md);
+}
+
+.day,
+.channel {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: var(--font-size-base);
+}
+
+.time {
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+}
+
+.service-areas ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-areas li {
+  color: var(--text-color);
+  padding: var(--spacing-sm) 0;
+  padding-left: var(--spacing-2xl);
+  position: relative;
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-base);
+}
+
+.service-areas li::before {
+  content: "🌍";
+  position: absolute;
+  left: 0;
+  font-size: var(--font-size-lg);
+}
+
+.group-companies {
+  background: var(--white-color);
+  padding: var(--spacing-6xl) 0;
+}
+
+.group-companies h2 {
+  text-align: center;
+  color: var(--text-color);
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-2xl);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.company-card {
+  background: var(--background-color);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  transition: all var(--transition-normal);
+  border: 2px solid transparent;
+}
+
+.company-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-color);
+}
+
+.company-card h4 {
+  color: var(--primary-color);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+}
+
+.company-card p {
+  color: var(--dark-gray);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contact-faq {
+  background: var(--background-color);
+  padding: var(--spacing-6xl) 0;
+}
+
+.contact-faq h2 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.faq-item {
+  background: var(--background-color);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-lg);
+  transition: all var(--transition-normal);
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+}
+
+.faq-item h4 {
+  color: var(--primary-color);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+}
+
+.faq-item p {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  font-size: var(--font-size-base);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-header {
+    padding: var(--spacing-3xl) 0;
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .page-title {
+    font-size: var(--font-size-4xl);
+  }
+
+  .page-subtitle {
+    font-size: var(--font-size-lg);
+  }
+
+  .additional-contact-info {
+    padding: var(--spacing-4xl) 0;
+  }
+
+  .contact-grid-extended {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    padding: 0 var(--container-padding);
+  }
+
+  .contact-info-card {
+    padding: var(--spacing-2xl);
+  }
+
+  .contact-info-card h3 {
+    font-size: var(--font-size-xl);
+  }
+
+  .day,
+  .channel,
+  .time {
+    font-size: var(--font-size-sm);
+  }
+
+  .contact-faq {
+    padding: var(--spacing-4xl) 0;
+  }
+
+  .contact-faq h2 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .faq-item {
+    padding: var(--spacing-xl);
+  }
+
+  .faq-item h4 {
+    font-size: var(--font-size-lg);
+  }
+
+  .faq-item p {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .page-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .contact-info-card {
+    padding: var(--spacing-xl);
+  }
+
+  .contact-info-card h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  .hours-item,
+  .response-item {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .faq-item {
+    padding: var(--spacing-lg);
+  }
+
+  .faq-item h4 {
+    font-size: var(--font-size-base);
+  }
+}

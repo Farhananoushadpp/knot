@@ -1,0 +1,288 @@
+/**
+ * ASP Global Marine Trading LLC - Certifications Page Styles
+ *
+ * Dedicated certifications page styling
+ * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
+ */
+
+/* ============================================
+   CERTIFICATIONS HERO SECTION
+   ============================================ */
+
+.certifications-hero {
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, #0d3a5c 0%, #0c4b65 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.certifications-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.certifications-hero-title {
+  font-family: var(--font-family-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.certifications-hero-subtitle {
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============================================
+   CERTIFICATIONS MAIN SECTION
+   ============================================ */
+
+.certifications-main {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.certifications-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certification-item-modern {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  padding: 40px;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border: 2px solid #0a2f4a;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.certification-item-modern::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), #2abaa3);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.certification-item-modern:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(10, 47, 74, 0.1);
+  border-color: #0d3a5c;
+}
+
+.certification-item-modern:hover::before {
+  transform: scaleX(1);
+}
+
+.certification-badge-modern {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #0d3a5c 0%, #0c4b65 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+.certification-text-modern {
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.certification-content-modern {
+  flex: 1;
+}
+
+.certification-name-modern {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0a1f44;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.certification-desc-modern {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============================================
+   CERTIFICATIONS CTA SECTION
+   ============================================ */
+
+.certifications-cta {
+  padding: 80px 0;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.certifications-cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.certifications-cta p {
+  font-family: var(--font-family);
+  font-size: 1.125rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.certifications-cta .btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 992px) {
+  .certifications-hero {
+    padding: 100px 0 60px;
+  }
+
+  .certifications-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .certifications-hero-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .certifications-main {
+    padding: 80px 0;
+  }
+
+  .certifications-grid-modern {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .certification-item-modern {
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .certification-badge-modern {
+    width: 70px;
+    height: 70px;
+  }
+
+  .certification-text-modern {
+    font-size: 1.125rem;
+  }
+
+  .certification-name-modern {
+    font-size: 1.375rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .certifications-hero {
+    padding: 80px 0 40px;
+  }
+
+  .certifications-hero-title {
+    font-size: 2rem;
+  }
+
+  .certifications-main {
+    padding: 60px 0;
+  }
+
+  .certifications-grid-modern {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .certification-item-modern {
+    padding: 25px;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .certification-badge-modern {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+  }
+
+  .certification-text-modern {
+    font-size: 1rem;
+  }
+
+  .certification-name-modern {
+    font-size: 1.25rem;
+  }
+
+  .certification-desc-modern {
+    font-size: 0.95rem;
+  }
+
+  .certifications-cta {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .certifications-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .certifications-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .certification-item-modern {
+    padding: 20px;
+  }
+
+  .certification-badge-modern {
+    width: 50px;
+    height: 50px;
+  }
+
+  .certification-text-modern {
+    font-size: 0.875rem;
+  }
+
+  .certifications-cta .btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}

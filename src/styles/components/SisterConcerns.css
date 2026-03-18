@@ -1,0 +1,110 @@
+/**
+ * ASP Global Marine Trading LLC - Sister Concerns Styles
+ * 
+ * Corporate grid of group companies
+ * ASP PDF Design System: Deep Ocean Blue Maritime Corporate
+ */
+
+.sister-concerns {
+  padding: var(--spacing-5xl) 0;
+}
+
+.sister-concerns .section-label {
+  display: block;
+  text-align: center;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: var(--spacing-md);
+}
+
+.sister-headline {
+  text-align: center;
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.sister-subtext {
+  text-align: center;
+  font-size: var(--font-size-lg);
+  color: var(--dark-gray);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.company-block {
+  background: var(--background-color);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.company-block:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-color);
+}
+
+.company-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-gradient);
+  color: var(--white-color);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.company-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--secondary-color);
+}
+
+.company-block:hover .company-icon svg {
+  color: var(--accent-color);
+}
+
+.company-name {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.3;
+}
+
+.company-desc {
+  font-size: var(--font-size-sm);
+  color: var(--dark-gray);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .companies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .companies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sister-headline {
+    font-size: var(--font-size-3xl);
+  }
+}
