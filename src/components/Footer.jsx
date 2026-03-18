@@ -67,7 +67,7 @@ const Footer = () => {
             </p>
             <div className="footer-social">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/aspglobalmarine/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
@@ -82,7 +82,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/asp-global-marine-trading/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
@@ -97,7 +97,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/aspglobalmarine?utm_source=qr&igsh=MXRwdG5yYjR6Znd5ag=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
@@ -112,7 +112,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com/aspglobalmarine"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
@@ -135,13 +135,16 @@ const Footer = () => {
             <div className="footer-links-group">
               <h4 className="footer-links-title">Quick Links</h4>
               <nav className="footer-nav">
-                <a href="#about" className="footer-link">
+                <a href="/about" className="footer-link">
                   About Us
                 </a>
-                <a href="#products" className="footer-link">
+                <a href="/products" className="footer-link">
                   Products
                 </a>
-                <a href="#contact" className="footer-link">
+                <a href="/careers" className="footer-link">
+                  Careers
+                </a>
+                <a href="/contact" className="footer-link">
                   Contact
                 </a>
               </nav>

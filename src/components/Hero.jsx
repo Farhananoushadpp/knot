@@ -16,7 +16,7 @@ const Hero = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
   const videoSlides = [
-    "/homebanner.mp4",
+    "/homebanner1.mp4",
     "/homebanner3.mp4",
     "/homebanner2.mp4",
   ];

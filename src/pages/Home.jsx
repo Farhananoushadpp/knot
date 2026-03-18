@@ -196,7 +196,7 @@ const Home = () => {
             <div className="service-card-professional">
               <div className="service-image-professional">
                 <img
-                  src="/spare.jpg"
+                  src="/cate3.jpg"
                   alt="Turbo Charger"
                   className="service-image-img"
                 />
@@ -214,7 +214,7 @@ const Home = () => {
             <div className="service-card-professional">
               <div className="service-image-professional">
                 <img
-                  src="/spare.jpg"
+                  src="/cate9.jpg"
                   alt="Purifiers Parts"
                   className="service-image-img"
                 />
@@ -232,7 +232,7 @@ const Home = () => {
             <div className="service-card-professional">
               <div className="service-image-professional">
                 <img
-                  src="/spare.jpg"
+                  src="/cate7.jpg"
                   alt="Air Compressor Parts"
                   className="service-image-img"
                 />
@@ -251,7 +251,7 @@ const Home = () => {
             <div className="service-card-professional">
               <div className="service-image-professional">
                 <img
-                  src="/spare.jpg"
+                  src="/cate8.jpg"
                   alt="Hydraulic Spares"
                   className="service-image-img"
                 />
@@ -268,7 +268,7 @@ const Home = () => {
             <div className="service-card-professional">
               <div className="service-image-professional">
                 <img
-                  src="/spare.jpg"
+                  src="/cate6.webp"
                   alt="Boilers, Incinerators & Heat Exchangers"
                   className="service-image-img"
                 />
@@ -288,7 +288,7 @@ const Home = () => {
             <div className="service-card-professional">
               <div className="service-image-professional">
                 <img
-                  src="/spare.jpg"
+                  src="/heat.webp"
                   alt="Heat Exchanger Parts"
                   className="service-image-img"
                 />
@@ -307,7 +307,7 @@ const Home = () => {
             <div className="service-card-professional">
               <div className="service-image-professional">
                 <img
-                  src="/spare.jpg"
+                  src="/cate4.jpg"
                   alt="Pump Spares"
                   className="service-image-img"
                 />
@@ -325,7 +325,7 @@ const Home = () => {
             <div className="service-card-professional">
               <div className="service-image-professional">
                 <img
-                  src="/spare.jpg"
+                  src="/cate5.webp"
                   alt="HVAC Compressor"
                   className="service-image-img"
                 />

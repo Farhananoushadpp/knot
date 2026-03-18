@@ -419,11 +419,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 8px;
-  background: #25d366;
-  border: none;
+  background: transparent;
   cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
@@ -431,15 +430,19 @@
 
 .whatsapp-btn:hover,
 .contact-btn-six.whatsapp-btn-six:hover {
-  background: #128c7e;
   transform: none;
 }
 
 .whatsapp-btn svg,
 .contact-btn-six.whatsapp-btn-six svg {
-  width: 20px;
-  height: 20px;
-  fill: white;
+  width: 24px;
+  height: 24px;
+  fill: #25d366;
+}
+
+.whatsapp-btn:hover svg,
+.contact-btn-six.whatsapp-btn-six:hover svg {
+  fill: #25d366;
 }
 
 /* Email Button */
@@ -448,11 +451,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 8px;
-  background: #ea4335;
-  border: none;
+  background: transparent;
   cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
@@ -460,16 +462,19 @@
 
 .email-btn:hover,
 .contact-btn-six.email-btn-six:hover {
-  background: #d33b2c;
   transform: none;
 }
 
 .email-btn svg,
 .contact-btn-six.email-btn-six svg {
-  width: 20px;
-  height: 20px;
-  fill: white;
-  transform: none;
+  width: 24px;
+  height: 24px;
+  fill: #dc2626;
+}
+
+.email-btn:hover svg,
+.contact-btn-six.email-btn-six:hover svg {
+  fill: #dc2626;
 }
 
 /* Hide category text completely */
@@ -540,15 +545,15 @@
   .whatsapp-btn,
   .email-btn,
   .contact-btn-six {
-    width: 36px;
-    height: 36px;
+    width: 45px;
+    height: 45px;
   }
 
   .whatsapp-btn svg,
   .email-btn svg,
   .contact-btn-six svg {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
   }
 }
 
@@ -588,15 +593,15 @@
   .whatsapp-btn,
   .email-btn,
   .contact-btn-six {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
   }
 
   .whatsapp-btn svg,
   .email-btn svg,
   .contact-btn-six svg {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -1560,33 +1565,23 @@
 }
 
 .whatsapp-btn-four {
-  background: linear-gradient(135deg, #25d366, #128c7e);
-  color: var(--white-color);
+  background: transparent;
+  color: #25d366;
   box-shadow: none;
 }
 
 .whatsapp-btn-four:hover {
-  background: linear-gradient(135deg, #128c7e, #25d366);
   transform: none;
   box-shadow: none;
 }
 
 .email-btn-four {
-  background: linear-gradient(
-    135deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
-  color: var(--white-color);
+  background: transparent;
+  color: #dc2626;
   box-shadow: none;
 }
 
 .email-btn-four:hover {
-  background: linear-gradient(
-    135deg,
-    var(--secondary-color),
-    var(--primary-color)
-  );
   transform: none;
   box-shadow: none;
 }
@@ -1651,24 +1646,22 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--primary-color);
-  color: white;
+  background: transparent;
+  color: #25d366;
   padding: var(--spacing-md);
   border-radius: var(--radius-md);
   text-decoration: none;
   font-size: var(--font-size-lg);
   font-weight: 600;
   transition: all var(--transition-normal);
-  border: none;
   cursor: pointer;
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(10, 31, 68, 0.3);
 }
 
 .whatsapp-btn:hover {
-  background: var(--accent-color);
   transform: none;
   box-shadow: none;
 }
@@ -1678,24 +1671,22 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--secondary-color);
-  color: white;
+  background: transparent;
+  color: #dc2626;
   padding: var(--spacing-md);
   border-radius: var(--radius-md);
   text-decoration: none;
   font-size: var(--font-size-lg);
   font-weight: 600;
   transition: all var(--transition-normal);
-  border: none;
   cursor: pointer;
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(10, 31, 68, 0.3);
 }
 
 .email-btn:hover {
-  background: #1f8a7a;
   transform: none;
   box-shadow: none;
 }
@@ -1919,7 +1910,7 @@
 }
 
 .manufacturer-table tbody tr:last-child {
-  /* border-bottom removed */
+  border-bottom: none;
 }
 
 .manufacturer-table td {
@@ -2301,11 +2292,11 @@
 }
 
 .pump-model-row {
-  /* border-bottom removed */
+  border-bottom: none;
 }
 
 .pump-model-row:last-child {
-  /* border-bottom removed */
+  border-bottom: none;
 }
 
 .pump-manufacturer-name {
@@ -2325,7 +2316,7 @@
   flex-wrap: wrap;
   gap: var(--spacing-sm);
   align-items: center;
-  font-color: black;
+  color: black;
 }
 
 .pump-model-badge {

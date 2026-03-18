@@ -50,12 +50,6 @@ const About = () => {
       description:
         "From engine spares to safety equipment, we provide 9500+ products ensuring your vessels operate at peak performance worldwide.",
     },
-    {
-      id: 4,
-      image: "/about4.jpg",
-      heading: "",
-      description: "",
-    },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);

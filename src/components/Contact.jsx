@@ -186,6 +186,50 @@ const Contact = () => {
               </div>
             ))}
 
+            {/* QR Codes Section */}
+            <div className="qr-section">
+              <h4>Scan to Connect</h4>
+              <div className="qr-codes">
+                <div className="qr-code-card">
+                  <div className="qr-code-image">
+                    <img
+                      src="/qr-arun.svg"
+                      alt="Arun V.V QR Code"
+                      onError={(e) => {
+                        // Fallback placeholder QR code
+                        e.target.src =
+                          "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23f0f0f0'/%3E%3Crect x='10' y='10' width='30' height='30' fill='%23000'/%3E%3Crect x='20' y='20' width='10' height='10' fill='%23f0f0f0'/%3E%3Crect x='80' y='10' width='30' height='30' fill='%23000'/%3E%3Crect x='90' y='20' width='10' height='10' fill='%23f0f0f0'/%3E%3Crect x='10' y='80' width='30' height='30' fill='%23000'/%3E%3Crect x='20' y='90' width='10' height='10' fill='%23f0f0f0'/%3E%3Crect x='50' y='50' width='20' height='20' fill='%23000'/%3E%3Ctext x='60' y='105' text-anchor='middle' font-family='Arial' font-size='10' fill='%23666'%3EArun V.V%3C/text%3E%3C/svg%3E";
+                      }}
+                    />
+                  </div>
+                  <div className="qr-code-info">
+                    <h5>Arun V.V</h5>
+                    <p>Senior Marine Consultant</p>
+                    <small>Scan for direct contact</small>
+                  </div>
+                </div>
+
+                <div className="qr-code-card">
+                  <div className="qr-code-image">
+                    <img
+                      src="/qr-yoosaf.svg"
+                      alt="Yoosaf N QR Code"
+                      onError={(e) => {
+                        // Fallback placeholder QR code
+                        e.target.src =
+                          "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23f0f0f0'/%3E%3Crect x='10' y='10' width='30' height='30' fill='%23000'/%3E%3Crect x='20' y='20' width='10' height='10' fill='%23f0f0f0'/%3E%3Crect x='80' y='10' width='30' height='30' fill='%23000'/%3E%3Crect x='90' y='20' width='10' height='10' fill='%23f0f0f0'/%3E%3Crect x='10' y='80' width='30' height='30' fill='%23000'/%3E%3Crect x='20' y='90' width='10' height='10' fill='%23f0f0f0'/%3E%3Crect x='45' y='45' width='30' height='30' fill='%23000'/%3E%3Crect x='55' y='55' width='10' height='10' fill='%23f0f0f0'/%3E%3Ctext x='60' y='105' text-anchor='middle' font-family='Arial' font-size='10' fill='%23666'%3EYoosaf N%3C/text%3E%3C/svg%3E";
+                      }}
+                    />
+                  </div>
+                  <div className="qr-code-info">
+                    <h5>Yoosaf N</h5>
+                    <p>Marine Equipment Specialist</p>
+                    <small>Scan for direct contact</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* NFC Card Buttons */}
             {/* <div className="nfc-section">
               <h4>Digital Business Cards</h4>

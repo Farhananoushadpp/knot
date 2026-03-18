@@ -1,0 +1,38 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://aspglobalmarine.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow temporary or admin directories (if any)
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /*.json$
+Disallow: /*?*$
+Disallow: /static/
+
+# Allow important directories
+Allow: /products/
+Allow: /about/
+Allow: /contact/
+Allow: /authorizations/
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1

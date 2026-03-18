@@ -20,6 +20,12 @@ const Navbar = () => {
   };
 
   const isActive = (path) => {
+    if (path === "/products") {
+      return (
+        location.pathname === "/products" ||
+        location.pathname.startsWith("/products/")
+      );
+    }
     return location.pathname === path;
   };
 
@@ -72,7 +78,7 @@ const Navbar = () => {
               className={`nav-dropdown ${productsDropdownOpen ? "active" : ""}`}
             >
               <button
-                className="nav-link dropdown-toggle"
+                className={`nav-link dropdown-toggle ${isActive("/products") ? "active" : ""}`}
                 onClick={toggleProductsDropdown}
               >
                 <span className="nav-text">Products</span>

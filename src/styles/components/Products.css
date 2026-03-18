@@ -112,41 +112,38 @@
 }
 
 .contact-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.625rem 1rem;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
   border-radius: 8px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
   flex: 1;
   justify-content: center;
+  width: 50px;
+  height: 50px;
 }
 
 .contact-btn.whatsapp {
-  background: #f0fdf4;
-  color: #16a34a;
-  border: 1px solid #bbf7d0;
+  background: transparent;
+  color: #25d366;
 }
 
 .contact-btn.whatsapp:hover {
-  background: #16a34a;
-  color: white;
+  transform: none;
 }
 
 .contact-btn.email {
-  background: #fafafa;
-  color: #525252;
-  border: 1px solid #e5e5e5;
+  background: transparent;
+  color: #dc2626;
 }
 
 .contact-btn.email:hover {
-  background: #525252;
-  color: white;
-  border-color: #525252;
+  transform: none;
 }
 
 /* Responsive */
