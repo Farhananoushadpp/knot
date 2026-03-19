@@ -14,13 +14,16 @@ const ContactPage = () => {
     <div className="container-full contact-page">
       {/* Hero Section - Using PageHero Component */}
       <PageHero
-        title="Contact Us"
-        subtitle="Get In Touch"
-        icon={Phone}
+        title="Get In Touch"
+        subtitle="Connect with our expert team for all your marine equipment needs"
+        description="We're here to help you find the right solutions for your maritime requirements. Reach out to us for inquiries, quotes, or technical support."
+        icon={Mail}
         badges={[
-          { icon: Mail, text: "24/7 Email Support" },
-          { icon: MapPin, text: "Global Presence" },
+          { text: "Quick Response" },
+          { text: "Expert Support" },
+          { text: "24/7 Availability" },
         ]}
+        backgroundImage="/contact.jpg"
       />
 
       <Contact />

@@ -163,14 +163,16 @@ const Authorization = () => {
     <div className="authorization-page">
       {/* Hero Section - Using PageHero Component */}
       <PageHero
-        title="Authorized Manufacturing Partners"
-        subtitle="Certified Partners"
+        title="Trusted Authorizations"
+        subtitle="Certified Manufacturing Partners"
+        description="Partnering with industry-leading manufacturers who meet the highest international standards for marine equipment quality, safety, and reliability."
         icon={ShieldCheck}
         badges={[
-          { icon: CheckCircle, text: "ISO 9001" },
+          { icon: CheckCircle, text: "ISO Certified" },
           { icon: CheckCircle, text: "SOLAS Compliant" },
           { icon: CheckCircle, text: "Class Approved" },
         ]}
+        backgroundImage="/author.jpg"
       />
 
       {/* Partners Grid Section */}

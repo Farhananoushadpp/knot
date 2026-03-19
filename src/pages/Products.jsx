@@ -17,7 +17,7 @@ const ProductsPage = () => {
       title: "Engine Stores",
       description:
         "Complete engine stores including gaskets, seals, filters, and maintenance supplies for marine engines.",
-      image: "/2.webp",
+      image: "/spare.jpg",
       brands: ["FREUDENBERG", "ELASTOL", "DANFOSS", "SKF"],
     },
     {
@@ -25,7 +25,7 @@ const ProductsPage = () => {
       title: "Deck Stores & General",
       description:
         "Comprehensive deck stores, safety equipment, and general marine supplies for vessel operations.",
-      image: "/5.webp",
+      image: "/deckstore.webp",
       brands: ["VIKING", "SURVITEC", "WILHELMSEN", "SMIT"],
     },
     {
@@ -106,7 +106,7 @@ const ProductsPage = () => {
       title: "LSA & FFA Equipment",
       description:
         "Life-saving appliances and firefighting equipment meeting SOLAS and international maritime standards.",
-      image: "/3.webp",
+      image: "/lsa.jpg",
       brands: ["VIKING", "SURVITEC", "HONEYWELL", "KIDDE"],
     },
   ];
@@ -115,13 +115,16 @@ const ProductsPage = () => {
     <div className="products-page">
       {/* Hero Section */}
       <PageHero
-        title="Products Catalog"
-        subtitle="Marine Equipment & Solutions"
+        title="Marine Equipment Catalog"
+        subtitle="Complete Solutions for Maritime Industry"
+        description="Explore our comprehensive range of high-quality marine equipment, spare parts, and solutions. From engine stores to safety equipment, we provide everything you need for optimal vessel operations."
         icon={Package}
         badges={[
-          { icon: Award, text: "ISO 9001:2015" },
-          { icon: Users, text: "Global Network" },
+          { icon: Award, text: "Quality Assured" },
+          { icon: Users, text: "Global Supply" },
+          { icon: Package, text: "Wide Range" },
         ]}
+        backgroundImage="/catalog.jpg"
       />
 
       {/* All Categories */}

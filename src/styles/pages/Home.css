@@ -131,7 +131,7 @@
 
 .service-title-professional {
   font-family: var(--font-family-heading);
-  font-size: 1.125rem !important;
+  font-size: 0.999rem !important;
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 10px;
@@ -192,7 +192,7 @@
   }
 
   .service-title-professional {
-    font-size: 0.875rem !important;
+    font-size: 0.775rem !important;
   }
 
   .service-desc-professional {
@@ -245,7 +245,7 @@
 
 .why-choose-modern .why-title-modern {
   font-family: var(--font-family-heading);
-  font-size: 2rem !important;
+  font-size: 1.8rem !important;
   font-weight: 700;
   color: #0a1f44;
   margin-bottom: 2px !important;
@@ -364,7 +364,7 @@
   }
 
   .why-title-modern {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .why-grid-modern {
@@ -1082,7 +1082,7 @@
 }
 
 .section-title {
-  font-size: var(--font-size-4xl);
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-color);
   margin: 0 0 var(--spacing-lg);
@@ -1461,14 +1461,14 @@
 }
 
 .why-choose-header .section-title {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #0a1f44;
   margin-bottom: 0.75rem;
 }
 
 .why-choose-header .section-subtitle {
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   color: #64748b;
 }
 
@@ -1531,7 +1531,7 @@
   }
 
   .why-choose-header .section-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .why-grid {
@@ -1667,7 +1667,7 @@
   }
 
   .section-title {
-    font-size: var(--font-size-3xl);
+    font-size: 2.5rem;
   }
 }
 
@@ -1701,7 +1701,7 @@
   }
 
   .section-title {
-    font-size: var(--font-size-2xl);
+    font-size: 2.5rem;
   }
 }
 
@@ -1716,7 +1716,7 @@
   }
 
   .section-title {
-    font-size: var(--font-size-xl);
+    font-size: 2.5rem;
   }
 
   .container {
@@ -2385,7 +2385,7 @@
 }
 
 .section-title-modern {
-  font-size: var(--font-size-4xl);
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-color);
   margin-bottom: var(--spacing-md);
@@ -2528,7 +2528,7 @@
   }
 
   .section-title-modern {
-    font-size: var(--font-size-3xl);
+    font-size: 2.5rem;
   }
 }
 

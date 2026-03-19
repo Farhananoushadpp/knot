@@ -1438,15 +1438,15 @@
 }
 
 .cta-button.primary {
-  background: linear-gradient(135deg, #1b5f9c 0%, #2b6fa6 100%);
+  background: linear-gradient(135deg, #9a9c9e 0%, #04355ec0 100%);
   color: white;
 }
 
-.cta-button.primary:hover {
+/* .cta-button.primary:hover {
   background: linear-gradient(135deg, #2b6fa6 0%, #1b5f9c 100%);
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-}
+} */
 
 .cta-button.secondary {
   background: transparent;
