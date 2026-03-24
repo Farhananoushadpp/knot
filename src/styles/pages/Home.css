@@ -29,25 +29,25 @@
   display: inline-block;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #0b3c5d;
+  color: #01013f;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
-  background: rgba(11, 60, 93, 0.1);
+  background: rgba(1, 1, 63, 0.1);
   border-radius: 50px;
 }
 
 .who-we-header .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #0b3c5d;
+  color: #01013f;
   margin-bottom: 0.75rem;
 }
 
 .who-we-header .section-subtitle {
   font-size: 1.125rem;
-  color: #0f4c75;
+  color: #030c54;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -94,7 +94,7 @@
 
 .service-card-professional {
   background: #ffffff;
-  border: 1px solid #0a2f4a;
+  border: 1px solid #030c54;
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -104,13 +104,33 @@
 .service-card-professional:hover {
   transform: none;
   box-shadow: none;
-  border-color: #0a2f4a;
+  border-color: #030c54;
 }
 
 .service-image-professional {
   width: 100%;
   height: 160px;
   overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+}
+
+.service-icon-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #1c70c8, #51a2d5);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.service-card-professional:hover .service-icon-placeholder {
+  transform: scale(1.1);
 }
 
 .service-image-img {
@@ -274,7 +294,7 @@
 
 .why-card-modern {
   background: #ffffff !important;
-  border: 1px solid #0a2f4a !important;
+  border: 1px solid #030c54 !important;
   border-radius: 16px !important;
   padding: 10px 15px 20px !important;
   text-align: center !important;
@@ -295,7 +315,7 @@
 .why-card-modern:hover {
   transform: none;
   box-shadow: none;
-  border-color: #0a2f4a;
+  border-color: #030c54;
 }
 
 .why-icon-modern {
@@ -307,7 +327,7 @@
   color: #ffffff;
   margin: 15px auto 12px;
   transition: all 0.3s ease;
-  background: linear-gradient(135deg, #0d3a5c 0%, #0c4b65 100%);
+  background: linear-gradient(135deg, #030c54 0%, #02083d 100%);
   border-radius: 50%;
   flex-shrink: 0;
   position: relative;
@@ -326,7 +346,7 @@
   font-family: var(--font-family-heading);
   font-size: 1rem !important;
   font-weight: 600;
-  color: #0a1f44;
+  color: #030c54;
   margin-bottom: 12px;
   line-height: 1.3;
 }
@@ -597,7 +617,7 @@
   gap: 20px;
   padding: 30px;
   background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-  border: 1px solid #0a2f4a;
+  border: 1px solid #030c54;
   border-radius: 16px;
   transition: all 0.3s ease;
   position: relative;
@@ -619,7 +639,7 @@
 .authorization-item-professional:hover {
   transform: none;
   box-shadow: none;
-  border-color: #0a2f4a;
+  border-color: #030c54;
 }
 
 .authorization-item-professional:hover::before {
@@ -629,7 +649,7 @@
 .authorization-badge-professional {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #0d3a5c 0%, #0c4b65 100%);
+  background: linear-gradient(135deg, #030c54 0%, #02083d 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -775,7 +795,7 @@
   margin: 0 20px !important;
   padding: 15px;
   background: #ffffff;
-  border: 1px solid #0d3a5c !important;
+  border: 1px solid #030c54 !important;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -919,10 +939,10 @@
 .ocean-group-banner {
   display: inline-block;
   padding: 12px 24px;
-  background: linear-gradient(135deg, #0b3c5d 0%, #1f6f8b 100%);
+  background: linear-gradient(135deg, #030c54 0%, #030c54 100%);
   color: #ffffff;
   border-radius: 50px;
-  border: 1px solid rgba(11, 60, 93, 0.3);
+  border: 1px solid rgba(3, 12, 84, 0.3);
   box-shadow: none;
   transition: all 0.3s ease;
 }
@@ -930,7 +950,7 @@
 .ocean-group-banner:hover {
   transform: none;
   box-shadow: none;
-  border-color: rgba(11, 60, 93, 0.5);
+  border-color: rgba(3, 12, 84, 0.5);
 }
 
 .ocean-group-text {
@@ -999,7 +1019,7 @@
   display: block;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #0d3a5c;
+  color: #030c54;
   margin-bottom: 0.5rem;
   line-height: 1;
 }
@@ -1157,7 +1177,7 @@
   box-shadow: none;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-  border: 1px solid #0a2f4a;
+  border: 1px solid #030c54;
 }
 
 .carousel-card.active {
@@ -1297,7 +1317,7 @@
   display: inline-block;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #0d3a5c;
+  color: #030c54;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -1309,7 +1329,7 @@
 .services-header .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #0a1f44;
+  color: #030c54;
   margin-bottom: 0.75rem;
 }
 
@@ -1331,7 +1351,7 @@
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
-  border: 1px solid #0a2f4a;
+  border: 1px solid #030c54;
   box-shadow: none;
   transition: all 0.3s ease;
 }
@@ -1345,7 +1365,7 @@
   width: 64px;
   height: 64px;
   margin: 0 auto 1rem;
-  background: linear-gradient(135deg, #0d3a5c 0%, #0c4b65 100%);
+  background: linear-gradient(135deg, #030c54 0%, #030c54 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1356,7 +1376,7 @@
 .service-card h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #0a1f44;
+  color: #030c54;
   margin-bottom: 0.75rem;
 }
 
@@ -1451,7 +1471,7 @@
   display: inline-block;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #0d3a5c;
+  color: #030c54;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -1463,7 +1483,7 @@
 .why-choose-header .section-title {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #0a1f44;
+  color: #030c54;
   margin-bottom: 0.75rem;
 }
 
@@ -1482,7 +1502,7 @@
   background: #f8fafc;
   border-radius: 12px;
   padding: 2rem 1.5rem;
-  border: 1px solid #0a2f4a;
+  border: 1px solid #030c54;
   transition: all 0.3s ease;
 }
 
@@ -1496,7 +1516,7 @@
   width: 120px;
   height: 120px;
   margin: 0 auto 1rem;
-  background: linear-gradient(135deg, #0d3a5c 0%, #0c4b65 100%);
+  background: linear-gradient(135deg, #030c54 0%, #030c54 100%);
   border-radius: 50% !important;
   display: flex;
   align-items: center;
@@ -1507,7 +1527,7 @@
 .why-card h3 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #0a1f44;
+  color: #030c54;
   margin-bottom: 0.5rem;
 }
 
@@ -1555,7 +1575,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  background: #0d3a5c;
+  background: #030c54;
   border-radius: 12px;
   padding: 2rem;
 }
@@ -1568,7 +1588,7 @@
   display: block;
   font-size: 2rem;
   font-weight: 700;
-  color: #0d3a5c;
+  color: #030c54;
   margin-bottom: 0.25rem;
 }
 
@@ -1792,7 +1812,7 @@
 }
 
 .services-section .section-title {
-  color: #0c2d48;
+  color: #030c54;
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
@@ -1821,13 +1841,13 @@
   padding: var(--spacing-2xl);
   background: #ffffff;
   border-radius: 12px;
-  border: 2px solid #0a2f4a;
+  border: 2px solid #030c54;
   transition: all 0.3s ease;
   position: relative;
 }
 
 .service-item-classic:hover {
-  border-color: #0a2f4a;
+  border-color: #030c54;
   transform: none;
   box-shadow: none;
 }
@@ -1838,7 +1858,7 @@
   justify-content: center;
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #4291ab 0%, #307087 100%);
+  background: linear-gradient(135deg, #030c54 0%, #030c54 100%);
   border-radius: 50%;
   margin-bottom: var(--spacing-lg);
   color: white;
@@ -1854,7 +1874,7 @@
 .service-title {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #0c2d48;
+  color: #030c54;
   margin-bottom: var(--spacing-md);
   font-family: var(--font-family-heading);
   line-height: 1.3;
@@ -1895,7 +1915,7 @@
 }
 
 .why-choose-section .section-title {
-  color: #0c2d48;
+  color: #030c54;
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
@@ -1935,13 +1955,13 @@
 }
 
 .stat-card {
-  background: linear-gradient(135deg, #4291ab 0%, #307087 100%);
+  background: linear-gradient(135deg, #030c54 0%, #030c54 100%);
   color: white;
   padding: var(--spacing-lg);
   border-radius: 16px;
   text-align: center;
   transition: all 0.3s ease;
-  border: 2px solid #0a2f4a;
+  border: 2px solid #030c54;
   box-shadow: none;
 }
 
@@ -2038,7 +2058,7 @@
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
   border-radius: 16px;
-  border: 2px solid #0a2f4a;
+  border: 2px solid #030c54;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -2059,7 +2079,7 @@
 .benefit-item-modern:hover {
   transform: none;
   box-shadow: none;
-  border-color: #0a2f4a;
+  border-color: #030c54;
 }
 
 .benefit-item-modern:hover::before {
@@ -2083,7 +2103,7 @@
   font-size: 24px;
   font-weight: 700;
   flex-shrink: 0;
-  border: 2px solid #0a2f4a;
+  border: 2px solid #030c54;
   box-shadow: none;
 }
 
@@ -2098,7 +2118,7 @@
   right: -8px;
   width: 24px;
   height: 24px;
-  background: #0c2d48;
+  background: #030c54;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -2116,7 +2136,7 @@
 .benefit-content h4 {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #0c2d48;
+  color: #030c54;
   margin-bottom: var(--spacing-sm);
   font-family: var(--font-family-heading);
   line-height: 1.3;
@@ -2149,7 +2169,7 @@
 
 .benefit-item-modern:hover .benefit-tag {
   background: rgba(10, 47, 74, 0.15);
-  color: #0a2f4a;
+  color: #030c54;
 }
 
 /* Responsive Design */
@@ -2259,7 +2279,7 @@
   display: inline-block;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #0d3a5c;
+  color: #030c54;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -2295,7 +2315,7 @@
   border-radius: 12px;
   padding: 2rem 2rem 2rem 2rem;
   text-align: center;
-  border: 1px solid #0a2f4a;
+  border: 1px solid #030c54;
   box-shadow: none;
   transition: all 0.3s ease;
   position: relative;
@@ -2311,7 +2331,7 @@
   width: 56px;
   height: 56px;
   margin: 0 auto 1rem;
-  background: linear-gradient(135deg, #0d3a5c 0%, #0c4b65 100%);
+  background: linear-gradient(135deg, #030c54 0%, #030c54 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2327,7 +2347,7 @@
 .authorization-card h3 {
   font-size: 1rem !important;
   font-weight: 600;
-  color: #0a1f44;
+  color: #030c54;
   margin-bottom: 0.5rem;
 }
 
@@ -2415,7 +2435,7 @@
   border-radius: 12px;
   padding: var(--spacing-xl);
   text-align: center;
-  border: 1px solid #0a2f4a;
+  border: 1px solid #030c54;
   box-shadow: none;
   transition: none;
   position: relative;

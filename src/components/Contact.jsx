@@ -1,5 +1,5 @@
 /**
- * ASP Global Marine Trading LLC - Contact Section
+ * Knot & Sail - Contact Section
  * Standard professional design with clean layout
  */
 
@@ -50,7 +50,7 @@ const Contact = () => {
       formDataObj.append("urgency", formData.urgencyLevel);
 
       // Netlify Forms - automatically handles submission
-      // Netlify will send to sales@aspglobalmarine.com based on your Netlify dashboard settings
+      // Netlify will send to info@knotandsail.com based on your Netlify dashboard settings
       const response = await fetch("/", {
         method: "POST",
         body: formDataObj,
@@ -75,7 +75,7 @@ const Contact = () => {
     } catch (error) {
       console.error("Error sending email:", error);
       alert(
-        "Failed to send message. Please contact us directly at sales@aspglobalmarine.com",
+        "Failed to send message. Please contact us directly at info@knotandsail.com",
       );
     } finally {
       setIsSubmitting(false);
@@ -105,19 +105,19 @@ const Contact = () => {
       icon: MapPin,
       title: "Headquarters",
       details: [
-        "Xavier Business Center, Office Suite A5-18",
-        "Dubai, United Arab Emirates",
+        "Xavier Business Center, Office Suite No: A5 - 18",
+        "Dubai - UAE",
       ],
     },
     {
       icon: Phone,
       title: "Phone",
-      details: ["+971 4 572 4542", "+971 52 547 8137"],
+      details: ["+971 52 775 6765", "+971 58 146 4580"],
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@aspglobalmarine.com", "support@aspglobalmarine.com"],
+      details: ["info@knotandsail.com", "operation@knotandsail.com"],
     },
     {
       icon: Clock,
@@ -132,28 +132,28 @@ const Contact = () => {
 
   const nfcCard = {
     company: {
-      name: "ASP Global Marine Trading LLC",
-      title: "Marine Equipment Solutions",
-      phone: "+971 4 572 4542",
-      email: "info@aspglobalmarine.com",
-      website: "www.aspglobalmarine.com",
-      address: "Dubai, UAE",
+      name: "Knot & Sail",
+      title: "Marine Services & Technical Solutions",
+      phone: "+971 52 775 6765",
+      email: "info@knotandsail.com",
+      website: "www.knotandsail.com",
+      address: "Dubai - UAE",
     },
     arun: {
       name: "Arun V.V",
       title: "Senior Marine Consultant",
-      phone: "+971 XX XXX XXXX",
-      email: "arun@aspglobalmarine.com",
-      website: "www.aspglobalmarine.com",
-      address: "Dubai, UAE",
+      phone: "+971 52 775 6765",
+      email: "info@knotandsail.com",
+      website: "www.knotandsail.com",
+      address: "Dubai - UAE",
     },
     yoosaf: {
       name: "Yoosaf N",
       title: "Marine Equipment Specialist",
-      phone: "+971 XX XXX XXXX",
-      email: "yoosaf@aspglobalmarine.com",
-      website: "www.aspglobalmarine.com",
-      address: "Dubai, UAE",
+      phone: "+971 58 146 4580",
+      email: "operation@knotandsail.com",
+      website: "www.knotandsail.com",
+      address: "Dubai - UAE",
     },
   };
 
@@ -165,7 +165,8 @@ const Contact = () => {
           <MessageSquare size={32} />
           <h2>Contact Our Marine Experts</h2>
           <p>
-            Connect with our team for comprehensive marine equipment solutions
+            Connect with our team for comprehensive marine services and
+            technical solutions
           </p>
         </div>
 
@@ -204,8 +205,8 @@ const Contact = () => {
                   </div>
                   <div className="qr-code-info">
                     <h5>Arun V.V</h5>
-                    <p>Senior Marine Consultant</p>
-                    <small>Scan for direct contact</small>
+                    <p>Advisor-Technical & Commercial</p>
+                    {/* <small>Scan for direct contact</small> */}
                   </div>
                 </div>
 
@@ -223,8 +224,8 @@ const Contact = () => {
                   </div>
                   <div className="qr-code-info">
                     <h5>Yoosaf N</h5>
-                    <p>Marine Equipment Specialist</p>
-                    <small>Scan for direct contact</small>
+                    <p>Operation Manager</p>
+                    {/* <small>Scan for direct contact</small> */}
                   </div>
                 </div>
               </div>

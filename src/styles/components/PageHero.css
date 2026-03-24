@@ -11,11 +11,11 @@
   min-height: 280px;
   display: flex;
   align-items: center;
-  background: #0a2f4a;
+  background: #01013f;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #eaf6fb;
+  color: #f8fafc;
   padding: 60px 0 100px 0;
   overflow: hidden;
   margin: 0;
@@ -134,7 +134,7 @@
 .page-hero__orb--1 {
   width: 400px;
   height: 400px;
-  background: rgba(14, 116, 144, 0.2); /* Marine Teal */
+  background: rgba(28, 112, 200, 0.2); /* Ocean Blue */
   top: -100px;
   right: 10%;
   animation: float 8s ease-in-out infinite;
@@ -143,7 +143,7 @@
 .page-hero__orb--2 {
   width: 300px;
   height: 300px;
-  background: rgba(199, 160, 8, 0.1); /* Safety Gold - subtle */
+  background: rgba(81, 162, 213, 0.1); /* Light Ocean Blue - subtle */
   bottom: -50px;
   left: 5%;
   animation: float 10s ease-in-out infinite reverse;
@@ -262,17 +262,17 @@
   text-align: center;
 }
 
-/* Section Label - Marine Teal Accent */
+/* Section Label - New Ocean Blue Accent */
 .page-hero__label {
   display: inline-block;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #0e7490; /* Marine Teal */
+  color: #1c70c8; /* Ocean Blue */
   margin-bottom: 16px;
   padding: 8px 16px;
-  background: rgba(14, 116, 144, 0.15);
+  background: rgba(28, 112, 200, 0.15);
   border-radius: 20px;
   border: none;
 }
@@ -329,9 +329,9 @@
   transform: translateY(-2px);
 }
 
-/* Badge Icon - Marine Teal */
+/* Badge Icon - New Ocean Blue */
 .badge__icon {
-  color: #0e7490; /* Marine Teal */
+  color: #1c70c8; /* Ocean Blue */
   size: 20px;
 }
 
@@ -352,7 +352,7 @@
 .page-hero__icon-wrapper {
   width: 90px;
   height: 90px;
-  background: rgba(9, 65, 148, 0.08);
+  background: rgba(1, 1, 63, 0.08);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -375,7 +375,7 @@
     box-shadow:
       0 30px 80px rgba(0, 0, 0, 0.4),
       inset 0 0 80px rgba(255, 255, 255, 0.1),
-      0 0 40px rgba(14, 116, 144, 0.3); /* Marine Teal glow */
+      0 0 40px rgba(28, 112, 200, 0.3); /* Ocean Blue glow */
   }
 }
 

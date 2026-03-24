@@ -1,5 +1,5 @@
 /**
- * ASP Global Marine Trading LLC - Certifications Component
+ * Knot & Sail - Certifications Component Styles
  * 
  * Certifications and compliance section
  */
@@ -23,7 +23,11 @@
   position: relative;
   display: inline-block;
   padding: 0 var(--spacing-xl);
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -31,7 +35,7 @@
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -12px;
   left: 50%;
@@ -176,54 +180,54 @@
   .certifications {
     padding: var(--spacing-4xl) 0;
   }
-  
+
   .certifications-content {
     padding: 0 var(--container-padding);
   }
-  
+
   .certifications-intro {
     font-size: var(--font-size-base);
     margin-bottom: var(--spacing-2xl);
   }
-  
+
   .certifications-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--spacing-2xl);
     margin-bottom: var(--spacing-3xl);
   }
-  
+
   .certification-item {
     padding: var(--spacing-2xl);
   }
-  
+
   .certification-icon span {
     width: 50px;
     height: 50px;
     font-size: var(--font-size-xl);
   }
-  
+
   .certification-item h3 {
     font-size: var(--font-size-lg);
   }
-  
+
   .certification-item p {
     font-size: var(--font-size-sm);
   }
-  
+
   .certification-badges {
     gap: var(--spacing-md);
   }
-  
+
   .badge-placeholder {
     padding: var(--spacing-md) var(--spacing-lg);
   }
-  
+
   .badge-icon {
     width: 35px;
     height: 35px;
     font-size: var(--font-size-sm);
   }
-  
+
   .badge-placeholder span {
     font-size: var(--font-size-xs);
   }
@@ -233,17 +237,17 @@
   .certifications {
     padding: var(--spacing-3xl) 0;
   }
-  
+
   .certifications-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-xl);
   }
-  
+
   .certification-badges {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .badge-placeholder {
     width: 100%;
     max-width: 250px;

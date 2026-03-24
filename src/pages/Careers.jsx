@@ -7,26 +7,26 @@ const Careers = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Careers - ASP Global Marine Trading LLC",
+    name: "Careers - Knot & Sail",
     description:
-      "Join our team at ASP Global Marine Trading LLC. Explore career opportunities in marine equipment industry.",
-    url: "https://aspglobalmarine.com/careers",
+      "Join our team at Knot & Sail. Explore career opportunities in marine services industry.",
+    url: "https://knotandsail.com/careers",
     mainEntity: {
       "@type": "Organization",
-      name: "ASP Global Marine Trading LLC",
-      url: "https://aspglobalmarine.com",
-      logo: "https://aspglobalmarine.com/logo.webp",
+      name: "Knot & Sail",
+      url: "https://knotandsail.com",
+      logo: "https://knotandsail.com/logo.webp",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Xavier Business Center, Office Suite A5-18",
+        streetAddress: "Xavier Business Center, Office Suite No: A5 - 18",
         addressLocality: "Dubai",
         addressCountry: "UAE",
       },
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: "+971 4 572 4542",
+        telephone: "+971 52 775 6765",
         contactType: "careers",
-        email: "careers@oceanserenitygroup.com",
+        email: "info@knotandsail.com",
       },
     },
   };
@@ -34,10 +34,10 @@ const Careers = () => {
   return (
     <>
       <SEO
-        title="Careers - Join Our Team | ASP Global Marine Trading LLC"
-        description="Explore career opportunities at ASP Global Marine Trading LLC. Join our team of marine equipment experts in Dubai UAE. Sales, technical, procurement, and marketing positions available."
-        keywords="marine equipment careers, dubai marine jobs, marine engineer jobs, sales executive marine, procurement specialist marine, marketing coordinator marine, ASP Global Marine careers, marine industry jobs UAE"
-        canonicalUrl="https://aspglobalmarine.com/careers"
+        title="Careers - Join Our Team | Knot & Sail"
+        description="Explore career opportunities at Knot & Sail. Join our team of marine services experts in Dubai UAE. Technical, operations, and administrative positions available."
+        keywords="marine services careers, dubai marine jobs, marine technician jobs, hydro blasting jobs, tank cleaning jobs, marine painting jobs, Knot & Sail careers, marine industry jobs UAE"
+        canonicalUrl="https://knotandsail.com/careers"
         structuredData={structuredData}
       />
 

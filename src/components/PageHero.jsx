@@ -1,5 +1,5 @@
 /**
- * ASP Global Marine Trading LLC - Reusable PageHero Component
+ * Knot & Sail - Reusable PageHero Component
  *
  * Standardized attractive hero section for all pages (excluding Home)
  * Features: Gradient background, title, subtitle, badges

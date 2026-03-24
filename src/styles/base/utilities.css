@@ -1,8 +1,33 @@
 /**
- * ASP Global Marine Trading LLC - Utility Classes
+ * Knot & Sail - Utility Classes
  * 
  * Common utility classes for styling
  */
+
+/* Text colors */
+.text-white {
+  color: var(--white-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+.text-dark {
+  color: var(--text-dark);
+}
+
+.text-light {
+  color: var(--text-light);
+}
 
 /* Background colors */
 .bg-white {

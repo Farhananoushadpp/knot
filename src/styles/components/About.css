@@ -1,5 +1,5 @@
 /**
- * ASP Global Marine Trading LLC - About Component
+ * Knot & Sail - About Component Styles
  * 
  * Enhanced about section with comprehensive company information
  */
@@ -20,7 +20,7 @@
   bottom: 0;
   background: radial-gradient(
     circle at 10% 10%,
-    rgba(31, 175, 154, 0.05) 0%,
+    rgba(28, 112, 200, 0.05) 0%,
     transparent 50%
   );
   pointer-events: none;

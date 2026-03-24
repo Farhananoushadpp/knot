@@ -1,5 +1,5 @@
 /**
- * ASP Global Marine Trading LLC - Main App Component
+ * Knot & Sail - Main App Component
  *
  * Technology Stack:
  * - React 18 with functional components and hooks
@@ -22,6 +22,7 @@ import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import ProductsPage from "./pages/Products.jsx";
+import Services from "./pages/Services.jsx";
 import Contact from "./pages/Contact.jsx";
 import Careers from "./pages/Careers.jsx";
 
@@ -141,6 +142,9 @@ function App() {
 
               {/* About Us Route - Single Page */}
               <Route path="/about" element={<About />} />
+
+              {/* Services Route */}
+              <Route path="/services" element={<Services />} />
 
               {/* Products Routes - Main products page first */}
               <Route path="/products" element={<ProductsPage />} />

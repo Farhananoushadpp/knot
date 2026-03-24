@@ -1,5 +1,5 @@
 /**
- * ASP Global Marine Trading LLC - Home Page
+ * Knot & Sail - Home Page
  *
  * Comprehensive home page with multiple sections
  * Technology: React functional component with JSX
@@ -25,13 +25,13 @@ import { useState, useEffect } from "react";
 const Home = () => {
   // Card images for the carousel
   const cardImages = [
-    { id: 1, src: "/1.webp", title: "Marine Excellence" },
-    { id: 2, src: "/map.jpeg", title: "Global Operations" },
-    { id: 3, src: "/quality.jpg", title: "Quality Equipment" },
+    { id: 1, src: "/1.webp", title: "Knot & Sail Excellence" },
+    { id: 2, src: "/map.jpeg", title: "UAE Maritime Operations" },
+    { id: 3, src: "/quality.jpg", title: "Marine Solutions" },
     { id: 4, src: "/safety.webp", title: "Safety Standards" },
-    { id: 5, src: "/5.webp", title: "Technical Support" },
-    { id: 6, src: "/products/deck/1.webp", title: "Deck Solutions" },
-    { id: 7, src: "/products/enginestores/1.webp", title: "Engine Parts" },
+    { id: 5, src: "/5.webp", title: "Technical Expertise" },
+    { id: 6, src: "/products/deck/1.webp", title: "Marine Services" },
+    { id: 7, src: "/products/enginestores/1.webp", title: "Technical Support" },
     { id: 8, src: "/products/lsa&ffa/1.webp", title: "Safety Equipment" },
   ];
 
@@ -59,12 +59,12 @@ const Home = () => {
 
       {/* Who We Are Section - Same as About Page */}
       <section className="about-section" id="who-we-are">
-        <div className="container-full">
+        <div className="container">
           <div className="section-header">
             {/* <span className="section-label">Company Overview</span> */}
             <h2>Who We Are</h2>
             {/* <p>
-              Your trusted partner in marine and offshore solutions since 2006
+              Your trusted partner in marine and offshore solutions since 2001
             </p> */}
           </div>
 
@@ -93,27 +93,47 @@ const Home = () => {
                   />
                 ))}
               </div>
+              <p>
+                At Knot & Sail, our mission is to set a benchmark for excellence
+                in the UAE's maritime industry by combining innovation with a
+                customer-centric approach. We continuously invest in advanced
+                technology and industry best practices to ensure that we meet
+                and exceed our clients' expectations. As a company that values
+                long-term partnerships, we strive to be the preferred choice for
+                ship owners and managers seeking reliable and comprehensive
+                maritime solutions.
+              </p>
             </div>
             <div className="about-content-text">
-              <h3 className="about-subtitle">Marine Excellence Since 2021</h3>
+              <h3 className="about-subtitle">
+                Your Trusted Partner in the UAE Marine Industry
+              </h3>
               <div className="ocean-group-text-birds">
-                Part of Ocean Serenity Group
+                Premier Marine Service Provider
               </div>
               <p>
-                ASP Global Marine is a specialized marine and offshore product
-                solution provider delivering high-quality equipment, spare
-                parts, and consumables to vessels and offshore installations
-                worldwide. With a strong focus on operational reliability and
-                compliance requirements of the maritime industry, ASP Global
-                offers product solutions for equipment/mechanical systems,
-                safety items, deck/engine stores and engine spares.
+                Knot & Sail is a premier service provider in the UAE marine
+                market, offering a complete range of reliable and high-quality
+                solutions for ship owners and ship management companies. With a
+                strong presence across all UAE ports, we are committed to
+                delivering excellence in maritime services, ensuring vessels
+                operate smoothly, efficiently, and in compliance with
+                international standards. Our expertise spans across various
+                aspects of ship support, from maintenance and repairs to
+                logistics and technical assistance, making us a trusted partner
+                in the industry.
               </p>
               <p>
-                This is backed by extensive sourcing capabilities and technical
-                product knowledge, which enables ASP Global marine to serve
-                shipowners, ship managers, operators, and marine service
-                companies throughout the maritime sector.
+                Our company takes pride in its ability to provide tailored
+                solutions that cater to the unique needs of both local and
+                international clients. Backed by a team of experienced
+                professionals, we prioritize efficiency, safety, and
+                sustainability in every service we offer. Whether it's vessel
+                supply, engineering support, or regulatory compliance
+                assistance, Knot & Sail is dedicated to enhancing operational
+                performance and minimizing downtime for our clients.
               </p>
+
               <div className="about-cta">
                 <Link to="/products" className="btn btn-primary">
                   Explore our Products
@@ -124,236 +144,199 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          <div className="stats-section-modern">
+            <div className="stats-item-modern">
+              <div className="stats-number-modern">5+</div>
+              <div className="stats-label-modern">Years Experience</div>
+            </div>
+            <div className="stats-item-modern">
+              <div className="stats-number-modern">200+</div>
+              <div className="stats-label-modern">Global Clients</div>
+            </div>
+            <div className="stats-item-modern">
+              <div className="stats-number-modern">10+</div>
+              <div className="stats-label-modern">Countries Served</div>
+            </div>
+            <div className="stats-item-modern">
+              <div className="stats-number-modern">4200+</div>
+              <div className="stats-label-modern">Products</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Our Services Section - Professional Design */}
+      {/* Knot & Sail Services Section - Professional Design */}
       <section className="services-section-professional">
         <div className="container">
           <div className="services-header">
-            <h2 className="services-title">Our Services</h2>
+            <h2 className="services-title">Knot & Sail Services</h2>
             <p className="services-subtitle">
-              Comprehensive marine solutions for the global maritime industry
+              Professional marine solutions across all UAE ports
             </p>
           </div>
 
           <div className="services-grid-professional">
-            {/* 1. Engine Stores */}
+            {/* 1. Hydro Blasting */}
             <div className="service-card-professional">
               <div className="service-image-professional">
                 <img
-                  src="/spare.jpg"
-                  alt="Engine Stores"
+                  src="/knot and sail images/Asset 33.webp"
+                  alt="Hydro Blasting"
                   className="service-image-img"
                 />
               </div>
               <div className="service-content-professional">
-                <h3 className="service-title-professional">Engine Stores</h3>
+                <h3 className="service-title-professional">Hydro Blasting</h3>
                 <p className="service-desc-professional">
-                  Seals, Gaskets, Pumps, Tools, Testing Equipment, Safety Gear,
-                  Electrical, HVAC, and Maintenance Supplies.
+                  Eco-friendly high-pressure water jet cleaning for rust, paint,
+                  and contaminant removal. Ensures thorough surface preparation
+                  without damage to vessel structure.
                 </p>
               </div>
             </div>
 
-            {/* 2. Deck Stores */}
+            {/* 2. Tank Cleaning */}
             <div className="service-card-professional">
               <div className="service-image-professional">
                 <img
-                  src="/deckstore.webp"
-                  alt="Deck Stores"
-                  className="service-image-img"
-                />
-              </div>
-              <div className="service-content-professional">
-                <h3 className="service-title-professional">Deck Stores</h3>
-                <p className="service-desc-professional">
-                  Navigation & Lighting, Ropes & Chains, Deck Tools, Safety &
-                  Protection, Communication, Maintenance, Operations, and
-                  Environmental Systems.
-                </p>
-              </div>
-            </div>
-
-            {/* 3. Engine Spares */}
-            <div className="service-card-professional">
-              <div className="service-image-professional">
-                <img
-                  src="/enginespare.jpg"
-                  alt="Engine Spares"
-                  className="service-image-img"
-                />
-              </div>
-              <div className="service-content-professional">
-                <h3 className="service-title-professional">Engine Spares</h3>
-                <p className="service-desc-professional">
-                  Comprehensive range of engine spare parts for marine vessels
-                </p>
-              </div>
-            </div>
-
-            {/* 4. Turbo Charger */}
-            <div className="service-card-professional">
-              <div className="service-image-professional">
-                <img
-                  src="/cate3.jpg"
-                  alt="Turbo Charger"
-                  className="service-image-img"
-                />
-              </div>
-              <div className="service-content-professional">
-                <h3 className="service-title-professional">Turbo Charger</h3>
-                <p className="service-desc-professional">
-                  Marine turbocharger parts and complete units for optimal
-                  engine performance
-                </p>
-              </div>
-            </div>
-
-            {/* 5. Purifiers Parts */}
-            <div className="service-card-professional">
-              <div className="service-image-professional">
-                <img
-                  src="/cate9.jpg"
-                  alt="Purifiers Parts"
-                  className="service-image-img"
-                />
-              </div>
-              <div className="service-content-professional">
-                <h3 className="service-title-professional">Purifiers Parts</h3>
-                <p className="service-desc-professional">
-                  Oil and fuel purifier spare parts for Alfa Laval, Westfalia,
-                  and Mitsubishi
-                </p>
-              </div>
-            </div>
-
-            {/* 6. Air Compressor Parts */}
-            <div className="service-card-professional">
-              <div className="service-image-professional">
-                <img
-                  src="/cate7.jpg"
-                  alt="Air Compressor Parts"
+                  src="/knot and sail images/Asset 34.webp"
+                  alt="Tank Cleaning Service"
                   className="service-image-img"
                 />
               </div>
               <div className="service-content-professional">
                 <h3 className="service-title-professional">
-                  Air Compressor Parts
+                  Tank Cleaning Service
                 </h3>
                 <p className="service-desc-professional">
-                  Marine air compressor spare parts and complete unit supplies
+                  Professional cleaning of fuel tanks, ballast tanks, cargo
+                  tanks, and water tanks using advanced techniques for safety,
+                  efficiency, and regulatory compliance.
                 </p>
               </div>
             </div>
 
-            {/* 7. Hydraulic Spares */}
+            {/* 3. Antifouling Coating */}
             <div className="service-card-professional">
               <div className="service-image-professional">
                 <img
-                  src="/cate8.jpg"
-                  alt="Hydraulic Spares"
-                  className="service-image-img"
-                />
-              </div>
-              <div className="service-content-professional">
-                <h3 className="service-title-professional">Hydraulic Spares</h3>
-                <p className="service-desc-professional">
-                  Hydraulic pumps, motors, valves, and complete system spares
-                </p>
-              </div>
-            </div>
-
-            {/* 8. Boilers, Incinerators & Heat Exchangers */}
-            <div className="service-card-professional">
-              <div className="service-image-professional">
-                <img
-                  src="/cate6.webp"
-                  alt="Boilers, Incinerators & Heat Exchangers"
+                  src="/knot and sail images/Asset 35.webp"
+                  alt="Antifouling & Anticavitation Coating"
                   className="service-image-img"
                 />
               </div>
               <div className="service-content-professional">
                 <h3 className="service-title-professional">
-                  Boilers, Incinerators & Heat Exchangers
+                  Antifouling & Anticavitation Coating
                 </h3>
                 <p className="service-desc-professional">
-                  Complete units and spare parts for marine boilers,
-                  incinerators, and heat exchangers
+                  Advanced coating solutions to protect hull and propulsion
+                  systems from marine growth, corrosion, and cavitation damage
+                  for enhanced fuel efficiency.
                 </p>
               </div>
             </div>
 
-            {/* 9. Heat Exchanger Parts */}
+            {/* 4. Painting Works */}
             <div className="service-card-professional">
               <div className="service-image-professional">
                 <img
-                  src="/heat.webp"
-                  alt="Heat Exchanger Parts"
+                  src="/knot and sail images/Asset 37.webp"
+                  alt="Painting Works"
+                  className="service-image-img"
+                />
+              </div>
+              <div className="service-content-professional">
+                <h3 className="service-title-professional">Painting Works</h3>
+                <p className="service-desc-professional">
+                  Comprehensive painting solutions from surface preparation to
+                  final coating using top-grade materials and latest application
+                  techniques.
+                </p>
+              </div>
+            </div>
+
+            {/* 5. Steel Fabrication */}
+            <div className="service-card-professional">
+              <div className="service-image-professional">
+                <img
+                  src="/knot and sail images/Asset 38.webp"
+                  alt="Steel Fabrication & Pipe Welding"
                   className="service-image-img"
                 />
               </div>
               <div className="service-content-professional">
                 <h3 className="service-title-professional">
-                  Heat Exchanger Parts
+                  Steel Fabrication & Pipe Welding
                 </h3>
                 <p className="service-desc-professional">
-                  Plates, gaskets, and complete heat exchanger unit supplies
+                  Specialized steel fabrication and pipe welding services using
+                  TIG, MIG, and ARC welding techniques for hull repairs and
+                  structural modifications.
                 </p>
               </div>
             </div>
 
-            {/* 10. Pump Spares */}
+            {/* 6. Technical Manpower */}
             <div className="service-card-professional">
               <div className="service-image-professional">
                 <img
-                  src="/cate4.jpg"
-                  alt="Pump Spares"
+                  src="/knot and sail images/Asset 39.webp"
+                  alt="Technical Manpower Supply"
                   className="service-image-img"
                 />
               </div>
               <div className="service-content-professional">
-                <h3 className="service-title-professional">Pump Spares</h3>
+                <h3 className="service-title-professional">
+                  Technical Manpower Supply
+                </h3>
                 <p className="service-desc-professional">
-                  Centrifugal, gear, and bilge pump spare parts for all marine
-                  applications
+                  Certified marine professionals including mechanical fitters,
+                  welders, electricians, and technicians for reliable workforce
+                  solutions.
                 </p>
               </div>
             </div>
 
-            {/* 11. HVAC Compressor */}
+            {/* 7. Riding Squad Services */}
             <div className="service-card-professional">
               <div className="service-image-professional">
                 <img
-                  src="/cate5.webp"
-                  alt="HVAC Compressor"
+                  src="/knot and sail images/Asset 40.webp"
+                  alt="Riding Squad Services"
                   className="service-image-img"
                 />
               </div>
               <div className="service-content-professional">
-                <h3 className="service-title-professional">HVAC Compressor</h3>
+                <h3 className="service-title-professional">
+                  Riding Squad Services
+                </h3>
                 <p className="service-desc-professional">
-                  Marine HVAC compressor parts and complete refrigeration unit
-                  supplies
+                  Global riding squad support for maintenance and repairs during
+                  voyages to reduce downtime and maintain class and CAP
+                  standards.
                 </p>
               </div>
             </div>
 
-            {/* 12. LSA/FFA Products */}
+            {/* 8. Quality Assurance */}
             <div className="service-card-professional">
               <div className="service-image-professional">
                 <img
-                  src="/lsa.jpg"
-                  alt="LSA/FFA Products"
+                  src="/knot and sail images/Asset 41.webp"
+                  alt="Quality & Safety Compliance"
                   className="service-image-img"
                 />
               </div>
               <div className="service-content-professional">
-                <h3 className="service-title-professional">LSA/FFA Products</h3>
+                <h3 className="service-title-professional">
+                  Quality & Safety Compliance
+                </h3>
                 <p className="service-desc-professional">
-                  Life Saving Appliances, Fire Fighting Equipment, Safety
-                  Signage, EEBD, PPE, Pyrotechnic Equipment, and Marine Safety
-                  Training.
+                  Strict adherence to international maritime standards with
+                  comprehensive safety protocols and continuous improvement
+                  practices.
                 </p>
               </div>
             </div>

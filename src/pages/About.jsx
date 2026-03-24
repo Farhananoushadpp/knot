@@ -1,5 +1,5 @@
 /**
- * ASP Global Marine Trading LLC - About Us Page (Single Page)
+ * Knot & Sail - About Us Page (Single Page)
  *
  * Comprehensive About Us page with all sections
  * No sub-pages - single scrollable page design
@@ -21,6 +21,7 @@ import {
   Settings,
   Wrench,
   MessageSquare,
+  Package,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -32,23 +33,23 @@ const About = () => {
     {
       id: 1,
       image: "/about1.webp",
-      heading: "Global Marine Excellence",
+      heading: "Knot & Sail Maritime Excellence",
       description:
-        "Delivering world-class marine equipment and spare parts to vessels across 50+ countries with unmatched reliability and technical expertise.",
+        "Your premier partner in the UAE's maritime industry, delivering comprehensive marine solutions with unmatched expertise and commitment to operational excellence.",
     },
     {
       id: 2,
       image: "/about2.webp",
-      heading: "Trusted Industry Partner",
+      heading: "Trusted Maritime Solutions Provider",
       description:
-        "Serving 500+ global clients since 2006 with ISO 9001:2015 certified quality management and SOLAS compliant safety standards.",
+        "Setting the benchmark for excellence in the UAE's maritime industry through innovation, customer-centric approach, and long-term partnerships with ship owners and managers.",
     },
     {
       id: 3,
       image: "/about3.webp",
-      heading: "Comprehensive Solutions",
+      heading: "Comprehensive Marine Services",
       description:
-        "From engine spares to safety equipment, we provide 9500+ products ensuring your vessels operate at peak performance worldwide.",
+        "From technical manpower supply to specialized marine services, we provide reliable solutions that enhance operational performance and minimize downtime for your vessels.",
     },
   ];
 
@@ -79,13 +80,13 @@ const About = () => {
 
   // Card images for the carousel
   const cardImages = [
-    { id: 1, src: "/1.webp", title: "Marine Excellence" },
-    { id: 2, src: "/2.webp", title: "Global Operations" },
-    { id: 3, src: "/3.webp", title: "Quality Equipment" },
+    { id: 1, src: "/1.webp", title: "Knot & Sail Excellence" },
+    { id: 2, src: "/2.webp", title: "UAE Maritime Operations" },
+    { id: 3, src: "/3.webp", title: "Marine Solutions" },
     { id: 4, src: "/4.webp", title: "Safety Standards" },
-    { id: 5, src: "/5.webp", title: "Technical Support" },
-    { id: 6, src: "/products/deck/1.webp", title: "Deck Solutions" },
-    { id: 7, src: "/products/enginestores/1.webp", title: "Engine Parts" },
+    { id: 5, src: "/5.webp", title: "Technical Expertise" },
+    { id: 6, src: "/products/deck/1.webp", title: "Marine Services" },
+    { id: 7, src: "/products/enginestores/1.webp", title: "Technical Support" },
     { id: 8, src: "/products/lsa&ffa/1.webp", title: "Safety Equipment" },
   ];
 
@@ -216,27 +217,50 @@ const About = () => {
                   />
                 ))}
               </div>
+              <div>
+                <p>
+                  At Knot & Sail, our mission is to set a benchmark for
+                  excellence in the UAE's maritime industry by combining
+                  innovation with a customer-centric approach. We continuously
+                  invest in advanced technology and industry best practices to
+                  ensure that we meet and exceed our clients' expectations. As a
+                  company that values long-term partnerships, we strive to be
+                  the preferred choice for ship owners and managers seeking
+                  reliable and comprehensive maritime solutions.
+                </p>
+              </div>
             </div>
+
             <div className="about-content-text">
-              <h3 className="about-subtitle">Marine Excellence Since 2021</h3>
+              <h3 className="about-subtitle">
+                Your Trusted Partner in the UAE Marine Industry
+              </h3>
               <div className="ocean-group-text-birds">
-                Part of Ocean Serenity Group
+                Premier Marine Service Provider
               </div>
               <p>
-                ASP Global Marine is a specialized marine and offshore product
-                solution provider delivering high-quality equipment, spare
-                parts, and consumables to vessels and offshore installations
-                worldwide. With a strong focus on operational reliability and
-                compliance requirements of the maritime industry, ASP Global
-                offers product solutions for equipment/mechanical systems,
-                safety items, deck/engine stores and engine spares.
+                Knot & Sail is a premier service provider in the UAE marine
+                market, offering a complete range of reliable and high-quality
+                solutions for ship owners and ship management companies. With a
+                strong presence across all UAE ports, we are committed to
+                delivering excellence in maritime services, ensuring vessels
+                operate smoothly, efficiently, and in compliance with
+                international standards. Our expertise spans across various
+                aspects of ship support, from maintenance and repairs to
+                logistics and technical assistance, making us a trusted partner
+                in the industry.
               </p>
               <p>
-                This is backed by extensive sourcing capabilities and technical
-                product knowledge, which enables ASP Global marine to serve
-                shipowners, ship managers, operators, and marine service
-                companies throughout the maritime sector.
+                Our company takes pride in its ability to provide tailored
+                solutions that cater to the unique needs of both local and
+                international clients. Backed by a team of experienced
+                professionals, we prioritize efficiency, safety, and
+                sustainability in every service we offer. Whether it's vessel
+                supply, engineering support, or regulatory compliance
+                assistance, Knot & Sail is dedicated to enhancing operational
+                performance and minimizing downtime for our clients.
               </p>
+
               <div className="about-cta">
                 <Link to="/products" className="btn btn-primary">
                   Explore our Products
@@ -287,10 +311,13 @@ const About = () => {
               <div className="mission-content-modern">
                 <h3 className="mission-title-modern">Our Mission</h3>
                 <p className="mission-desc-modern">
-                  To deliver accurate, reliable, and compliant marine solutions
-                  at the right time, every time. We focus on operational
-                  reliability, technical compliance, and long-term client
-                  partnerships.
+                  At Knot & Sail, our mission is to provide reliable,
+                  high-quality, and cost-effective marine solutions to ship
+                  owners and management companies across all UAE ports. We are
+                  committed to ensuring seamless operations through expert
+                  services, innovative technology, and round-the-clock support,
+                  delivering excellence in every aspect of the maritime
+                  industry.
                 </p>
               </div>
             </div>
@@ -302,9 +329,12 @@ const About = () => {
               <div className="vision-content-modern">
                 <h3 className="vision-title-modern">Our Vision</h3>
                 <p className="vision-desc-modern">
-                  To become a globally trusted marine supply partner known for
-                  technical excellence and operational reliability, serving
-                  clients worldwide with unparalleled expertise.
+                  Our vision is to be the leading marine service provider in the
+                  UAE, setting the benchmark for quality, efficiency, and
+                  customer satisfaction. We aim to build long-term partnerships
+                  with local and international clients by continuously enhancing
+                  our capabilities, adopting sustainable practices, and staying
+                  ahead in the ever-evolving maritime industry.
                 </p>
               </div>
             </div>
@@ -313,48 +343,168 @@ const About = () => {
       </section>
 
       {/* Quality Policy */}
-      {/* <section id="quality-policy">
-          <div className="std-container">
-            <div className="quality-header">
-              <span className="section-label">Commitment</span>
-              <h2 className="section-title">Quality Policy</h2>
-              <p className="section-subtitle">
-                Our dedication to excellence in every aspect of our operations
-              </p>
+      <section className="why-choose-modern">
+        <div className="container">
+          <div className="why-header-modern">
+            <h2 className="why-title-modern">Quality Policy</h2>
+            <p className="why-subtitle-modern">
+              Our dedication to excellence in every aspect of our operations
+            </p>
+          </div>
+
+          <div className="why-grid-modern">
+            <div className="why-card-modern">
+              <div className="quality-icon">
+                <Users size={36} />
+              </div>
+              <div className="why-content-modern">
+                <h3>Customer Satisfaction</h3>
+                <p>
+                  We prioritize client needs by delivering tailored,
+                  high-quality services that ensure operational efficiency and
+                  vessel performance.
+                </p>
+              </div>
             </div>
-            <div className="quality-content">
-              <p className="quality-statement">
-                ASP Global Marine is committed to delivering accurate, reliable,
-                and compliant marine solutions at the right time, every time.
-                Our quality management system ensures all products and services
-                meet the highest standards.
-              </p>
-              <div className="quality-grid">
-                <div className="quality-card">
-                  <div className="quality-icon">
-                    <Users size={36} />
-                  </div>
-                  <h3>Customer Focus</h3>
-                  <p>Exceeding expectations through dedicated service</p>
-                </div>
-                <div className="quality-card">
-                  <div className="quality-icon">
-                    <CheckCircle size={36} />
-                  </div>
-                  <h3>Compliance Excellence</h3>
-                  <p>Meeting international maritime standards</p>
-                </div>
-                <div className="quality-card">
-                  <div className="quality-icon">
-                    <Shield size={36} />
-                  </div>
-                  <h3>Reliability Assurance</h3>
-                  <p>Consistent performance and product quality</p>
-                </div>
+
+            <div className="why-card-modern">
+              <div className="quality-icon">
+                <CheckCircle size={36} />
+              </div>
+              <div className="why-content-modern">
+                <h3>Compliance & Standards</h3>
+                <p>
+                  We adhere to local and international maritime regulations,
+                  ensuring our services meet industry best practices.
+                </p>
+              </div>
+            </div>
+
+            <div className="why-card-modern">
+              <div className="why-icon-modern">
+                <Settings size={48} />
+              </div>
+              <div className="why-content-modern">
+                <h3>Skilled Workforce</h3>
+                <p>
+                  Our team consists of highly trained professionals who use
+                  advanced technology and the latest techniques to maintain
+                  excellence.
+                </p>
+              </div>
+            </div>
+
+            <div className="why-card-modern">
+              <div className="why-icon-modern">
+                <Anchor size={48} />
+              </div>
+              <div className="why-content-modern">
+                <h3>Continuous Improvement</h3>
+                <p>
+                  We regularly evaluate and enhance our processes to improve
+                  service quality, efficiency, and environmental responsibility.
+                </p>
+              </div>
+            </div>
+
+            <div className="why-card-modern">
+              <div className="why-icon-modern">
+                <Package size={48} />
+              </div>
+              <div className="why-content-modern">
+                <h3>Safety & Sustainability</h3>
+                <p>
+                  We implement strict safety protocols and use eco-friendly
+                  solutions to minimize our environmental impact.
+                </p>
               </div>
             </div>
           </div>
-        </section> */}
+        </div>
+      </section>
+
+      {/* Safety Policy */}
+      <section className="why-choose-modern">
+        <div className="container">
+          <div className="why-header-modern">
+            <h2 className="why-title-modern">Safety Policy</h2>
+            <p className="why-subtitle-modern">
+              Our unwavering commitment to safety in all operations
+            </p>
+          </div>
+
+          <div className="why-grid-modern">
+            <div className="why-card-modern">
+              <div className="quality-icon">
+                <ShieldCheck size={36} />
+              </div>
+              <div className="why-content-modern">
+                <h3>Zero Tolerance for Safety Violations</h3>
+                <p>
+                  We uphold a strict zero-tolerance approach toward any actions
+                  or practices that compromise safety standards.
+                </p>
+              </div>
+            </div>
+
+            <div className="why-card-modern">
+              <div className="quality-icon">
+                <Users size={36} />
+              </div>
+              <div className="why-content-modern">
+                <h3>Employee Training & Awareness</h3>
+                <p>
+                  We provide ongoing training and development to all employees,
+                  ensuring they are equipped with the necessary skills and
+                  knowledge to work safely.
+                </p>
+              </div>
+            </div>
+
+            <div className="why-card-modern">
+              <div className="quality-icon">
+                <Target size={36} />
+              </div>
+              <div className="why-content-modern">
+                <h3>Risk Assessment & Mitigation</h3>
+                <p>
+                  Before beginning any service, we conduct thorough risk
+                  assessments to identify potential hazards and implement
+                  effective mitigation measures.
+                </p>
+              </div>
+            </div>
+
+            <div className="why-card-modern">
+              <div className="quality-icon">
+                <CheckCircle size={36} />
+              </div>
+              <div className="why-content-modern">
+                <h3>Compliance with Regulations</h3>
+                <p>
+                  Our services are fully compliant with local and international
+                  safety regulations, ensuring that we meet or exceed all legal
+                  requirements.
+                </p>
+              </div>
+            </div>
+
+            <div className="why-card-modern">
+              <div className="quality-icon">
+                <TrendingUp size={36} />
+              </div>
+              <div className="why-content-modern">
+                <h3>Continuous Safety Improvement</h3>
+                <p>
+                  We continuously review and enhance our safety procedures to
+                  stay ahead of potential risks and maintain a proactive safety
+                  culture.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Clients We Serve - Modern Design */}
       <section className="clients-modern" id="clients">
@@ -428,7 +578,7 @@ const About = () => {
       </section>
 
       {/* Our Valued Clients - Modern Design */}
-      <section className="valued-clients-modern" id="client-logos">
+      {/* <section className="valued-clients-modern" id="client-logos">
         <div className="container">
           <div className="valued-clients-header-modern">
             <h2 className="valued-clients-title-modern">Our Valued Clients</h2>
@@ -441,23 +591,23 @@ const About = () => {
           <div className="client-logos-slider-modern">
             <div className="client-logos-track-modern">
               {/* Generate all numbered client logos dynamically */}
-              {Array.from({ length: 47 }, (_, i) => i + 1).map((num) => (
+      {/* {Array.from({ length: 47 }, (_, i) => i + 1).map((num) => (
                 <div key={num} className="client-logo-item-modern">
                   <img
                     src={`/Client%20Logo/Asset%20${num}.webp`}
                     alt={`Client Logo ${num}`}
                   />
                 </div>
-              ))}
-              {/* Add the special logo */}
-              <div className="client-logo-item-modern">
+              ))} */}
+      {/* Add the special logo */}
+      {/* <div className="client-logo-item-modern">
                 <img
                   src="/Client%20Logo/TovXkH.webp"
                   alt="Client Logo Special"
                 />
-              </div>
-              {/* Duplicate set for seamless loop */}
-              {Array.from({ length: 47 }, (_, i) => i + 1).map((num) => (
+              </div> */}
+      {/* Duplicate set for seamless loop */}
+      {/* {Array.from({ length: 47 }, (_, i) => i + 1).map((num) => (
                 <div
                   key={`duplicate-${num}`}
                   className="client-logo-item-modern"
@@ -467,9 +617,9 @@ const About = () => {
                     alt={`Client Logo ${num}`}
                   />
                 </div>
-              ))}
-              {/* Duplicate the special logo */}
-              <div className="client-logo-item-modern">
+              ))} */}
+      {/* Duplicate the special logo */}
+      {/* <div className="client-logo-item-modern">
                 <img
                   src="/Client%20Logo/TovXkH.webp"
                   alt="Client Logo Special"
@@ -478,10 +628,10 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Message from Management */}
-      <section id="message">
+      {/* <section id="message">
         <div className="std-container">
           <div className="section-title-center">
             <MessageSquare size={32} />
@@ -512,7 +662,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

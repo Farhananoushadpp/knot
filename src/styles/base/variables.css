@@ -1,81 +1,81 @@
 /**
- * ASP Global Marine Trading LLC - CSS Variables
+ * Knot & Sail - CSS Variables
  * 
  * Deep Ocean Corporate Theme - Best for ASP
  * Theme: Deep Ocean Corporate (Maritime Industrial)
  */
 
 :root {
-  /* 🌊 Oceanic Deep Blue Theme */
+  /* 🌊 New Ocean Blue Theme */
   /* Primary Colors */
-  --primary-color: #0b3c5d; /* Deep Ocean Blue */
-  --primary-dark: #082d47;
-  --primary-light: #0d4a73;
+  --primary-color: #01013f; /* Deep Navy Blue */
+  --primary-dark: #01013f;
+  --primary-light: #030c54;
 
   /* Secondary Colors */
-  --secondary-color: #0f4c75; /* Navy Blue */
-  --secondary-dark: #0c3d5e;
-  --secondary-light: #12608f;
+  --secondary-color: #030c54; /* Dark Navy */
+  --secondary-dark: #030c54;
+  --secondary-light: #022f8e;
 
   /* Accent Colors */
-  --accent-color: #1f6f8b; /* Ocean Blue */
-  --accent-dark: #195a72;
-  --accent-light: #2582a0;
+  --accent-color: #1c70c8; /* Ocean Blue */
+  --accent-dark: #1c70c8;
+  --accent-light: #51a2d5;
 
   /* Interactive States */
-  --hover-color: #4fa3c7; /* Sea Blue */
-  --hover-dark: #3d8fb3;
-  --hover-light: #61b7d4;
+  --hover-color: #51a2d5; /* Light Ocean Blue */
+  --hover-dark: #1c70c8;
+  --hover-light: #7dbcde;
 
   /* Light / Background Colors */
-  --light-bg: #87c7e0; /* Soft Sky Blue */
-  --light-bg-dark: #6ebad6;
-  --light-bg-light: #9ed4e9;
+  --light-bg: #7dbcde; /* Soft Sky Blue */
+  --light-bg-dark: #51a2d5;
+  --light-bg-light: #a8d5e8;
 
   /* Text Colors */
-  --text-light: #eaf6fb; /* Mist White */
-  --text-dark: #0b3c5d; /* Deep Ocean for light backgrounds */
+  --text-light: #f8fafc; /* Light Gray White */
+  --text-dark: #01013f; /* Deep Navy for light backgrounds */
 
   /* Background Colors */
-  --background-dark: #0f4c75;
-  --background-light: #87c7e0;
+  --background-dark: #030c54;
+  --background-light: #7dbcde;
   --white-color: #ffffff;
 
-  /* 🔥 Oceanic Gradients */
-  --ocean-gradient: linear-gradient(180deg, #0b3c5d, #1f6f8b, #87c7e0);
-  --ocean-gradient-reverse: linear-gradient(180deg, #87c7e0, #1f6f8b, #0b3c5d);
+  /* 🔥 New Ocean Blue Gradients */
+  --ocean-gradient: linear-gradient(180deg, #01013f, #030c54, #1c70c8);
+  --ocean-gradient-reverse: linear-gradient(180deg, #7dbcde, #51a2d5, #022f8e);
   --primary-gradient: linear-gradient(
     135deg,
-    #0b3c5d 0%,
-    #0f4c75 50%,
-    #1f6f8b 100%
+    #01013f 0%,
+    #030c54 50%,
+    #022f8e 100%
   );
-  --accent-gradient: linear-gradient(135deg, #1f6f8b 0%, #4fa3c7 100%);
+  --accent-gradient: linear-gradient(135deg, #1c70c8 0%, #51a2d5 100%);
   --hero-gradient: linear-gradient(
     135deg,
-    #0b3c5d 0%,
-    #1f6f8b 50%,
-    #87c7e0 100%
+    #01013f 0%,
+    #022f8e 50%,
+    #7dbcde 100%
   );
 
-  /* 🎯 Table & Card Colors - Ocean Theme */
-  --table-header-bg: #0c4a6e; /* Deep ocean blue */
-  --table-header-text: #f0f9ff; /* Ocean foam white */
-  --table-border: #bae6fd; /* Light ocean blue */
-  --table-row-alt: #f0f9ff; /* Very light ocean */
+  /* 🎯 Table & Card Colors - New Ocean Theme */
+  --table-header-bg: #030c54; /* Deep navy blue */
+  --table-header-text: #f8fafc; /* Light gray white */
+  --table-border: #7dbcde; /* Light ocean blue */
+  --table-row-alt: #f8fafc; /* Very light ocean */
   --card-bg: #ffffff;
   --card-shadow:
-    0 4px 6px -1px rgba(10, 22, 40, 0.1), 0 2px 4px -1px rgba(10, 22, 40, 0.06);
-  --card-border: rgba(14, 116, 144, 0.1);
+    0 4px 6px -1px rgba(1, 1, 63, 0.1), 0 2px 4px -1px rgba(1, 1, 63, 0.06);
+  --card-border: rgba(28, 112, 200, 0.1);
 
-  /* 🎨 Hover States - Ocean */
-  --hover-primary: #070f1a;
-  --hover-secondary: #093654;
-  --hover-accent: #0d9488;
-  --hover-bg: #e0f2fe;
-  --hover-ocean: #bae6fd;
+  /* 🎨 Hover States - New Ocean */
+  --hover-primary: #01013f;
+  --hover-secondary: #030c54;
+  --hover-accent: #1c70c8;
+  --hover-bg: #f0f9ff;
+  --hover-ocean: #7dbcde;
 
-  /* Typography - Professional Font Stack for Maritime Corporate */
+  /* Knot & Sail - Enhanced Typography - Professional Font Stack for Maritime Corporate */
   --font-family:
     "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-family-heading:
@@ -117,13 +117,13 @@
   --radius-2xl: 24px;
   --radius-full: 50%;
 
-  /* Shadows - Ocean tinted */
-  --shadow-sm: 0 1px 2px rgba(10, 22, 40, 0.05);
-  --shadow-md: 0 4px 6px rgba(10, 22, 40, 0.08);
-  --shadow-lg: 0 10px 15px rgba(10, 22, 40, 0.1);
-  --shadow-xl: 0 20px 25px rgba(10, 22, 40, 0.12);
-  --shadow-primary: 0 10px 25px rgba(10, 22, 40, 0.2);
-  --shadow-ocean: 0 8px 30px rgba(14, 116, 144, 0.25);
+  /* Shadows - New Ocean tinted */
+  --shadow-sm: 0 1px 2px rgba(1, 1, 63, 0.05);
+  --shadow-md: 0 4px 6px rgba(1, 1, 63, 0.08);
+  --shadow-lg: 0 10px 15px rgba(1, 1, 63, 0.1);
+  --shadow-xl: 0 20px 25px rgba(1, 1, 63, 0.12);
+  --shadow-primary: 0 10px 25px rgba(1, 1, 63, 0.2);
+  --shadow-ocean: 0 8px 30px rgba(28, 112, 200, 0.25);
 
   /* Transitions - Smooth */
   --transition-fast: 0.2s ease;

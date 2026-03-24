@@ -646,7 +646,7 @@
   width: 56px;
   height: 56px;
   margin: 0 auto 1rem;
-  background: linear-gradient(135deg, #0d3a5c 0%, #0c4b65 100%);
+  background: linear-gradient(135deg, #01013f 0%, #022f8e 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -3779,16 +3779,18 @@
 /* Image Carousel */
 .about-image-carousel {
   position: relative;
-  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(27, 95, 156, 0.15);
-  background: #ffffff;
+  box-shadow: none;
+  padding: auto;
+  background: transparent;
 }
 
 .carousel-container {
   position: relative;
   height: 400px;
   overflow: hidden;
+  padding: 2rem;
+  margin-bottom: 1rem;
 }
 
 .about-carousel-slide {
@@ -3862,7 +3864,7 @@
 .about-subtitle {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #0d3a5c;
+  color: #01013f;
   margin-bottom: 0;
   position: relative;
   padding-bottom: 0;
@@ -3875,7 +3877,7 @@
   left: 0;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #1b5f9c 0%, #3b7eb7 100%);
+  background: linear-gradient(90deg, #01013f 0%, #51a2d5 100%);
   border-radius: 2px;
 }
 
@@ -3902,24 +3904,24 @@
 }
 
 .about-cta .btn-primary {
-  background: linear-gradient(135deg, #0b3c5d 0%, #1f6f8b 100%);
+  background: linear-gradient(135deg, #01013f 0%, #51a2d5 100%);
   color: #ffffff;
 }
 
 .about-cta .btn-primary:hover {
   transform: none;
   box-shadow: none;
-  background: linear-gradient(135deg, #0b3c5d 0%, #1f6f8b 100%);
+  background: linear-gradient(135deg, #01013f 0%, #51a2d5 100%);
 }
 
 .about-cta .btn-outline {
-  border: 2px solid #0b3c5d;
-  color: #0b3c5d;
+  border: 2px solid #01013f;
+  color: #01013f;
   background: transparent;
 }
 
 .about-cta .btn-outline:hover {
-  background: linear-gradient(135deg, #0b3c5d 0%, #1f6f8b 100%);
+  background: linear-gradient(135deg, #01013f 0%, #51a2d5 100%);
   color: #ffffff;
   border-color: #0b3c5d;
   transform: none;
@@ -4041,7 +4043,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), #2abaa3);
+  background: linear-gradient(90deg, var(--primary-color), #1c70c8);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -4074,7 +4076,7 @@
   transform: translateX(-50%);
   width: 40px;
   height: 3px;
-  background: linear-gradient(90deg, var(--primary-color), #2abaa3);
+  background: linear-gradient(90deg, var(--primary-color), #1c70c8);
   border-radius: 2px;
 }
 
@@ -4212,7 +4214,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), #2abaa3);
+  background: linear-gradient(90deg, var(--primary-color), #1c70c8);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -4582,7 +4584,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), #2abaa3);
+  background: linear-gradient(90deg, var(--primary-color), #1c70c8);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }

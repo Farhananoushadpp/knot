@@ -1,5 +1,5 @@
 /**
- * ASP Global Marine Trading LLC - Ocean Wave Hero Section
+ * Knot & Sail - Ocean Wave Hero Section
  *
  * Modern hero design with ocean wave SVG background
  * Floating ship/anchor animations
@@ -96,28 +96,29 @@ const Hero = () => {
         <div className={`hero-content ${isVisible ? "visible" : ""}`}>
           {/* Tagline - First in order */}
           <h1 className="hero-headline">
-            &quot;Driven by Quality. Propelled by Trust.&quot;
+            &quot;Delivering Expectations for Every Voyage&quot;
           </h1>
 
           {/* Modern Description Card - Second */}
           <div className="hero-description-card">
             <p className="hero-description">
-              Premium marine equipment, genuine spare parts, and comprehensive
-              logistics solutions for the global maritime industry.
+              Premier marine solutions and technical manpower supply in the UAE,
+              setting benchmarks for excellence in the maritime industry through
+              innovation and customer-centric approach.
             </p>
           </div>
 
           {/* Modern Subtitle - Third */}
           <div className="hero-subtitle-wrapper">
             <span className="accent-line"></span>
-            <p className="hero-subtitle">Global Marine Solutions Provider</p>
+            <p className="hero-subtitle">UAE Maritime Industry Leader</p>
             <span className="accent-line"></span>
           </div>
 
           {/* Professional Trust Indicators - Fifth */}
           <div className="hero-trust-indicators">
-            <span className="trust-badge">ISO 9001:2015</span>
-            <span className="trust-badge">Global Network</span>
+            <span className="trust-badge">Technical Excellence</span>
+            <span className="trust-badge">UAE Maritime Focus</span>
             <span className="trust-badge">24/7 Support</span>
           </div>
 

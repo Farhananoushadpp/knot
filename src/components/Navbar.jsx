@@ -36,17 +36,17 @@ const Navbar = () => {
           <Link to="/" className="logo-link">
             <img
               src="/logo.webp"
-              alt="ASP Global Marine Trading LLC"
+              alt="Knot & Sail"
               className="logo-image logo-first"
             />
           </Link>
-          <Link to="/" className="logo-link">
+          {/* <Link to="/" className="logo-link">
             <img
               src="/asp.webp"
-              alt="ASP Global Marine Trading LLC"
+              alt="Knot & Sail"
               className="logo-image logo-second"
             />
-          </Link>
+          </Link> */}
         </div>
         {/* <img src="/asplogo.svg" alt="ASP Global Marine Trading LLC" /> */}
         {/* <div className="nav-branding">
@@ -74,7 +74,16 @@ const Navbar = () => {
                 <span className="nav-text">About Us</span>
               </Link>
             </li>
-            <li
+            <li>
+              <Link
+                to="/services"
+                className={`nav-link ${isActive("/services") ? "active" : ""}`}
+                onClick={closeMenu}
+              >
+                <span className="nav-text">Services</span>
+              </Link>
+            </li>
+            {/* <li
               className={`nav-dropdown ${productsDropdownOpen ? "active" : ""}`}
             >
               <button
@@ -177,8 +186,8 @@ const Navbar = () => {
                   LSA & FFA (Life-Saving & Fire-Fighting Equipment)
                 </Link>
               </div>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link
                 to="/authorizations"
                 className={`nav-link ${isActive("/authorizations") ? "active" : ""}`}
@@ -186,7 +195,7 @@ const Navbar = () => {
               >
                 <span className="nav-text">Authorizations</span>
               </Link>
-            </li>
+            </li> */}
             <li>
               {/* <Link
                 to="/certifications"

@@ -1,5 +1,5 @@
 /**
- * ASP Global Marine Trading LLC - Footer Section
+ * Knot & Sail - Footer Section
  *
  * Modern footer design with ocean wave SVG
  * Newsletter subscription and maritime theme
@@ -49,25 +49,26 @@ const Footer = () => {
             <div className="footer-logo">
               <img
                 src="/logo.webp"
-                alt="ASP Global Marine Trading LLC"
+                alt="Knot & Sail"
                 className="footer-logo-image footer-logo-first"
               />
-              <img
+              {/* <img
                 src="/asp.webp"
-                alt="ASP Global Marine Trading LLC"
+                alt="Knot & Sail"
                 className="footer-logo-image footer-logo-second"
-              />
+              /> */}
             </div>
             <p className="footer-description">
-              Specialized marine and offshore product solution provider
-              delivering high-quality equipment and spare parts worldwide.
+              Specialized marine service provider delivering high-quality
+              solutions for ship owners and management companies across all UAE
+              ports.
             </p>
             <p className="footer-headline">
-              &quot;Driven by Quality. Propelled by Trust.&quot;
+              &quot;Delivering Expectations for Every Voyage&quot;
             </p>
             <div className="footer-social">
               <a
-                href="https://www.facebook.com/aspglobalmarine/"
+                href="https://www.facebook.com/knotandsail/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
@@ -82,7 +83,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://www.linkedin.com/company/asp-global-marine-trading/"
+                href="https://www.linkedin.com/company/knot-and-sail/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
@@ -97,7 +98,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/aspglobalmarine?utm_source=qr&igsh=MXRwdG5yYjR6Znd5ag=="
+                href="https://www.instagram.com/knotandsail"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
@@ -112,7 +113,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://x.com/aspglobalmarine"
+                href="https://x.com/knotandsail"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
@@ -138,8 +139,8 @@ const Footer = () => {
                 <a href="/about" className="footer-link">
                   About Us
                 </a>
-                <a href="/products" className="footer-link">
-                  Products
+                <a href="/services" className="footer-link">
+                  Services
                 </a>
                 <a href="/careers" className="footer-link">
                   Careers
@@ -168,19 +169,28 @@ const Footer = () => {
                 <address>
                   Xavier Business Center
                   <br />
-                  Office Suite A5-18
+                  Office Suite No: A5 - 18
                   <br />
-                  Dubai, UAE
+                  Dubai - UAE
                 </address>
                 <div className="footer-contact-details">
-                  <a href="tel:+97145724542" className="footer-contact-link">
-                    +971 4 572 4542
+                  <a href="tel:+971527756765" className="footer-contact-link">
+                    +971 52 775 6765
+                  </a>
+                  <a href="tel:+971581464580" className="footer-contact-link">
+                    +971 58 146 4580
                   </a>
                   <a
-                    href="mailto:info@aspglobalmarine.com"
+                    href="mailto:info@knotandsail.com"
                     className="footer-contact-link"
                   >
-                    info@aspglobalmarine.com
+                    info@knotandsail.com
+                  </a>
+                  <a
+                    href="mailto:operation@knotandsail.com"
+                    className="footer-contact-link"
+                  >
+                    operation@knotandsail.com
                   </a>
                 </div>
               </div>
@@ -192,7 +202,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <p className="copyright">
-              Copyright © asp | Designed by{" "}
+              Copyright © Knot & Sail | Designed by{" "}
               <a
                 href="https://tarah.ae/"
                 target="_blank"
