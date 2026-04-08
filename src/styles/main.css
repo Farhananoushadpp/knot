@@ -1,15 +1,16 @@
 /**
- * ASP Global Marine Trading LLC - Enhanced Main CSS File
+ * Ocean Infinity - Enhanced Main CSS File
  * 
  * Modern animations, micro-interactions, and improved visual hierarchy
+ * Ocean Infinity Green Theme Override
  */
-
 /* Base Styles */
 @import "./base/variables.css";
 @import "./base/reset.css";
 @import "./base/typography.css";
 @import "./base/layout.css";
 @import "./base/utilities.css";
+@import "./base/responsive.css";
 
 /* Component Styles */
 @import "./components/Navbar.css";
@@ -28,6 +29,540 @@
 @import "./pages/Services.css";
 @import "./pages/Contact.css";
 
+/* Premium Dark Ocean Green Theme - Infinity Wave Inspired */
+:root {
+  /* Dark Ocean Color Palette */
+  --primary-color: #0f7f7a !important;
+  --secondary-color: #0a4f4c !important;
+  --accent-color: #3fe0d0 !important;
+  --ocean-primary: #041f1e !important;
+  --ocean-secondary: #062f2e !important;
+  --ocean-accent: #0a4f4c !important;
+  --ocean-light: #3fe0d0 !important;
+  --ocean-dark: #041f1e !important;
+  --text-primary: #eaf7f6 !important;
+  --text-secondary: #a0b3b2 !important;
+}
+
+/* Premium Dark Ocean Theme - Infinity Wave Inspired */
+.navbar {
+  background: linear-gradient(
+    135deg,
+    #041f1e 0%,
+    #062f2e 50%,
+    #0a4f4c 100%
+  ) !important;
+  box-shadow: 0 4px 20px rgba(3, 224, 208, 0.1) !important;
+  border-bottom: 1px solid rgba(63, 224, 208, 0.2) !important;
+}
+.navbar.scrolled {
+  background: linear-gradient(
+    135deg,
+    #041f1e 0%,
+    #062f2e 50%,
+    #0a4f4c 100%
+  ) !important;
+  box-shadow: 0 6px 30px rgba(3, 224, 208, 0.2) !important;
+}
+
+/* Update navbar text colors for dark ocean background */
+.navbar * {
+  color: #eaf7f6 !important;
+}
+
+.navbar .nav-list a {
+  color: #eaf7f6 !important;
+  text-shadow: 0 0 10px rgba(63, 224, 208, 0.3) !important;
+}
+
+.navbar .nav-list a:hover {
+  color: #3fe0d0 !important;
+  text-shadow: 0 0 15px rgba(63, 224, 208, 0.6) !important;
+}
+
+.navbar .nav-list a.active {
+  color: #0f7f7a !important;
+  text-shadow: 0 0 12px rgba(15, 127, 122, 0.5) !important;
+}
+
+.navbar .nav-list a.active::after,
+.navbar .nav-list a:hover::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #3fe0d0,
+    transparent
+  ) !important;
+  box-shadow: 0 0 10px rgba(63, 224, 208, 0.5) !important;
+}
+
+/* Update logo to show exact original colors */
+.navbar .logo-link img {
+  filter: none;
+}
+
+/* Premium Dark Ocean Footer - Glassmorphism */
+.footer,
+footer {
+  background: linear-gradient(
+    135deg,
+    #041f1e 0%,
+    #062f2e 50%,
+    #0a4f4c 100%
+  ) !important;
+  color: #eaf7f6 !important;
+  backdrop-filter: blur(10px) !important;
+  position: relative !important;
+}
+
+.footer::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(
+    135deg,
+    rgba(63, 224, 208, 0.05),
+    rgba(15, 127, 122, 0.02)
+  ) !important;
+  z-index: -1 !important;
+}
+
+/* Update footer text colors for dark ocean background */
+.footer * {
+  color: #eaf7f6 !important;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #3fe0d0 !important;
+  text-shadow: 0 0 10px rgba(63, 224, 208, 0.3) !important;
+}
+
+.footer-links a {
+  color: #a0b3b2 !important;
+  transition: all 0.3s ease !important;
+}
+
+.footer-links a:hover {
+  color: #3fe0d0 !important;
+  text-shadow: 0 0 8px rgba(63, 224, 208, 0.4) !important;
+  transform: translateY(-1px) !important;
+}
+
+.footer-contact p,
+.business-hours p {
+  color: rgba(234, 247, 246, 0.8) !important;
+}
+
+.social-link {
+  background: rgba(63, 224, 208, 0.1) !important;
+  border: 1px solid rgba(63, 224, 208, 0.2) !important;
+  backdrop-filter: blur(5px) !important;
+}
+
+.social-link:hover {
+  background: rgba(63, 224, 208, 0.2) !important;
+  border-color: #3fe0d0 !important;
+  box-shadow: 0 0 15px rgba(63, 224, 208, 0.3) !important;
+  transform: translateY(-2px) !important;
+}
+
+.footer-bottom-links a {
+  color: rgba(234, 247, 246, 0.6) !important;
+}
+
+.footer-bottom-links a:hover {
+  color: #3fe0d0 !important;
+  text-shadow: 0 0 5px rgba(63, 224, 208, 0.3) !important;
+}
+
+.copyright p {
+  color: rgba(234, 247, 246, 0.5) !important;
+}
+
+/* Premium Dark Ocean Buttons with Glowing Effects */
+.btn-primary {
+  background: linear-gradient(135deg, #0f7f7a 0%, #0a4f4c 100%) !important;
+  color: #eaf7f6 !important;
+  border: 1px solid rgba(63, 224, 208, 0.3) !important;
+  box-shadow: 0 4px 15px rgba(15, 127, 122, 0.3) !important;
+  text-shadow: 0 0 8px rgba(63, 224, 208, 0.3) !important;
+  backdrop-filter: blur(5px) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.btn-primary::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(63, 224, 208, 0.3),
+    transparent
+  ) !important;
+  transition: left 0.5s ease !important;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #3fe0d0 0%, #0f7f7a 100%) !important;
+  border-color: #3fe0d0 !important;
+  box-shadow: 0 6px 25px rgba(63, 224, 208, 0.4) !important;
+  text-shadow: 0 0 12px rgba(63, 224, 208, 0.5) !important;
+  transform: translateY(-2px) !important;
+}
+
+.btn-primary:hover::before {
+  left: 100% !important;
+}
+
+.btn-secondary {
+  background: rgba(15, 127, 122, 0.1) !important;
+  color: #3fe0d0 !important;
+  border: 2px solid #3fe0d0 !important;
+  backdrop-filter: blur(10px) !important;
+  text-shadow: 0 0 6px rgba(63, 224, 208, 0.4) !important;
+}
+
+.btn-secondary:hover {
+  background: rgba(63, 224, 208, 0.2) !important;
+  color: #eaf7f6 !important;
+  border-color: #3fe0d0 !important;
+  box-shadow: 0 4px 20px rgba(63, 224, 208, 0.3) !important;
+  text-shadow: 0 0 10px rgba(63, 224, 208, 0.5) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Premium Dark Ocean Section Titles */
+.section-title {
+  color: #eaf7f6 !important;
+  text-shadow: 0 0 15px rgba(63, 224, 208, 0.3) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.section-title::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #3fe0d0,
+    transparent
+  ) !important;
+  height: 3px !important;
+  box-shadow: 0 0 10px rgba(63, 224, 208, 0.4) !important;
+}
+
+/* Premium Dark Ocean Body Theme */
+body {
+  /* background: linear-gradient(
+    135deg,
+    #041f1e 0%,
+    #062f2e 50%,
+    #0a4f4c 100%
+  ) !important; */
+  background: transparent !important;
+  color: #eaf7f6 !important;
+  min-height: 100vh !important;
+}
+
+/* Premium Dark Ocean Cards with Glassmorphism */
+.product-card,
+.strength-card,
+.certification-item,
+.contact-info-card,
+.faq-item {
+  background: rgba(15, 127, 122, 0.05) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(63, 224, 208, 0.2) !important;
+  border-radius: 16px !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.product-card::before,
+.strength-card::before,
+.certification-item::before,
+.contact-info-card::before,
+.faq-item::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(
+    135deg,
+    rgba(63, 224, 208, 0.03),
+    rgba(15, 127, 122, 0.01)
+  ) !important;
+  z-index: -1 !important;
+}
+
+.product-card:hover,
+.strength-card:hover,
+.certification-item:hover,
+.contact-info-card:hover,
+.faq-item:hover {
+  background: rgba(15, 127, 122, 0.1) !important;
+  border-color: #3fe0d0 !important;
+  box-shadow: 0 8px 30px rgba(63, 224, 208, 0.2) !important;
+  transform: translateY(-5px) !important;
+}
+
+.product-card h3,
+.strength-card h3,
+.certification-item h3,
+.contact-info-card h3,
+.faq-item h4 {
+  color: #eaf7f6 !important;
+  text-shadow: 0 0 8px rgba(63, 224, 208, 0.2) !important;
+}
+
+/* Premium Dark Ocean Hero Section */
+.hero-subtitle {
+  color: #f9fcfd !important;
+  text-shadow: none !important;
+}
+
+.hero-title {
+  color: #eaf7f6 !important;
+  text-shadow: 0 0 25px rgba(55, 148, 139, 0.3) !important;
+}
+
+.hero-headline {
+  color: #eaf7f6 !important;
+  text-shadow: 0 0 30px rgba(55, 148, 139, 0.4) !important;
+}
+
+/* Premium Dark Ocean Icons */
+.product-icon,
+.strength-icon,
+.certification-icon {
+  color: #3fe0d0 !important;
+  text-shadow: 0 0 15px rgba(63, 224, 208, 0.3) !important;
+  background: rgba(63, 224, 208, 0.1) !important;
+  backdrop-filter: blur(5px) !important;
+  border: 1px solid rgba(63, 224, 208, 0.3) !important;
+  border-radius: 12px !important;
+}
+
+/* Premium Dark Ocean Strength Cards */
+.strength-card:hover {
+  border-color: #3fe0d0 !important;
+  box-shadow: 0 8px 30px rgba(63, 224, 208, 0.2) !important;
+}
+
+.strength-icon {
+  color: #3fe0d0 !important;
+  text-shadow: 0 0 15px rgba(63, 224, 208, 0.3) !important;
+}
+
+/* Premium Dark Ocean Certification Section */
+.certification-icon {
+  color: #3fe0d0 !important;
+  text-shadow: 0 0 15px rgba(63, 224, 208, 0.3) !important;
+}
+
+/* Premium Dark Ocean Contact Section */
+.contact-info h3,
+.contact-form h3 {
+  color: #3fe0d0 !important;
+  text-shadow: 0 0 10px rgba(63, 224, 208, 0.3) !important;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #3fe0d0 !important;
+  box-shadow: 0 0 0 3px rgba(63, 224, 208, 0.2) !important;
+  background: rgba(15, 127, 122, 0.05) !important;
+}
+
+.footer {
+  background: linear-gradient(
+    135deg,
+    var(--ocean-dark),
+    var(--ocean-accent)
+  ) !important;
+  color: white !important;
+}
+
+/* Premium Dark Ocean Footer Elements */
+.footer-section h3,
+.footer-section h4 {
+  color: #3fe0d0 !important;
+  text-shadow: 0 0 10px rgba(63, 224, 208, 0.3) !important;
+}
+
+.footer-links a:hover {
+  color: #3fe0d0 !important;
+  text-shadow: 0 0 8px rgba(63, 224, 208, 0.4) !important;
+}
+
+.social-link:hover {
+  background: #3fe0d0 !important;
+  box-shadow: 0 0 15px rgba(63, 224, 208, 0.3) !important;
+}
+
+.floating-quote {
+  background: linear-gradient(135deg, #041f1e, #062f2e) !important;
+  border: 1px solid rgba(63, 224, 208, 0.3) !important;
+  box-shadow: 0 4px 20px rgba(63, 224, 208, 0.2) !important;
+}
+
+/* Premium Dark Ocean Navigation */
+.nav-list a.active {
+  color: #3fe0d0 !important;
+  text-shadow: 0 0 8px rgba(63, 224, 208, 0.3) !important;
+}
+
+.nav-list a:hover {
+  color: #3fe0d0 !important;
+  text-shadow: 0 0 8px rgba(63, 224, 208, 0.3) !important;
+}
+
+.nav-list a.active::after,
+.nav-list a:hover::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #3fe0d0,
+    transparent
+  ) !important;
+  box-shadow: 0 0 10px rgba(63, 224, 208, 0.4) !important;
+}
+
+/* Premium Dark Ocean Trust Badges */
+.hero-headline {
+  color: #eaf7f6 !important;
+  text-shadow: 0 0 30px rgba(63, 224, 208, 0.4) !important;
+}
+
+.trust-badge {
+  background: var(--ocean-secondary) !important;
+  border: var(--ocean-secondary) !important;
+  backdrop-filter: blur(10px) !important;
+  color: #ffffff !important;
+}
+
+.trust-badge:hover {
+  background: var(--ocean-secondary) !important;
+  border-color: var(--ocean-secondary) !important;
+  box-shadow: none !important;
+  text-shadow: 0 0 8px rgba(63, 224, 208, 0.4) !important;
+}
+
+/* Premium Dark Ocean Icons */
+.icon {
+  background: linear-gradient(135deg, #0f7f7a, #0a4f4c) !important;
+  border: 1px solid rgba(63, 224, 208, 0.3) !important;
+  box-shadow: 0 4px 15px rgba(15, 127, 122, 0.3) !important;
+}
+
+.icon:hover {
+  box-shadow: 0 6px 25px rgba(63, 224, 208, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Premium Dark Ocean Page Titles */
+.page-title {
+  color: #3fe0d0 !important;
+  text-shadow: 0 0 15px rgba(63, 224, 208, 0.3) !important;
+}
+
+.page-subtitle {
+  color: #eaf7f6 !important;
+  text-shadow: 0 0 10px rgba(63, 224, 208, 0.2) !important;
+}
+
+/* Premium Dark Ocean Text Elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #eaf7f6 !important;
+  text-shadow: 0 0 8px rgba(63, 224, 208, 0.1) !important;
+}
+
+p {
+  color: #a0b3b2 !important;
+}
+
+a {
+  color: #3fe0d0 !important;
+  text-shadow: 0 0 5px rgba(63, 224, 208, 0.2) !important;
+}
+
+a:hover {
+  color: #eaf7f6 !important;
+  text-shadow: 0 0 8px rgba(63, 224, 208, 0.3) !important;
+}
+
+.core-values h3,
+.product-brands h3,
+.group-companies h3,
+.history-content h2,
+.mission-box h2,
+.vision-box h2,
+.product-detail-card h2,
+.quality-content h2,
+.contact-faq h2,
+.faq-item h4 {
+  color: var(--ocean-primary) !important;
+}
+
+.brand-tag:hover {
+  background: var(--ocean-secondary) !important;
+}
+
+.company-item:hover {
+  background: var(--ocean-secondary) !important;
+}
+
+.check-icon,
+.badge-icon {
+  color: var(--ocean-dark) !important;
+}
+
+.time {
+  color: var(--ocean-secondary) !important;
+}
+
+/* Force all text colors to green theme */
+body {
+  color: var(--ocean-dark) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--ocean-primary) !important;
+}
+
+p {
+  color: var(--ocean-dark) !important;
+}
+
+a {
+  color: var(--ocean-primary) !important;
+}
+
+a:hover {
+  color: var(--ocean-secondary) !important;
+}
+
 /* App Layout - No Container Wrapper */
 .App {
   margin: 0;
@@ -36,6 +571,91 @@
   outline: none;
   background: var(--background-color);
   min-height: 100vh;
+}
+
+/* Force all cards and containers to dark ocean green */
+.card,
+.container,
+.wrapper,
+.box,
+.panel {
+  background-color: transparent !important;
+  border-color: var(--ocean-dark) !important;
+}
+
+.product-card {
+  background: transparent !important;
+  border: 2px solid var(--ocean-dark) !important;
+}
+
+.product-card:hover {
+  background: var(--ocean-dark) !important;
+  border-color: var(--ocean-dark) !important;
+  color: white !important;
+}
+
+.strength-card {
+  background: transparent !important;
+  border: 1px solid var(--ocean-dark) !important;
+}
+
+.strength-card:hover {
+  border-color: var(--ocean-dark) !important;
+  box-shadow: 0 15px 40px rgba(11, 63, 51, 0.2) !important;
+}
+
+.certification-item {
+  background: transparent !important;
+  border: 1px solid var(--ocean-dark) !important;
+}
+
+.certification-item:hover {
+  border-color: var(--ocean-dark) !important;
+  box-shadow: 0 5px 20px rgba(11, 63, 51, 0.2) !important;
+}
+
+.badge-placeholder {
+  background: transparent !important;
+  border: 1px solid var(--ocean-dark) !important;
+}
+
+.badge-placeholder:hover {
+  border-color: var(--ocean-dark) !important;
+  box-shadow: 0 3px 15px rgba(11, 63, 51, 0.2) !important;
+}
+
+.quality-badge {
+  background: transparent !important;
+  border: 1px solid var(--ocean-dark) !important;
+}
+
+.quality-badge:hover {
+  border-color: var(--ocean-dark) !important;
+  box-shadow: 0 3px 15px rgba(11, 63, 51, 0.2) !important;
+}
+
+/* Update all icons to dark ocean green */
+.icon,
+.fa,
+.fas,
+.far,
+.fab,
+[class*="icon"] {
+  color: var(--ocean-dark) !important;
+}
+
+/* Update card hover states */
+.mission-box:hover,
+.vision-box:hover,
+.product-detail-card:hover,
+.quality-content:hover,
+.contact-info-card:hover,
+.faq-item:hover,
+.company-item:hover,
+.brand-tag:hover {
+  background: var(--ocean-dark) !important;
+  color: white !important;
+  border-color: var(--ocean-dark) !important;
 }
 
 .main-content {
@@ -576,26 +1196,57 @@
   justify-content: center;
   font-size: 1.5rem;
   z-index: var(--z-fixed);
-  transition: all var(--transition-bounce);
-  animation: pulse 2s infinite;
+  transition: none;
+  animation: none;
 }
 
 .whatsapp-float:hover {
   background: #25d366;
+  transform: none;
+  box-shadow: none;
+  text-decoration: none !important;
+  text-underline-offset: 0 !important;
+  text-decoration-style: none !important;
+  text-decoration-color: transparent !important;
 }
 
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
+/* Additional comprehensive underline removal */
+.whatsapp-float,
+.whatsapp-float:hover,
+.whatsapp-float:focus,
+.whatsapp-float:active,
+.whatsapp-float:visited,
+.whatsapp-float:link {
+  text-decoration: none !important;
+  text-underline-offset: 0 !important;
+  text-decoration-line: none !important;
+  text-decoration-style: none !important;
+  text-decoration-color: transparent !important;
+  text-decoration-thickness: 0 !important;
+  -webkit-text-decoration: none !important;
+  -webkit-text-decoration-line: none !important;
+  -webkit-text-decoration-style: none !important;
+  -webkit-text-decoration-color: transparent !important;
+  -moz-text-decoration: none !important;
+  -moz-text-decoration-line: none !important;
+  -moz-text-decoration-style: none !important;
+  -moz-text-decoration-color: transparent !important;
+  border-bottom: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
+/* Universal override for any link underlines */
+a.whatsapp-float,
+a.whatsapp-float:hover,
+a.whatsapp-float:focus,
+a.whatsapp-float:active,
+a.whatsapp-float:visited,
+a.whatsapp-float:link {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  outline: none !important;
+}
 /* Enhanced Animation Classes */
 .reveal {
   opacity: 0;
@@ -646,7 +1297,6 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-
 .btn::before {
   content: "";
   position: absolute;
@@ -677,7 +1327,7 @@
 }
 
 .btn-secondary {
-  background: var(--white-color);
+  background: transparent;
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
 }
@@ -690,7 +1340,7 @@
 
 /* Enhanced Card Styles */
 .card {
-  background: var(--white-color);
+  background: transparent;
   border-radius: var(--radius-xl);
   padding: var(--spacing-2xl);
   transition: all var(--transition-normal);

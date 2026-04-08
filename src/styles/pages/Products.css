@@ -41,7 +41,7 @@
 /* All Categories Section */
 .all-categories {
   padding: 80px 0;
-  background: #ffffff;
+  background: transparent;
 }
 
 .all-categories .container {
@@ -53,7 +53,7 @@
 
 /* 3D Product Catalog Cards - Modern Design */
 .category-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f6f8f8 100%);
+  background: transparent;
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid #243d4b4d;
@@ -79,15 +79,6 @@
   background: linear-gradient(90deg, #0b3c5d 0%, #1f6f8b 50%, #0b3c5d 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
-}
-
-.category-card:hover {
-  transform: none;
-  box-shadow: none;
-}
-
-.category-card:hover::before {
-  opacity: 0;
 }
 
 /* Category Image */
@@ -123,15 +114,6 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
-}
-
-.category-card:hover .category-image img {
-  transform: scale(1);
-  filter: brightness(1);
-}
-
-.category-card:hover .category-image::before {
-  opacity: 1;
 }
 
 .category-content {
@@ -178,15 +160,6 @@
   transition: transform 0.6s ease;
 }
 
-.category-card:hover .category-icon {
-  transform: none;
-  box-shadow: none;
-}
-
-.category-card:hover .category-icon::before {
-  transform: rotate(45deg) translateX(100%);
-}
-
 .category-content h3 {
   font-size: 1.2rem;
   color: #1e293b;
@@ -207,13 +180,6 @@
   transition: all 0.3s ease;
 }
 
-.category-card:hover .category-content h3 {
-  transform: translateY(-2px);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 .category-content p {
   color: #475569;
   line-height: 1.6;
@@ -224,11 +190,6 @@
   overflow: visible;
   min-height: 4.2rem;
   transition: all 0.3s ease;
-}
-
-.category-card:hover .category-content p {
-  color: #475569;
-  transform: translateY(-1px);
 }
 
 .category-link {
@@ -255,14 +216,6 @@
   letter-spacing: 1px;
 }
 
-.category-link:hover {
-  transform: none;
-  box-shadow: none;
-  background: transparent;
-  border: none;
-  color: #1f6f8b;
-}
-
 .category-link::before {
   content: "";
   position: absolute;
@@ -279,17 +232,9 @@
   transition: left 0.6s ease;
 }
 
-.category-link:hover::before {
-  left: 100%;
-}
-
 .category-link svg {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
-}
-
-.category-link:hover svg {
-  transform: none;
 }
 
 .brand-tags {
@@ -312,7 +257,7 @@
 /* Modern Clean Product Cards - New 3D Design */
 .gallery-item,
 .product-card-six {
-  background: #ffffff;
+  background: transparent;
   border-radius: 12px;
   box-shadow: none;
   transition: all 0.3s ease;
@@ -324,13 +269,6 @@
   position: relative;
 }
 
-.gallery-item:hover,
-.product-card-six:hover {
-  transform: none;
-  box-shadow: none;
-  border-color: #0d3a5c;
-}
-
 /* Product Image Container */
 .product-image,
 .product-image-six {
@@ -338,7 +276,7 @@
   height: 220px;
   overflow: hidden;
   position: relative;
-  background: #f8fafc;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -352,59 +290,53 @@
   transition: transform 0.3s ease;
 }
 
-.gallery-item:hover .product-image img,
-.product-card-six:hover .product-image-six img {
-  transform: none;
-}
-
 /* Product Content Container */
 .product-details,
 .product-info-six {
-  padding: 8px 4px;
+  padding: 4px 2px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
 }
 
 /* Product Name - Clean Design */
 .product-name,
 .product-name-six {
   color: #1f2937;
-  font-size: 0.5rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.3;
   text-align: center;
   margin: 0;
-  padding: 4px 6px;
-  min-height: 40px;
+  padding: 2px 4px;
+  min-height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 /* Product Description */
 .product-desc,
 .product-description-six {
   color: #6b7280;
-  font-size: 0.25rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   flex: 1;
   margin: 0;
-  padding: 4px 6px;
+  padding: 2px 4px;
   display: flex;
   align-items: center;
   text-align: center;
-  min-height: 50px;
+  min-height: 40px;
 }
 
 /* Button Container */
 .product-buttons,
 .product-actions-six {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   justify-content: center;
-  padding: 4px 6px 8px;
+  padding: 2px 4px 4px;
   margin-top: auto;
 }
 
@@ -423,20 +355,10 @@
   text-decoration: none;
 }
 
-.whatsapp-btn:hover,
-.contact-btn-six.whatsapp-btn-six:hover {
-  transform: none;
-}
-
 .whatsapp-btn svg,
 .contact-btn-six.whatsapp-btn-six svg {
   width: 24px;
   height: 24px;
-  fill: #25d366;
-}
-
-.whatsapp-btn:hover svg,
-.contact-btn-six.whatsapp-btn-six:hover svg {
   fill: #25d366;
 }
 
@@ -455,20 +377,10 @@
   text-decoration: none;
 }
 
-.email-btn:hover,
-.contact-btn-six.email-btn-six:hover {
-  transform: none;
-}
-
 .email-btn svg,
 .contact-btn-six.email-btn-six svg {
   width: 24px;
   height: 24px;
-  fill: #dc2626;
-}
-
-.email-btn:hover svg,
-.contact-btn-six.email-btn-six:hover svg {
   fill: #dc2626;
 }
 
@@ -496,13 +408,6 @@
     height 0.3s ease;
 }
 
-.whatsapp-btn:hover::before,
-.email-btn:hover::before,
-.contact-btn-six:hover::before {
-  width: 0;
-  height: 0;
-}
-
 /* Responsive adjustments for product cards */
 @media (max-width: 768px) {
   .gallery-item,
@@ -514,27 +419,26 @@
   .product-image-six {
     height: 180px;
   }
-
   .product-details,
   .product-info-six {
-    padding: 10px;
+    padding: 6px;
   }
 
   .product-name,
   .product-name-six {
-    font-size: 0.3rem;
-    padding: 3px 6px;
-    min-height: 40px;
+    font-size: 0.875rem;
+    padding: 2px 4px;
+    min-height: 32px;
   }
 
   .product-desc,
   .product-description-six {
-    font-size: 0.6rem;
+    font-size: 0.875rem;
   }
 
   .product-buttons,
   .product-actions-six {
-    padding: 12px 16px 16px;
+    padding: 8px 10px 12px;
   }
 
   .whatsapp-btn,
@@ -565,24 +469,24 @@
 
   .product-details,
   .product-info-six {
-    padding: 8px;
+    padding: 4px;
   }
 
   .product-name,
   .product-name-six {
-    font-size: 0.25rem;
-    padding: 2px 4px;
-    min-height: 36px;
+    font-size: 0.875rem;
+    padding: 2px 3px;
+    min-height: 28px;
   }
 
   .product-desc,
   .product-description-six {
-    font-size: 0.55rem;
+    font-size: 0.875rem;
   }
 
   .product-buttons,
   .product-actions-six {
-    padding: 10px 12px 14px;
+    padding: 6px 8px 10px;
   }
 
   .whatsapp-btn,
@@ -609,10 +513,6 @@
   .category-card {
     min-height: 280px;
     border-radius: 16px;
-  }
-
-  .category-card:hover {
-    transform: translateY(-8px) rotateX(1deg);
   }
 
   .category-content {
@@ -650,10 +550,6 @@
   .category-card {
     min-height: 260px;
     border-radius: 14px;
-  }
-
-  .category-card:hover {
-    transform: translateY(-6px) rotateX(0.5deg);
   }
 
   .category-content {
@@ -717,12 +613,6 @@
   transition: all var(--transition-normal);
 }
 
-.product-tag:hover {
-  background: var(--accent-color);
-  color: var(--white-color);
-  transform: translateY(-1px);
-}
-
 /* Technical Specifications */
 .technical-specifications {
   background: var(--background-color);
@@ -751,15 +641,11 @@
 }
 
 .spec-card {
-  background: var(--white-color);
+  background: transparent;
   border: 1px solid var(--light-gray);
   border-radius: var(--radius-lg);
   padding: var(--spacing-2xl);
   transition: all var(--transition-normal);
-}
-
-.spec-card:hover {
-  transform: translateY(-2px);
 }
 
 .spec-card h3 {
@@ -808,18 +694,13 @@
 }
 
 .quality-item {
-  background: var(--white-color);
+  background: transparent;
   border: 1px solid var(--light-gray);
   border-radius: var(--radius-lg);
   padding: var(--spacing-2xl);
   text-align: center;
   transition: all var(--transition-normal);
   position: relative;
-}
-
-.quality-item:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent-color);
 }
 
 .quality-icon {
@@ -890,14 +771,9 @@
   border: 2px solid var(--white-color);
 }
 
-.cta-buttons .btn-secondary:hover {
-  background: var(--white-color);
-  color: var(--primary-color);
-}
-
 /* Legacy Styles */
 .product-details {
-  background: var(--white-color);
+  background: transparent;
   padding: var(--spacing-6xl) 0;
 }
 
@@ -915,10 +791,6 @@
   margin: 0 auto;
   text-align: center;
   transition: all var(--transition-normal);
-}
-
-.product-detail-card:hover {
-  transform: translateY(-5px);
 }
 
 .product-detail-card h2 {
@@ -1043,7 +915,7 @@
 }
 
 .brand-tag {
-  background: var(--white-color);
+  background: transparent;
   color: var(--text-color);
   padding: var(--spacing-sm) var(--spacing-lg);
   border-radius: var(--radius-2xl);
@@ -1051,12 +923,6 @@
   font-weight: 500;
   border: 1px solid var(--primary-color);
   transition: all var(--transition-normal);
-}
-
-.brand-tag:hover {
-  background: var(--primary-color);
-  color: var(--white-color);
-  transform: translateY(-2px);
 }
 
 .product-actions {
@@ -1105,17 +971,13 @@
 }
 
 .quality-badge {
-  background: var(--white-color);
+  background: transparent;
   padding: var(--spacing-xl) var(--spacing-2xl);
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
   transition: all var(--transition-normal);
-}
-
-.quality-badge:hover {
-  transform: translateY(-3px);
 }
 
 .badge-icon {
@@ -1130,10 +992,6 @@
   background: var(--primary-gradient);
   color: var(--white-color);
   transition: all var(--transition-normal);
-}
-
-.quality-badge:hover .badge-icon {
-  transform: none;
 }
 
 .quality-badge span {
@@ -1256,7 +1114,7 @@
 /* Product Gallery Styles */
 .product-gallery {
   padding: var(--spacing-4xl) 0;
-  background: var(--white-color);
+  background: transparent;
 }
 
 .product-gallery .container {
@@ -1278,7 +1136,7 @@
   font-size: var(--font-size-base);
   border: 2px solid var(--light-gray);
   border-radius: var(--radius-lg);
-  background: var(--white-color);
+  background: transparent;
   color: var(--text-color);
   transition: all var(--transition-normal);
   outline: none;
@@ -1321,7 +1179,7 @@
   overflow: hidden;
   box-shadow: none;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background: #ffffff;
+  background: transparent;
   display: flex;
   flex-direction: column;
   border: 2px solid rgba(66, 145, 171, 0.15);
@@ -1338,12 +1196,6 @@
   z-index: 1;
 }
 
-.gallery-item:hover {
-  transform: none;
-  box-shadow: none;
-  border-color: rgba(66, 145, 171, 0.3);
-}
-
 .product-image {
   position: relative;
   width: 100%;
@@ -1352,7 +1204,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+  background: transparent;
   border-bottom: 1px solid rgba(66, 145, 171, 0.1);
 }
 
@@ -1379,16 +1231,12 @@
   padding: var(--spacing-sm);
 }
 
-.gallery-item:hover .product-image img {
-  transform: none;
-}
-
 .product-details {
   padding: 1rem;
   flex: 1;
   display: flex;
   flex-direction: column;
-  background: #ffffff;
+  background: transparent;
 }
 
 .product-category {
@@ -1451,19 +1299,13 @@
 }
 
 .product-card-four {
-  background: var(--white-color);
+  background: transparent;
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: none;
   transition: all var(--transition-bounce);
   position: relative;
   border: 1px solid rgba(59, 191, 167, 0.1);
-}
-
-.product-card-four:hover {
-  transform: none;
-  box-shadow: none;
-  border-color: var(--primary-color);
 }
 
 .product-image-four {
@@ -1478,10 +1320,6 @@
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-slow);
-}
-
-.product-card-four:hover .product-image-four img {
-  transform: none;
 }
 
 .product-info-four {
@@ -1555,30 +1393,15 @@
   transition: left var(--transition-slow);
 }
 
-.contact-btn-four:hover::before {
-  left: 100%;
-}
-
 .whatsapp-btn-four {
   background: transparent;
   color: #25d366;
   box-shadow: none;
 }
 
-.whatsapp-btn-four:hover {
-  transform: scale(1.1);
-  box-shadow: none;
-  background: rgba(37, 211, 102, 0.1);
-}
-
 .email-btn-four {
   background: transparent;
   color: #dc2626;
-  box-shadow: none;
-}
-
-.email-btn-four:hover {
-  transform: none;
   box-shadow: none;
 }
 
@@ -1676,11 +1499,6 @@ a.email-btn:active {
   text-decoration: none !important;
 }
 
-.whatsapp-btn:hover {
-  transform: scale(1.1);
-  box-shadow: none;
-  background: rgba(37, 211, 102, 0.1);
-}
 .email-btn {
   display: inline-flex;
   align-items: center;
@@ -1707,11 +1525,199 @@ a.email-btn:active {
   text-decoration: none !important;
 }
 
+.whatsapp-btn:focus,
+.whatsapp-btn:active {
+  text-decoration: none !important;
+}
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: none;
+  background: rgba(37, 211, 102, 0.1);
+  text-decoration: none !important;
+  text-underline-offset: 0 !important;
+  border-bottom: none !important;
+}
 .email-btn:hover {
   transform: scale(1.1);
   box-shadow: none;
   background: rgba(220, 38, 38, 0.1);
 }
+
+/* Additional icon underline removal */
+.whatsapp-btn svg,
+.email-btn svg,
+.contact-btn-six svg,
+.whatsapp-btn:hover svg,
+.email-btn:hover svg,
+.contact-btn-six:hover svg {
+  text-decoration: none !important;
+}
+
+/* Category link icons */
+.category-link svg,
+.category-link:hover svg {
+  text-decoration: none !important;
+}
+
+/* Product card icons */
+.product-buttons a,
+.product-actions-six a,
+.product-buttons a:hover,
+.product-actions-six a:hover {
+  text-decoration: none !important;
+}
+
+/* Ultimate icon underline removal - maximum coverage */
+.product-buttons *,
+.product-actions-six *,
+.category-link *,
+.contact-btn-four *,
+.whatsapp-btn-four *,
+.email-btn-four *,
+.product-buttons *:hover,
+.product-actions-six *:hover,
+.category-link *:hover,
+.contact-btn-four *:hover,
+.whatsapp-btn-four *:hover,
+.email-btn-four *:hover {
+  text-decoration: none !important;
+}
+
+/* All SVG icons in product cards */
+.product-buttons svg,
+.product-actions-six svg,
+.category-link svg,
+.contact-btn-four svg,
+.whatsapp-btn-four svg,
+.email-btn-four svg,
+.product-buttons svg:hover,
+.product-actions-six svg:hover,
+.category-link svg:hover,
+.contact-btn-four svg:hover,
+.whatsapp-btn-four svg:hover,
+.email-btn-four svg:hover {
+  text-decoration: none !important;
+}
+
+/* All icon containers and their children */
+.gallery-item a,
+.product-card-six a,
+.gallery-item a:hover,
+.product-card-six a:hover,
+.gallery-item a *,
+.product-card-six a *,
+.gallery-item a *:hover,
+.product-card-six a *:hover {
+  text-decoration: none !important;
+}
+
+/* ABSOLUTE UNDERLINE REMOVAL - OVERWRITE EVERYTHING */
+.gallery-item *,
+.product-card-six *,
+.category-card *,
+.product-card-four *,
+.gallery-item *:hover,
+.product-card-six *:hover,
+.category-card *:hover,
+.product-card-four *:hover,
+.gallery-item a,
+.product-card-six a,
+.category-card a,
+.product-card-four a,
+.gallery-item a:hover,
+.product-card-six a:hover,
+.category-card a:hover,
+.product-card-four a:hover,
+.gallery-item a *,
+.product-card-six a *,
+.category-card a *,
+.product-card-four a *,
+.gallery-item a *:hover,
+.product-card-six a *:hover,
+.category-card a *:hover,
+.product-card-four a *:hover {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-decoration-style: none !important;
+  text-decoration-color: transparent !important;
+  text-underline-offset: 0 !important;
+  text-underline-position: auto !important;
+}
+
+/* Global override for all links in product sections */
+.products-page a,
+.products-page a:hover,
+.products-page a:focus,
+.products-page a:active,
+.products-page a *,
+.products-page a *:hover,
+.products-page a *:focus,
+.products-page a *:active {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-underline-offset: 0 !important;
+}
+
+/* SPECIFIC WHATSAPP & EMAIL ICON UNDERLINE REMOVAL */
+.whatsapp-btn,
+.email-btn,
+.whatsapp-btn:hover,
+.email-btn:hover,
+.whatsapp-btn:focus,
+.email-btn:focus,
+.whatsapp-btn:active,
+.email-btn:active,
+.whatsapp-btn svg,
+.email-btn svg,
+.whatsapp-btn:hover svg,
+.email-btn:hover svg,
+.whatsapp-btn:focus svg,
+.email-btn:focus svg,
+.whatsapp-btn:active svg,
+.email-btn:active svg,
+.contact-btn-six.whatsapp-btn-six,
+.contact-btn-six.email-btn-six,
+.contact-btn-six.whatsapp-btn-six:hover,
+.contact-btn-six.email-btn-six:hover,
+.contact-btn-six.whatsapp-btn-six:focus,
+.contact-btn-six.email-btn-six:focus,
+.contact-btn-six.whatsapp-btn-six:active,
+.contact-btn-six.email-btn-six:active,
+.contact-btn-six.whatsapp-btn-six svg,
+.contact-btn-six.email-btn-six svg,
+.contact-btn-six.whatsapp-btn-six:hover svg,
+.contact-btn-six.email-btn-six:hover svg,
+.contact-btn-six.whatsapp-btn-six:focus svg,
+.contact-btn-six.email-btn-six:focus svg,
+.contact-btn-six.whatsapp-btn-six:active svg,
+.contact-btn-six.email-btn-six:active svg,
+.whatsapp-btn-four,
+.email-btn-four,
+.whatsapp-btn-four:hover,
+.email-btn-four:hover,
+.whatsapp-btn-four:focus,
+.email-btn-four:focus,
+.whatsapp-btn-four:active,
+.email-btn-four:active,
+.whatsapp-btn-four svg,
+.email-btn-four svg,
+.whatsapp-btn-four:hover svg,
+.email-btn-four:hover svg,
+.whatsapp-btn-four:focus svg,
+.email-btn-four:focus svg,
+.whatsapp-btn-four:active svg,
+.email-btn-four:active svg {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-decoration-style: none !important;
+  text-decoration-color: transparent !important;
+  text-underline-offset: 0 !important;
+  text-underline-position: auto !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 @media (max-width: 992px) {
   .gallery-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1784,14 +1790,12 @@ a.email-btn:active {
     flex-direction: column;
     gap: var(--spacing-xs);
   }
-
   .whatsapp-btn,
   .email-btn {
     padding: var(--spacing-xs) var(--spacing-md);
     font-size: var(--font-size-xs);
   }
 }
-
 /* Full-width Product Image Display for Portfolio Pages */
 .product-image-display {
   width: 100%;
@@ -1837,7 +1841,7 @@ a.email-btn:active {
 
 /* Supported Brands Section */
 .brands-section {
-  background: var(--white-color);
+  background: transparent;
   padding: var(--spacing-lg);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
@@ -1876,7 +1880,7 @@ a.email-btn:active {
 
 /* Manufacturer Table */
 .manufacturer-table-section {
-  background: #f8fafc;
+  background: transparent;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   overflow: hidden;
@@ -1922,11 +1926,11 @@ a.email-btn:active {
 }
 
 .manufacturer-table tbody tr {
-  background: var(--white-color);
+  background: transparent;
 }
 
 .manufacturer-table tbody tr:nth-child(even) {
-  background: #f8fafc;
+  background: transparent;
 }
 
 .manufacturer-table tbody tr:last-child {
@@ -1978,7 +1982,7 @@ a.email-btn:active {
 .product-display-item {
   display: flex;
   align-items: stretch;
-  background: var(--white-color);
+  background: transparent;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   overflow: hidden;
@@ -2142,7 +2146,7 @@ a.email-btn:active {
 }
 
 .hydraulic-item {
-  background: var(--white-color);
+  background: transparent;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
@@ -2281,7 +2285,7 @@ a.email-btn:active {
 }
 
 .pump-models-table-container {
-  background: var(--white-color);
+  background: transparent;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   overflow: hidden;
@@ -2333,7 +2337,7 @@ a.email-btn:active {
 }
 
 .pump-models-list {
-  background: #ffffff;
+  background: transparent;
   padding: var(--spacing-md);
   display: flex;
   flex-wrap: wrap;
@@ -2450,7 +2454,7 @@ a.email-btn:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f8fafc;
+  background: transparent;
 }
 
 .product-card-image img {
@@ -2541,7 +2545,7 @@ a.email-btn:active {
 
 /* 3D Card Base - Applied to both gallery-item and product-card-six */
 .product-card-3d {
-  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+  background: transparent;
   border-radius: 12px;
   box-shadow: none;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -2592,23 +2596,6 @@ a.email-btn:active {
   display: none;
 }
 
-/* Hover Effects - 3D Transform */
-.product-card-3d-wrapper:hover .product-card-3d {
-  transform: none;
-  box-shadow: none;
-  border-color: #0d3a5c;
-}
-
-.product-card-3d-wrapper:hover .product-card-3d::after {
-  transform: scaleX(1);
-}
-
-.product-card-3d-wrapper:hover .product-card-3d::before {
-  bottom: -16px;
-  opacity: 0.7;
-  filter: blur(18px);
-}
-
 /* 3D Floating Animation */
 @keyframes float-product-3d {
   0%,
@@ -2655,27 +2642,6 @@ a.email-btn:active {
   animation-delay: 2.7s;
 }
 
-/* Pause animation on hover */
-.product-card-3d-wrapper:hover {
-  animation-play-state: paused;
-}
-
-/* Enhanced Internal Elements with 3D Depth */
-.product-card-3d-wrapper:hover .product-card-3d .product-image,
-.product-card-3d-wrapper:hover .product-card-3d .product-image-six {
-  transform: none;
-}
-
-.product-card-3d-wrapper:hover .product-card-3d .product-info-six,
-.product-card-3d-wrapper:hover .product-card-3d .product-details {
-  transform: translateZ(20px);
-}
-
-.product-card-3d-wrapper:hover .product-card-3d .product-actions-six,
-.product-card-3d-wrapper:hover .product-card-3d .product-buttons {
-  transform: translateZ(35px);
-}
-
 .product-card-3d .product-image,
 .product-card-3d .product-image-six {
   transition: transform 0.4s ease;
@@ -2697,12 +2663,6 @@ a.email-btn:active {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.product-card-3d-wrapper:hover .product-card-3d .whatsapp-btn:hover,
-.product-card-3d-wrapper:hover .product-card-3d .email-btn:hover {
-  transform: none;
-  box-shadow: none;
-}
-
 /* Staggered Entry Animation */
 .product-card-3d-wrapper {
   opacity: 0;
@@ -2722,9 +2682,6 @@ a.email-btn:active {
 
 /* Responsive Design for 3D Cards */
 @media (max-width: 1200px) {
-  .product-card-3d-wrapper:hover .product-card-3d {
-    transform: translateY(-8px) translateZ(15px) rotateX(2deg);
-  }
 }
 
 @media (max-width: 768px) {
@@ -2735,11 +2692,6 @@ a.email-btn:active {
   }
 
   .product-card-3d {
-    transform: none !important;
-    box-shadow: none;
-  }
-
-  .product-card-3d-wrapper:hover .product-card-3d {
     transform: none !important;
     box-shadow: none;
   }

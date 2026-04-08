@@ -1,4 +1,4 @@
-# 🛠️ Technology Stack - ASP Global Marine Website
+# 🛠️ Technology Stack - Ocean Infinity Website
 
 ## **React, HTML, CSS Implementation**
 
@@ -177,4 +177,4 @@ src/
 
 ---
 
-**🎯 Result: A clean, professional website built with fundamental web technologies - React, HTML, and CSS!**
+**🎯 Result: A clean, professional website built with fundamental web technologies - React, HTML, and CSS for Ocean Infinity!**

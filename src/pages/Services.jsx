@@ -6,623 +6,383 @@
  */
 
 import { Helmet } from "react-helmet-async";
+import { useState } from "react";
 import PageHero from "../components/PageHero.jsx";
+import {
+  Ship,
+  Droplets,
+  Palette,
+  Users,
+  Settings,
+  Shield,
+  ChevronRight,
+  X,
+} from "lucide-react";
+import "../styles/pages/Services.css";
 
 const Services = () => {
+  const [selectedService, setSelectedService] = useState(null);
+
+  // Services data based on Samudhra Marine Engineering offerings
+  const servicesData = [
+    {
+      id: 1,
+      title: "Deck Machinery Services",
+      icon: Ship,
+      image: "/knot and sail images/Asset 33.webp",
+      shortDescription:
+        "Comprehensive deck machinery services including winches, cranes, and anchoring systems with expert maintenance and repairs.",
+      fullDescription:
+        "We provide complete deck machinery solutions covering all types of winches, cranes, anchoring systems, and cargo handling equipment. Our services include installation, maintenance, overhaul, and repairs of deck machinery to ensure optimal performance and compliance with maritime standards. With certified technicians and advanced equipment, we deliver reliable solutions across all vessel types.",
+      features: [
+        "Winch and crane overhaul",
+        "Anchor and chain renewal",
+        "Cargo gear maintenance",
+        "Hydraulic system repairs",
+        "Class certification support",
+      ],
+      images: [
+        "/knot and sail images/Asset 33.webp",
+        "/knot and sail images/Asset 34.webp",
+        "/knot and sail images/Asset 35.webp",
+      ],
+    },
+    {
+      id: 2,
+      title: "Main & Auxiliary Engine Overhaul",
+      icon: Settings,
+      image: "/knot and sail images/Asset 37.webp",
+      shortDescription:
+        "Complete engine overhaul services for main propulsion and auxiliary engines ensuring optimal performance and reliability.",
+      fullDescription:
+        "Our engine overhaul services cover both main propulsion engines and auxiliary engines, including complete disassembly, inspection, reconditioning, and reassembly. We specialize in 2-stroke and 4-stroke engines, turbochargers, and related components to restore engines to manufacturer specifications and extend their operational life.",
+      features: [
+        "Complete engine disassembly",
+        "Precision reconditioning",
+        "Manufacturer specifications",
+        "Performance testing",
+        "Extended engine life",
+      ],
+      images: [
+        "/knot and sail images/Asset 37.webp",
+        "/knot and sail images/Asset 38.webp",
+        "/knot and sail images/Asset 39.webp",
+      ],
+    },
+    {
+      id: 3,
+      title: "Automation & Control Systems",
+      icon: Shield,
+      image: "/knot and sail images/Asset 40.webp",
+      shortDescription:
+        "Advanced automation and control system services including PLC, SCADA, and marine electronics for vessel modernization.",
+      fullDescription:
+        "We specialize in automation and control systems for modern vessels, including PLC programming, SCADA systems, bridge electronics, and control panel manufacturing. Our services cover installation, troubleshooting, maintenance, and upgrades of automated systems to enhance operational efficiency and safety.",
+      features: [
+        "PLC and SCADA systems",
+        "Bridge electronics",
+        "Control panel manufacturing",
+        "System integration",
+        "24/7 technical support",
+      ],
+      images: [
+        "/knot and sail images/Asset 40.webp",
+        "/knot and sail images/Asset 41.webp",
+        "/knot and sail images/Asset 42.webp",
+      ],
+    },
+    {
+      id: 4,
+      title: "Ship Repair & Maintenance",
+      icon: Ship,
+      image: "/knot and sail images/Asset 43.webp",
+      shortDescription:
+        "Comprehensive ship repair and maintenance services including hull repairs, piping systems, and structural works.",
+      fullDescription:
+        "Our ship repair services cover everything from minor maintenance to major repairs and conversions. We handle hull repairs, steel fabrication, pipe welding, mechanical repairs, and electrical works. With class-approved procedures and certified welders, we ensure all repairs meet international maritime standards.",
+      features: [
+        "Hull and structural repairs",
+        "Pipe welding and fabrication",
+        "Mechanical and electrical works",
+        "Class-approved procedures",
+        "Emergency repair services",
+      ],
+      images: [
+        "/knot and sail images/Asset 43.webp",
+        "/knot and sail images/Asset 44.webp",
+        "/knot and sail images/Asset 45.webp",
+      ],
+    },
+    {
+      id: 5,
+      title: "Logistics & Agency Services",
+      icon: Users,
+      image: "/knot and sail images/Asset 50.webp",
+      shortDescription:
+        "Complete logistics and ship agency services including port coordination, customs clearance, and supply chain management.",
+      fullDescription:
+        "We provide comprehensive logistics and ship agency services to ensure smooth vessel operations. Our services include port coordination, customs clearance, crew changes, spares delivery, and supply chain management. With extensive port network and experienced staff, we handle all operational requirements efficiently.",
+      features: [
+        "Port agency services",
+        "Customs clearance",
+        "Crew change management",
+        "Spares and provisions",
+        "Supply chain solutions",
+      ],
+      images: [
+        "/knot and sail images/Asset 50.webp",
+        "/knot and sail images/Asset 51.webp",
+        "/knot and sail images/Asset 59.webp",
+      ],
+    },
+    {
+      id: 6,
+      title: "Workshop Services",
+      icon: Settings,
+      image: "/knot and sail images/Bh8OVy.webp",
+      shortDescription:
+        "Fully equipped workshop services for component reconditioning, fabrication, and precision engineering works.",
+      fullDescription:
+        "Our modern workshop facilities provide comprehensive reconditioning and fabrication services. We handle component machining, shaft reconditioning, pump overhauls, valve servicing, and custom fabrication. With precision equipment and skilled technicians, we deliver high-quality workmanship for all marine components.",
+      features: [
+        "Component reconditioning",
+        "Precision machining",
+        "Pump and valve overhauls",
+        "Custom fabrication",
+        "Quality assurance testing",
+      ],
+      images: [
+        "/knot and sail images/Bh8OVy.webp",
+        "/knot and sail images/F0F5Nv.webp",
+        "/knot and sail images/cU5Gqw.webp",
+      ],
+    },
+    {
+      id: 7,
+      title: "Hydraulic Systems",
+      icon: Droplets,
+      image: "/knot and sail images/Asset 52.webp",
+      shortDescription:
+        "Specialized hydraulic system services including design, installation, maintenance, and overhaul of marine hydraulic equipment.",
+      fullDescription:
+        "We provide comprehensive hydraulic system solutions for marine applications. Our services include hydraulic system design, installation, maintenance, and overhaul of deck machinery, steering systems, and hydraulic pumps. With specialized equipment and experienced technicians, we ensure optimal hydraulic performance.",
+      features: [
+        "Hydraulic system design",
+        "Installation and commissioning",
+        "Preventive maintenance",
+        "System overhauls",
+        "Troubleshooting and repair",
+      ],
+      images: [
+        "/knot and sail images/Asset 52.webp",
+        "/knot and sail images/Asset 53.webp",
+        "/knot and sail images/ekc1je.webp",
+      ],
+    },
+    {
+      id: 8,
+      title: "Turbocharger Services",
+      icon: Palette,
+      image: "/knot and sail images/fNVNPj.webp",
+      shortDescription:
+        "Complete turbocharger services including overhaul, repair, and balancing for marine and industrial applications.",
+      fullDescription:
+        "Our turbocharger services cover complete overhaul, repair, and precision balancing of marine and industrial turbochargers. We handle all major brands and models, providing rotor balancing, nozzle ring replacement, bearing upgrades, and performance testing to restore optimal turbocharger efficiency.",
+      features: [
+        "Complete turbocharger overhaul",
+        "Precision balancing",
+        "Rotor and nozzle repairs",
+        "Performance testing",
+        "All major brands supported",
+      ],
+      images: [
+        "/knot and sail images/fNVNPj.webp",
+        "/knot and sail images/gSQA4n.webp",
+        "/knot and sail images/iV1ZQg.webp",
+      ],
+    },
+  ];
   return (
     <>
       <Helmet>
-        <title>Marine Services | Knot & Sail</title>
+        <title>Marine Engineering Services | Ocean Infinity</title>
         <meta
           name="description"
-          content="Professional marine services including hydro blasting, tank cleaning, painting works, antifouling coating, steel fabrication, and technical manpower supply across UAE ports."
+          content="Professional marine engineering services including deck machinery, engine overhaul, automation systems, ship repair, logistics, workshop services, hydraulic systems, and turbocharger services."
         />
         <meta
           name="keywords"
-          content="marine services, hydro blasting, tank cleaning, painting works, antifouling coating, steel fabrication, manpower supply, Knot & Sail, UAE ports"
+          content="marine engineering services, deck machinery, engine overhaul, automation systems, ship repair, marine logistics, workshop services, hydraulic systems, turbocharger services"
         />
-        <meta property="og:title" content="Marine Services | Knot & Sail" />
+        <meta
+          property="og:title"
+          content="Marine Engineering Services | Ocean Infinity"
+        />
         <meta
           property="og:description"
-          content="Comprehensive marine services by Knot & Sail across all UAE ports with professional expertise and international standards compliance."
+          content="Comprehensive marine engineering services by Ocean Infinity including deck machinery, engine overhaul, automation systems, ship repair, and more."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://knotandsail.com/services" />
+        <meta property="og:url" content="https://oceaninfinity.com/services" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Marine Services | Knot & Sail" />
+        <meta
+          name="twitter:title"
+          content="Marine Engineering Services | Ocean Infinity"
+        />
         <meta
           name="twitter:description"
-          content="Professional marine services including hydro blasting, tank cleaning, painting works, and more by Knot & Sail."
+          content="Professional marine engineering services including deck machinery, engine overhaul, automation systems, and more by Ocean Infinity."
         />
       </Helmet>
 
       <div className="services-page">
         {/* Page Hero */}
         <PageHero
-          title="Marine Services"
-          subtitle="Comprehensive Marine Solutions Across All UAE Ports"
-          description="At Knot & Sail, we deliver a full spectrum of dependable and high-quality marine services tailored to the needs of ship owners and ship management companies across all major UAE ports."
+          title="Marine Engineering Services"
+          subtitle="Comprehensive Marine Engineering Solutions"
+          description="At Ocean Infinity, we deliver a full spectrum of marine engineering services tailored to the needs of ship owners and ship management companies, specializing in deck machinery, engine overhaul, automation systems, and comprehensive ship repair solutions."
+          backgroundImage="/knot and sail images/Asset 33.webp"
         />
 
-        {/* Services Section - Professional Design */}
-        <section className="services-section-professional">
+        {/* Ocean Infinity Services Section - Professional Design */}
+        <section
+          className="services-section-professional"
+          style={{ backgroundColor: "#ffffff" }}
+        >
           <div className="container">
             <div className="services-header">
-              <h2 className="services-title">Knot & Sail Services</h2>
+              <h2 className="services-title">Marine Engineering Services</h2>
               <p className="services-subtitle">
-                Professional marine solutions across all UAE ports
+                Professional marine engineering solutions worldwide
               </p>
             </div>
 
-            <div className="services-sections-layout">
-              {/* 1. Hydro Blasting Section */}
-              <section className="service-section-detailed">
-                <div className="service-header">
-                  <h3 className="service-section-title">Hydro Blasting</h3>
-                </div>
-                <div className="service-content-layout-balanced">
-                  <div className="service-left-column">
-                    <div className="service-images-section">
-                      <div className="service-images-row">
-                        <img
-                          src="/knot and sail images/Asset 33.webp"
-                          alt="Hydro Blasting Service 1"
-                          className="service-section-image"
-                        />
-                        <img
-                          src="/knot and sail images/Asset 34.webp"
-                          alt="Hydro Blasting Service 2"
-                          className="service-section-image"
-                        />
-                        <img
-                          src="/knot and sail images/Asset 35.webp"
-                          alt="Hydro Blasting Service 3"
-                          className="service-section-image"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <p className="service-desc-detailed">
-                        This process enhances the durability of coatings,
-                        improves vessel maintenance, and helps ship owners
-                        maintain compliance with international maritime
-                        standards. With a team of skilled professionals and
-                        state-of-the-art equipment, we provide hydro blasting
-                        services across all UAE ports, delivering fast,
-                        efficient, and cost-effective solutions.
-                      </p>
-                    </div>
+            <div className="template-card-grid">
+              {servicesData.map((service) => (
+                <div key={service.id} className="service-card-template">
+                  <div className="service-card-image-container">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="service-card-image"
+                    />
                   </div>
-                  <div className="service-right-column">
-                    <div className="service-text-section">
-                      <p className="service-desc-detailed">
-                        At Knot & Sail, we specialize in hydro blasting, a
-                        highly effective and eco-friendly cleaning method
-                        designed to remove rust, paint, scale, and contaminants
-                        from ship surfaces. Using high-pressure water jets, our
-                        hydro blasting services ensure thorough surface
-                        preparation without causing damage to the underlying
-                        structure.
-                      </p>
-                      <p className="service-desc-detailed">
-                        Whether it's hull cleaning, deck maintenance, or engine
-                        room descaling, our expertise guarantees superior
-                        results with minimal downtime. At Knot & Sail, we are
-                        committed to keeping your vessels in top condition,
-                        ensuring smooth sailing and long-term performance.
-                      </p>
-                    </div>
+                  <h3 className="service-card-title-large">{service.title}</h3>
+                  <div className="template-card-content">
+                    <p>{service.shortDescription}</p>
                   </div>
+                  <button
+                    className="service-card-see-more"
+                    onClick={() => setSelectedService(service)}
+                  >
+                    See More
+                    <ChevronRight size={16} />
+                  </button>
                 </div>
-              </section>
-
-              {/* 2. Tank Cleaning Section */}
-              <section className="service-section-detailed">
-                <div className="service-header">
-                  <h3 className="service-section-title">
-                    Tank Cleaning Service
-                  </h3>
-                </div>
-                <div className="service-content-layout-balanced">
-                  <div className="service-left-column">
-                    <div className="service-images-section">
-                      <div className="service-images-row">
-                        <img
-                          src="/knot and sail images/Asset 37.webp"
-                          alt="Tank Cleaning Service 1"
-                          className="service-section-image"
-                        />
-                        <img
-                          src="/knot and sail images/Asset 38.webp"
-                          alt="Tank Cleaning Service 2"
-                          className="service-section-image"
-                        />
-                        <img
-                          src="/knot and sail images/Asset 39.webp"
-                          alt="Tank Cleaning Service 3"
-                          className="service-section-image"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <p className="service-desc-detailed">
-                        We remove sludge, residues, and contaminants to prevent
-                        corrosion, improve operational efficiency, and maintain
-                        regulatory compliance. With a commitment to safety and
-                        environmental responsibility, our tank cleaning services
-                        are designed to minimize downtime and maximize
-                        performance.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="service-right-column">
-                    <div className="service-text-section">
-                      <p className="service-desc-detailed">
-                        At Knot & Sail, we provide professional tank cleaning
-                        services to ensure the safety, efficiency, and
-                        compliance of your vessel's storage systems. Our expert
-                        team specializes in cleaning fuel tanks, ballast tanks,
-                        cargo tanks, and water tanks using advanced techniques,
-                        including high-pressure hydro blasting and chemical
-                        cleaning.
-                      </p>
-                      <p className="service-desc-detailed">
-                        Available at all UAE ports, we deliver fast, reliable,
-                        and cost-effective solutions tailored to your vessel's
-                        needs. Trust Knot & Sail for clean, well-maintained
-                        tanks that keep your ship running at its best.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              {/* 3. Painting Works Section */}
-              <section className="service-section-detailed">
-                <div className="service-header">
-                  <h3 className="service-section-title">Painting Works</h3>
-                </div>
-                <div className="service-content-layout-balanced">
-                  <div className="service-left-column">
-                    <div className="service-images-section">
-                      <div className="service-images-row">
-                        <img
-                          src="/knot and sail images/Asset 40.webp"
-                          alt="Painting Works Service 1"
-                          className="service-section-image"
-                        />
-                        <img
-                          src="/knot and sail images/Asset 41.webp"
-                          alt="Painting Works Service 2"
-                          className="service-section-image"
-                        />
-                        <img
-                          src="/knot and sail images/Asset 42.webp"
-                          alt="Painting Works Service 3"
-                          className="service-section-image"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <p className="service-desc-detailed">
-                        Our team of skilled experts is dedicated to ensuring
-                        every project is executed with precision and in full
-                        compliance with international maritime standards. At the
-                        core of our service offering is our specialization in
-                        Painting Works, which plays a vital role in preserving
-                        vessel integrity and enhancing operational efficiency.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="service-right-column">
-                    <div className="service-text-section">
-                      <p className="service-desc-detailed">
-                        Knot & Sail is a premier service provider in the UAE's
-                        dynamic marine market, delivering a full spectrum of
-                        dependable and high-quality services tailored to the
-                        needs of ship owners and ship management companies. With
-                        an extensive presence across all major UAE ports, we
-                        have built a strong reputation for excellence,
-                        reliability, and professionalism.
-                      </p>
-                      <p className="service-desc-detailed">
-                        We provide comprehensive painting solutions—from surface
-                        preparation to final coating—using only top-grade
-                        materials and the latest application techniques. Whether
-                        it's routine maintenance or specialized coating for
-                        extreme conditions, Knot & Sail ensures superior results
-                        that extend vessel lifespan, reduce downtime, and meet
-                        the highest industry standards.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              {/* 4. Antifouling Anticavitation Coating Section */}
-              <section className="service-section-detailed">
-                <div className="service-header">
-                  <h3 className="service-section-title">
-                    Antifouling Anticavitation Coating
-                  </h3>
-                </div>
-                <div className="service-content-layout-balanced">
-                  <div className="service-left-column">
-                    <div className="service-images-section">
-                      <div className="service-images-row">
-                        <img
-                          src="/knot and sail images/Asset 43.webp"
-                          alt="Antifouling Coating Service 1"
-                          className="service-section-image"
-                        />
-                        <img
-                          src="/knot and sail images/Asset 44.webp"
-                          alt="Antifouling Coating Service 2"
-                          className="service-section-image"
-                        />
-                        <img
-                          src="/knot and sail images/Asset 45.webp"
-                          alt="Antifouling Coating Service 3"
-                          className="service-section-image"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <p className="service-desc-detailed">
-                        Meanwhile, our anticavitation coatings shield propellers
-                        and hull surfaces from cavitation erosion, reducing wear
-                        and tear and extending the lifespan of critical
-                        components. Using high-performance coatings and expert
-                        application techniques, we ensure long-lasting
-                        protection that improves vessel performance and reduces
-                        maintenance costs.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="service-right-column">
-                    <div className="service-text-section">
-                      <p className="service-desc-detailed">
-                        At Knot & Sail, we offer Antifouling and Anticavitation
-                        Coating services to protect your vessel's hull and
-                        propulsion systems from marine growth, corrosion, and
-                        cavitation damage. Our antifouling coatings prevent the
-                        accumulation of barnacles, algae, and other marine
-                        organisms, enhancing fuel efficiency and maintaining
-                        smooth sailing.
-                      </p>
-                      <p className="service-desc-detailed">
-                        Available at all UAE ports, our antifouling and
-                        anticavitation solutions help shipowners maintain
-                        efficiency, compliance, and reliability in demanding
-                        marine environments. Trust Knot & Sail to keep your
-                        fleet in peak condition.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              {/* 5. Fabricator Steel/ Pipe welder Section */}
-              <section className="service-section-detailed">
-                <div className="service-header">
-                  <h3 className="service-section-title">
-                    Fabricator Steel/ Pipe welder
-                  </h3>
-                </div>
-                <div className="service-content-layout-balanced">
-                  <div className="service-left-column">
-                    <div className="service-images-section">
-                      <div className="service-images-row">
-                        <img
-                          src="/knot and sail images/Asset 50.webp"
-                          alt="Steel Fabrication Service 1"
-                          className="service-section-image"
-                        />
-                        <img
-                          src="/knot and sail images/Asset 51.webp"
-                          alt="Steel Fabrication Service 2"
-                          className="service-section-image"
-                        />
-                        <img
-                          src="/knot and sail images/Asset 52.webp"
-                          alt="Steel Fabrication Service 3"
-                          className="service-section-image"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <p className="service-desc-detailed">
-                        From hull repairs and structural modifications to
-                        custom-fabricated components, we ensure all work is
-                        executed with strength, durability, and full compliance
-                        with international maritime standards. Our Pipe Welding
-                        services are designed to support critical onboard
-                        systems, including fuel lines, cooling systems, ballast
-                        piping, and hydraulic lines.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="service-right-column">
-                    <div className="service-text-section">
-                      <p className="service-desc-detailed">
-                        Knot & Sail also proudly offers specialized Steel
-                        Fabrication and Pipe Welding services, catering to the
-                        structural and mechanical needs of vessels across all
-                        UAE ports. Our experienced fabricators and certified
-                        welders are skilled in handling a wide range of
-                        marine-grade materials, delivering precision work for
-                        both new installations and repair projects.
-                      </p>
-                      <p className="service-desc-detailed">
-                        Using advanced welding techniques such as TIG, MIG, and
-                        ARC welding, we provide leak-proof, corrosion-resistant
-                        joints that ensure long-lasting performance under
-                        demanding marine conditions. At Knot & Sail, we combine
-                        technical expertise with a commitment to quality and
-                        safety, helping ship owners and managers maintain the
-                        structural integrity and efficiency of their vessels at
-                        all times.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              {/* 6. Technical Manpower supply Section */}
-              <section className="service-section-detailed">
-                <div className="service-header">
-                  <h3 className="service-section-title">
-                    Technical Manpower Supply
-                  </h3>
-                </div>
-                <div className="service-content-layout-balanced">
-                  <div className="service-left-column">
-                    <div className="service-images-section">
-                      <div className="service-images-row">
-                        <img
-                          src="/knot and sail images/Asset 53.webp"
-                          alt="Technical Manpower Service 1"
-                          className="service-section-image"
-                        />
-                        <img
-                          src="/knot and sail images/Asset 59.webp"
-                          alt="Technical Manpower Service 2"
-                          className="service-section-image"
-                        />
-                        <img
-                          src="/knot and sail images/Bh8OVy.webp"
-                          alt="Technical Manpower Service 3"
-                          className="service-section-image"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="service-right-column">
-                    <div className="service-text-section">
-                      <p className="service-desc-detailed">
-                        Knot and Sail is a trusted provider of certified marine
-                        and technical manpower, committed to operational
-                        excellence and regulatory compliance. We are delivering
-                        structured, reliable, and performance-driven maritime
-                        workforce solutions, enhancing vessel and offshore
-                        efficiency through strategically deployed maritime
-                        professionals.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="manpower-full-width-section">
-                  <div className="manpower-categories">
-                    <h4 className="manpower-subtitle">
-                      Our Technical Personnel Include:
-                    </h4>
-                    <div className="manpower-table">
-                      <div className="manpower-row">
-                        <div className="manpower-cell">
-                          Marine Mechanical Fitter
-                        </div>
-                        <div className="manpower-cell">Pipe Fitter</div>
-                        <div className="manpower-cell">
-                          TIG / MIG / ARC Welder
-                        </div>
-                      </div>
-                      <div className="manpower-row">
-                        <div className="manpower-cell">
-                          Structural Fabricator
-                        </div>
-                        <div className="manpower-cell">Marine Electrician</div>
-                        <div className="manpower-cell">
-                          Instrument Technician
-                        </div>
-                      </div>
-                      <div className="manpower-row">
-                        <div className="manpower-cell">
-                          Insulation Technician
-                        </div>
-                        <div className="manpower-cell">Blaster / Painter</div>
-                        <div className="manpower-cell">Scaffolder / Rigger</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              {/* 7. Riding Squad Services Section */}
-              <section className="service-section-detailed">
-                <div className="service-header">
-                  <h3 className="service-section-title">
-                    Riding Squad Services
-                  </h3>
-                </div>
-                <div className="service-content-layout-balanced">
-                  <div className="service-left-column">
-                    <div className="service-images-section">
-                      <div className="service-images-row">
-                        <img
-                          src="/knot and sail images/F0F5Nv.webp"
-                          alt="Riding Squad Service 1"
-                          className="service-section-image"
-                        />
-                        <img
-                          src="/knot and sail images/cU5Gqw.webp"
-                          alt="Riding Squad Service 2"
-                          className="service-section-image"
-                        />
-                        <img
-                          src="/knot and sail images/ekc1je.webp"
-                          alt="Riding Squad Service 3"
-                          className="service-section-image"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="riding-squad-services">
-                        <h4 className="riding-squad-subtitle">
-                          Our Riding Squad Services Include:
-                        </h4>
-                        <ul className="riding-squad-list">
-                          <li>
-                            <strong>Ballast Tank Maintenance:</strong>{" "}
-                            Protection against corrosion through surface
-                            preparation and coating maintenance. This reduces
-                            steel renewal costs and helps maintain strong CAP
-                            ratings.
-                          </li>
-                          <li>
-                            <strong>Deck Maintenance:</strong> Rust removal,
-                            coating touch-ups, and structural preservation to
-                            protect exposed areas, maintain vessel appearance,
-                            and ensure crew safety.
-                          </li>
-                          <li>
-                            <strong>Accommodation Maintenance:</strong> Interior
-                            maintenance, corrosion control, and refurbishment to
-                            provide a clean, safe, and comfortable living
-                            environment for onboard personnel.
-                          </li>
-                          <li>
-                            <strong>Steel Repair Team:</strong> Class-certified
-                            welders and fabricators perform structural steel
-                            repairs, deck renewals, and outfitting works during
-                            voyage to maintain overall vessel integrity.
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="service-right-column">
-                    <div className="service-text-section">
-                      <p className="service-desc-detailed">
-                        At Knot & Sail, we provide reliable Riding Squad
-                        Services globally, supporting vessels at sea and in
-                        port. Our skilled teams perform maintenance and repair
-                        works during voyages to reduce downtime, control costs,
-                        and maintain class and CAP standards.
-                      </p>
-                      <div className="riding-squad-services">
-                        <ul className="riding-squad-list">
-                          <li>
-                            <strong>Pipeline Cleaning:</strong> Internal
-                            cleaning and preservation to prevent corrosion,
-                            ensure smooth flow, and extend pipeline service
-                            life.
-                          </li>
-                          <li>
-                            <strong>HVAC, Insulation & Cladding:</strong>{" "}
-                            Inspection, repair, and refurbishment of HVAC
-                            systems and insulation to improve efficiency and
-                            onboard comfort.
-                          </li>
-                          <li>
-                            <strong>Cargo Hold Maintenance:</strong> Coating
-                            maintenance and product change washing using
-                            certified equipment to ensure cargo readiness and
-                            compliance.
-                          </li>
-                          <li>
-                            <strong>Helideck Maintenance:</strong> Maintenance
-                            in line with CAP 437 requirements, including
-                            friction control and proper markings for safe
-                            helicopter operations.
-                          </li>
-                          <li>
-                            <strong>Engine Service Team:</strong> Engine
-                            overhauling, troubleshooting, and preventive
-                            maintenance to ensure reliable performance and
-                            reduced breakdown risk.
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              {/* 8. Engine Service Team Section */}
-              <section className="service-section-detailed">
-                <div className="service-header">
-                  <h3 className="service-section-title">Engine Service Team</h3>
-                </div>
-                <div className="service-content-layout-balanced">
-                  <div className="service-left-column">
-                    <div className="service-images-section">
-                      <div className="service-images-row">
-                        <img
-                          src="/knot and sail images/fNVNPj.webp"
-                          alt="Engine Service Team 1"
-                          className="service-section-image"
-                        />
-                        <img
-                          src="/knot and sail images/gSQA4n.webp"
-                          alt="Engine Service Team 2"
-                          className="service-section-image"
-                        />
-                        <img
-                          src="/knot and sail images/iV1ZQg.webp"
-                          alt="Engine Service Team 3"
-                          className="service-section-image"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <p className="service-desc-detailed">
-                        From routine maintenance to complex engine repairs, our
-                        team is equipped with the latest diagnostic tools and
-                        technical expertise to handle all types of marine
-                        propulsion systems. We minimize downtime and maximize
-                        engine lifespan through proactive maintenance strategies
-                        and rapid response to operational issues.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="service-right-column">
-                    <div className="service-text-section">
-                      <p className="service-desc-detailed">
-                        Our Engine Service Team provides comprehensive engine
-                        overhauling, troubleshooting, and preventive maintenance
-                        to ensure reliable performance and reduced breakdown
-                        risk. With highly skilled marine engineers and
-                        technicians, we deliver expert engine services that keep
-                        your vessels operating at peak efficiency.
-                      </p>
-                      <p className="service-desc-detailed">
-                        Available across all UAE ports, our engine services
-                        ensure your vessels maintain optimal performance, fuel
-                        efficiency, and compliance with maritime standards.
-                        Trust Knot & Sail's Engine Service Team for reliable,
-                        professional engine maintenance and repair solutions.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </section>
+              ))}
             </div>
           </div>
         </section>
 
+        {/* Service Detail Modal */}
+        {selectedService && (
+          <div
+            className="service-detail-modal-overlay"
+            onClick={() => setSelectedService(null)}
+          >
+            <div
+              className="service-detail-modal"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="service-detail-header">
+                <div className="service-detail-icon">
+                  <selectedService.icon size={32} />
+                </div>
+                <h2 className="service-detail-title">
+                  {selectedService.title}
+                </h2>
+                <button
+                  className="service-detail-close"
+                  onClick={() => setSelectedService(null)}
+                >
+                  <X size={24} />
+                </button>
+              </div>
+
+              <div className="service-detail-content">
+                <div className="service-detail-images">
+                  {selectedService.images.map((image, index) => (
+                    <img
+                      key={index}
+                      src={image}
+                      alt={`${selectedService.title} ${index + 1}`}
+                      className="service-detail-image"
+                    />
+                  ))}
+                </div>
+
+                <div className="service-detail-info">
+                  <p className="service-detail-description">
+                    {selectedService.fullDescription}
+                  </p>
+
+                  <div className="service-detail-features">
+                    <h4>Key Features</h4>
+                    <ul>
+                      {selectedService.features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="service-detail-actions">
+                    <a
+                      href="https://wa.me/971123456789"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-whatsapp"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.709-.501l-.607-.009c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 2.16 3.998c2.782 2.543 4.596 3.375 5.448 3.726.565.218 1.004.188 1.38-.116.376-.305.996-.996.996-1.611 0-.198-.025-.396-.149-.545z" />
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.223-.548.223l.188-2.195 3.637-3.3c.16-.141-.036-.223-.253-.084l-4.5 2.821-1.937-.606c-.418-.134-.43-.418.087-.619l7.558-2.912c.35-.133.656.088.548.613z" />
+                      </svg>
+                      WhatsApp
+                    </a>
+                    <a
+                      href="mailto:info@knotandsail.com"
+                      className="btn btn-email"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                        <path d="m22 7-10 5L2 7" />
+                      </svg>
+                      Email
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Call to Action Section */}
-        <section className="services-cta">
-          <div className="container">
+        <section
+          className="services-cta"
+          style={{ backgroundColor: "#0c886314" }}
+        >
+          <div>
             <div className="cta-content text-center">
               <h2 className="cta-title">
                 Ready to Experience Our Marine Services?

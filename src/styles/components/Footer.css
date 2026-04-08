@@ -16,7 +16,7 @@
 
 /* Footer Container with Reduced Size */
 .footer {
-  background: #01013f;
+  background: #0a3d4a;
   color: #f8fafc;
   position: relative;
   overflow: hidden;
@@ -83,8 +83,8 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.875rem 1.5rem;
-  background: #ffffff;
-  color: #1b5f9c;
+  background: #0f7f7a;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   font-weight: 600;
@@ -94,7 +94,8 @@
 
 .newsletter-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: #6fd1c7;
+  box-shadow: 0 8px 20px rgba(15, 127, 122, 0.2);
 }
 
 /* Footer Content Wrapper */
@@ -205,7 +206,6 @@
 }
 
 .footer-headline::before {
-  content: '"';
   position: absolute;
   left: 0;
   top: 0;
@@ -408,7 +408,6 @@
 
 .footer-design-link:hover {
   color: #ffffff;
-  text-decoration: underline;
 }
 
 /* Social Links (Optional Enhancement) */

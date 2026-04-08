@@ -41,9 +41,9 @@
   height: 100%;
   background: linear-gradient(
     135deg,
-    rgba(11, 60, 93, 0.85) 0%,
-    rgba(15, 76, 117, 0.75) 50%,
-    rgba(31, 111, 139, 0.65) 100%
+    rgba(22, 98, 100, 0.85) 0%,
+    lch(29.45% 20 215.82 / 0.479) 50%,
+    lch(29.45% 20 215.82 / 0.3) 100%
   );
 }
 
@@ -142,7 +142,7 @@
 }
 
 .slider-dot.active {
-  background: #1a9bc0;
+  background: var(--ocean-primary);
   transform: scale(1.2);
 }
 
@@ -297,7 +297,7 @@
   overflow: hidden;
   box-shadow: none;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  background: transparent;
   border: 2px solid rgba(66, 145, 171, 0.15);
   opacity: 0;
   transform: translateX(100px) scale(0.8) rotateY(-15deg);
@@ -340,7 +340,7 @@
   left: 0;
   right: 0;
   padding: 16px;
-  background: linear-gradient(135deg, #4291ab 0%, #307087 100%);
+  background: linear-gradient(135deg, var(--ocean-primary) 0%, #307087 100%);
   text-align: center;
 }
 
@@ -382,7 +382,7 @@
 }
 
 .indicator.active {
-  background: #4291ab;
+  background: var(--ocean-primary);
   border-color: #ffffff;
   box-shadow: 0 0 0 2px rgba(66, 145, 171, 0.3);
   transform: scale(1.2);
@@ -395,7 +395,7 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 11px;
-  color: #4291ab;
+  color: var(--ocean-primary);
   opacity: 0.7;
   text-align: center;
   white-space: nowrap;
@@ -440,7 +440,7 @@
 }
 
 .std-section.alt-bg {
-  background: #f8fafc;
+  background: transparent;
 }
 
 .std-container {
@@ -455,20 +455,31 @@
 
 #clients {
   padding: 5rem 2rem;
-  background: #ffffff;
+  background: transparent;
 }
 
 #client-logos {
   padding: 5rem 2rem;
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #ffffff 100%);
+  background: transparent;
 }
 
 #message {
   padding: 5rem 2rem;
 }
 
-.about-section {
+/* Ultimate override for Who We Are section */
+section.about-section#who-we-are,
+body section.about-section#who-we-are,
+html body section.about-section#who-we-are {
   padding: 5rem 2rem;
+  background: transparent;
+  background: transparent;
+}
+
+section.about-section#who-we-are {
+  padding: 5rem 2rem;
+  background: transparent;
+  background: transparent;
 }
 
 .section-title-center {
@@ -477,14 +488,14 @@
 }
 
 .section-title-center svg {
-  color: #0d3a5c;
+  color: var(--ocean-dark);
   margin-bottom: 1rem;
 }
 
 .section-title-center h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #0d3a5c;
+  color: var(--ocean-dark);
 }
 
 /* Mission & Vision */
@@ -495,7 +506,7 @@
 }
 
 .mv-card {
-  background: white;
+  background: transparent;
   border-radius: 12px;
   padding: 2.5rem;
   box-shadow: none;
@@ -512,13 +523,13 @@
 }
 
 .mv-header svg {
-  color: #4291ab;
+  color: var(--ocean-primary);
 }
 
 .mv-header h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #0d3a5c;
+  color: var(--ocean-dark);
 }
 
 .mv-card p {
@@ -538,7 +549,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: white;
+  background: transparent;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: none;
@@ -548,7 +559,7 @@
 .cert-icon-std {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #0d3a5c 0%, #1a5a7a 100%);
+  background: linear-gradient(135deg, var(--ocean-dark) 0%, #1a5a7a 100%);
   color: white;
   border-radius: 10px;
   display: flex;
@@ -560,7 +571,7 @@
 
 .cert-info strong {
   display: block;
-  color: #0d3a5c;
+  color: var(--ocean-dark);
   font-size: 1rem;
   margin-bottom: 0.25rem;
 }
@@ -573,7 +584,7 @@
 /* Quality Policy */
 .quality-section {
   padding: 5rem 0;
-  background: #ffffff;
+  background: transparent;
 }
 
 .quality-header {
@@ -585,7 +596,7 @@
   display: inline-block;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #0d3a5c;
+  color: var(--ocean-dark);
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -629,7 +640,7 @@
 }
 
 .quality-card {
-  background: #f8fafc;
+  background: transparent;
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
@@ -637,7 +648,7 @@
 }
 
 .quality-card:hover {
-  background: #ffffff;
+  background: transparent;
   box-shadow: none;
   transform: none;
 }
@@ -709,7 +720,7 @@
   display: inline-block;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #0d3a5c;
+  color: var(--ocean-dark);
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -739,7 +750,7 @@
 }
 
 .client-card {
-  background: #ffffff;
+  background: transparent;
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
@@ -757,7 +768,7 @@
   width: 64px;
   height: 64px;
   margin: 0 auto 1rem;
-  background: linear-gradient(135deg, #0d3a5c 0%, #0c4b65 100%);
+  background: linear-gradient(135deg, var(--ocean-dark) 0%, #0c4b65 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -819,7 +830,7 @@
 /* Message from Management */
 .message-section {
   padding: 5rem 0;
-  background: #ffffff;
+  background: transparent;
 }
 
 .message-header {
@@ -831,7 +842,7 @@
   display: inline-block;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #0d3a5c;
+  color: var(--ocean-dark);
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -855,7 +866,7 @@
 }
 
 .message-card {
-  background: #f8fafc;
+  background: transparent;
   border-radius: 16px;
   padding: 3rem;
   max-width: 800px;
@@ -865,7 +876,7 @@
 
 .quote-icon {
   font-size: 5rem;
-  color: #0d3a5c;
+  color: var(--ocean-dark);
   opacity: 0.2;
   line-height: 1;
   margin-bottom: -2rem;
@@ -895,7 +906,7 @@
 .signature-line {
   width: 60px;
   height: 2px;
-  background: linear-gradient(135deg, #0d3a5c 0%, #0c4b65 100%);
+  background: linear-gradient(135deg, var(--ocean-dark) 0%, #0c4b65 100%);
   margin: 0 auto 1rem;
 }
 
@@ -994,7 +1005,7 @@
 .section-header-simple h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #0d3a5c;
+  color: var(--ocean-dark);
 }
 
 /* Mission & Vision - Simple Cards */
@@ -1012,11 +1023,11 @@
 }
 
 .simple-card.blue {
-  background: linear-gradient(135deg, #0d3a5c 0%, #1a5a7a 100%);
+  background: linear-gradient(135deg, var(--ocean-dark) 0%, #1a5a7a 100%);
 }
 
 .simple-card.teal {
-  background: linear-gradient(135deg, #2abaa3 0%, #4291ab 100%);
+  background: linear-gradient(135deg, #2abaa3 0%, var(--ocean-primary) 100%);
 }
 
 .simple-icon {
@@ -1048,7 +1059,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: white;
+  background: transparent;
   padding: 1rem 1.5rem;
   border-radius: 50px;
   box-shadow: none;
@@ -1070,13 +1081,13 @@
 
 .cert-name {
   font-weight: 600;
-  color: #0d3a5c;
+  color: var(--ocean-dark);
   font-size: 0.95rem;
 }
 
 /* Quality Policy - Statement + Pillars */
 .quality-statement-box {
-  background: linear-gradient(135deg, #0d3a5c 0%, #1a5a7a 100%);
+  background: linear-gradient(135deg, var(--ocean-dark) 0%, #1a5a7a 100%);
   padding: 3rem;
   border-radius: 16px;
   text-align: center;
@@ -1105,7 +1116,7 @@
 }
 
 .pillar {
-  background: white;
+  background: transparent;
   padding: 1.5rem;
   border-radius: 12px;
   text-align: center;
@@ -1115,7 +1126,7 @@
 
 .pillar strong {
   display: block;
-  color: #0d3a5c;
+  color: var(--ocean-dark);
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -1133,7 +1144,7 @@
 }
 
 .client-group h4 {
-  color: #0d3a5c;
+  color: var(--ocean-dark);
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -1149,7 +1160,7 @@
 
 .client-tags span {
   background: #e8f4f8;
-  color: #0d3a5c;
+  color: var(--ocean-dark);
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -1250,6 +1261,15 @@
   z-index: 2;
 }
 
+.hero-overlay.second {
+  background: linear-gradient(
+    135deg,
+    rgba(11, 63, 51, 0.9) 0%,
+    rgba(15, 88, 71, 0.8) 50%,
+    rgba(20, 113, 91, 0.7) 100%
+  );
+}
+
 /* Content Grid Layout */
 .hero-content-grid {
   position: relative;
@@ -1273,7 +1293,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  background: linear-gradient(135deg, #4291ab 0%, #307087 100%);
+  background: linear-gradient(135deg, var(--ocean-primary) 0%, #307087 100%);
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
@@ -1354,7 +1374,7 @@
 
 .slide-tag {
   display: inline-block;
-  background: linear-gradient(135deg, #4291ab 0%, #307087 100%);
+  background: linear-gradient(135deg, var(--ocean-primary) 0%, #307087 100%);
   color: white;
   padding: 0.4rem 1rem;
   border-radius: 20px;
@@ -1387,7 +1407,7 @@
 
 .progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, #2abaa3 0%, #4291ab 100%);
+  background: linear-gradient(90deg, #2abaa3 0%, var(--ocean-primary) 100%);
   transition: width 4s linear;
 }
 
@@ -1412,7 +1432,7 @@
 }
 
 .strip-item.active {
-  background: linear-gradient(90deg, #2abaa3 0%, #4291ab 100%);
+  background: linear-gradient(90deg, #2abaa3 0%, var(--ocean-primary) 100%);
   height: 4px;
 }
 
@@ -2742,7 +2762,7 @@
   transition: all var(--transition-normal);
   border: 2px solid #0a2f4a;
   border-radius: var(--radius-lg);
-  background: var(--white-color);
+  background: transparent;
   box-shadow: none;
 }
 
@@ -2783,7 +2803,7 @@
   display: inline-block;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #0d3a5c;
+  color: var(--ocean-dark);
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -2813,7 +2833,7 @@
 }
 
 .certification-card {
-  background: white;
+  background: transparent;
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
@@ -2831,7 +2851,7 @@
   width: 64px;
   height: 64px;
   margin: 0 auto 1rem;
-  background: linear-gradient(135deg, #0d3a5c 0%, #0c4b65 100%);
+  background: linear-gradient(135deg, var(--ocean-dark) 0%, #0c4b65 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -3038,7 +3058,7 @@
 .auth-card {
   padding: var(--spacing-2xl);
   text-align: center;
-  background: var(--white-color);
+  background: transparent;
   border-radius: var(--radius-lg);
   border: 2px solid #0a2f4a;
   overflow: hidden;
@@ -3314,7 +3334,7 @@
 
 /* Request Form */
 .request-form {
-  background: var(--white-color);
+  background: transparent;
   padding: var(--spacing-2xl);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
@@ -3340,7 +3360,7 @@
   border-radius: var(--radius-md);
   font-size: var(--font-size-base);
   color: var(--text-color);
-  background: var(--white-color);
+  background: transparent;
   transition: all var(--transition-fast);
 }
 
@@ -3498,7 +3518,7 @@
 /* Client Logos Slider Styles */
 .clients-showcase {
   padding: 5rem 0;
-  background: #f8fafc;
+  background: transparent;
 }
 
 .clients-showcase-header {
@@ -3510,7 +3530,7 @@
   display: inline-block;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #0d3a5c;
+  color: var(--ocean-dark);
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -3554,7 +3574,7 @@
   justify-content: center;
   padding: var(--spacing-md);
   margin-right: var(--spacing-lg);
-  background: #ffffff;
+  background: transparent;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
@@ -3620,7 +3640,7 @@
 }
 
 .guangzhou-auth-card {
-  background: var(--white-color);
+  background: transparent;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   overflow: hidden;
@@ -3641,7 +3661,7 @@
   width: 100px;
   height: 100px;
   object-fit: contain;
-  background: var(--white-color);
+  background: transparent;
   border-radius: var(--radius-md);
   padding: var(--spacing-sm);
   flex-shrink: 0;
@@ -3740,7 +3760,7 @@
 .about-section h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #0d3a5c;
+  color: var(--ocean-dark);
   margin-bottom: 0.1rem;
   position: relative;
   text-transform: none;
@@ -3852,7 +3872,7 @@
 }
 
 .carousel-dot.active {
-  background: #ffffff;
+  background: transparent;
   transform: scale(1.2);
 }
 
@@ -3864,7 +3884,7 @@
 .about-subtitle {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #01013f;
+  color: #14b18a41;
   margin-bottom: 0;
   position: relative;
   padding-bottom: 0;
@@ -3877,7 +3897,7 @@
   left: 0;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #01013f 0%, #51a2d5 100%);
+  background: linear-gradient(90deg, #14b18a41 0%, #0c8863 100%);
   border-radius: 2px;
 }
 
@@ -3904,28 +3924,49 @@
 }
 
 .about-cta .btn-primary {
-  background: linear-gradient(135deg, #01013f 0%, #51a2d5 100%);
+  background: linear-gradient(135deg, #0c8863 0%, #14b18a41 100%);
   color: #ffffff;
 }
 
-.about-cta .btn-primary:hover {
+/* Button hover effects removed */
+/* .about-cta .btn-primary:hover {
   transform: none;
   box-shadow: none;
   background: linear-gradient(135deg, #01013f 0%, #51a2d5 100%);
+} */
+
+/* Override global button hover effects for Who We Are section */
+.about-cta .btn-primary:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  background: linear-gradient(135deg, #14b18a41 0%, #0c8863 100%) !important;
+  border-color: inherit !important;
+  text-shadow: none !important;
 }
 
 .about-cta .btn-outline {
-  border: 2px solid #01013f;
-  color: #01013f;
+  border: 2px solid #14b18a41;
+  color: #0c8863;
   background: transparent;
 }
 
-.about-cta .btn-outline:hover {
+/* Button hover effects removed */
+/* .about-cta .btn-outline:hover {
   background: linear-gradient(135deg, #01013f 0%, #51a2d5 100%);
   color: #ffffff;
   border-color: #0b3c5d;
   transform: none;
   box-shadow: none;
+} */
+
+/* Override global button hover effects for Who We Are section */
+.about-cta .btn-outline:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  color: #0c8863 !important;
+  border-color: #14b18a41 !important;
+  text-shadow: none !important;
 }
 
 /* Stats Grid */
@@ -3947,7 +3988,7 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1b5f9c;
+  color: #1b9c8042;
   margin-bottom: 0.5rem;
 }
 
@@ -4028,7 +4069,7 @@
 .stats-item-modern {
   text-align: center;
   padding: 40px 30px;
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  background: transparent;
   border: 1px solid #e5e7eb;
   border-radius: 16px;
   transition: all 0.3s ease;
@@ -4043,7 +4084,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), #1c70c8);
+  background: linear-gradient(90deg, var(--primary-color), #14b18a41);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -4076,7 +4117,7 @@
   transform: translateX(-50%);
   width: 40px;
   height: 3px;
-  background: linear-gradient(90deg, var(--primary-color), #1c70c8);
+  background: linear-gradient(90deg, var(--primary-color), #14b18a41);
   border-radius: 2px;
 }
 
@@ -4152,7 +4193,7 @@
 /* Modern Mission & Vision Section */
 .mission-vision-modern {
   padding: 100px 0;
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  background: transparent;
 }
 
 .mission-vision-header-modern {
@@ -4197,7 +4238,7 @@
   align-items: center;
   gap: 15px;
   padding: 30px;
-  background: #ffffff;
+  background: transparent;
   border-radius: 20px;
   border: 1px solid #0a2f4a;
   position: relative;
@@ -4205,7 +4246,6 @@
   box-shadow: none;
   text-align: center;
 }
-
 .mission-card-modern::before,
 .vision-card-modern::before {
   content: "";
@@ -4341,7 +4381,7 @@
 /* Modern Certifications Section */
 .certifications-modern {
   padding: 100px 0;
-  background: #ffffff;
+  background: transparent;
 }
 
 .certifications-header-modern {
@@ -4384,7 +4424,7 @@
   align-items: flex-start;
   gap: 25px;
   padding: 40px;
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  background: transparent;
   border: 1px solid #0a2f4a;
   border-radius: 16px;
   transition: all 0.3s ease;
@@ -4523,7 +4563,7 @@
 /* Modern Clients Section */
 .clients-modern {
   padding: 100px 0;
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  background: transparent;
 }
 
 .clients-header-modern {
@@ -4567,7 +4607,7 @@
   align-items: center;
   gap: 15px;
   padding: 20px;
-  background: #ffffff;
+  background: transparent;
   border: 1px solid #0a2f4a;
   border-radius: 16px;
   transition: all 0.3s ease;
@@ -4738,7 +4778,7 @@
 /* Modern Valued Clients Section */
 .valued-clients-modern {
   padding: 100px 0;
-  background: #ffffff;
+  background: transparent;
   overflow: hidden;
 }
 
@@ -4787,7 +4827,7 @@
   width: 200px;
   height: 120px;
   margin: 0 30px;
-  background: #ffffff;
+  background: transparent;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   display: flex;
@@ -4930,7 +4970,7 @@
 
 .valued-clients-modern {
   padding: 100px 0;
-  background: #ffffff;
+  background: transparent;
   overflow: hidden;
 }
 
@@ -4980,8 +5020,8 @@
   height: 100px;
   margin: 0 20px !important;
   padding: 15px;
-  background: #ffffff;
-  border: 1px solid #0d3a5c !important;
+  background: transparent;
+  border: 1px solid var(--ocean-dark) !important;
   border-radius: 12px;
   display: flex;
   align-items: center;

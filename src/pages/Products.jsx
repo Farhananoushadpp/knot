@@ -118,23 +118,25 @@ const ProductsPage = () => {
         title="Marine Equipment Catalog"
         subtitle="Complete Solutions for Maritime Industry"
         description="Explore our comprehensive range of high-quality marine equipment, spare parts, and solutions. From engine stores to safety equipment, we provide everything you need for optimal vessel operations."
+        backgroundImage="/knot and sail images/Asset 34.webp"
         icon={Package}
         badges={[
           { icon: Award, text: "Quality Assured" },
           { icon: Users, text: "Global Supply" },
           { icon: Package, text: "Wide Range" },
         ]}
-        backgroundImage="/catalog.jpg"
       />
 
       {/* All Categories */}
-      <section className="all-categories section-spacing-top">
+      <section
+        className="all-categories section-spacing-top"
+        style={{ backgroundColor: "#ffffff" }}
+      >
         <div className="container">
           <div className="section-header">
             <h2>Product Categories</h2>
             <p>Complete range of marine equipment and solutions</p>
           </div>
-
           <div className="grid-responsive-5">
             {productCategories.map((category) => (
               <div key={category.id} className="category-card">

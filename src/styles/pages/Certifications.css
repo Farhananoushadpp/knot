@@ -6,39 +6,123 @@
  */
 
 /* ============================================
-   CERTIFICATIONS HERO SECTION
+   CERTIFICATIONS HERO SECTION - Logo-Inspired Theme
    ============================================ */
 
 .certifications-hero {
-  padding: 120px 0 80px;
-  background: linear-gradient(135deg, #0d3a5c 0%, #0c4b65 100%);
+  padding: 140px 0 100px;
+  background: linear-gradient(
+    135deg,
+    var(--ocean-deep) 0%,
+    var(--ocean-dark) 20%,
+    var(--ocean-accent) 40%,
+    var(--ocean-primary) 60%,
+    var(--ocean-secondary) 80%,
+    var(--ocean-light) 100%
+  );
   position: relative;
   overflow: hidden;
 }
 
+/* Remove white background from hero container */
+.certifications-hero .container {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.certifications-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(
+      circle at 30% 70%,
+      rgba(10, 58, 47, 0.4) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(15, 88, 71, 0.4) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(13, 76, 61, 0.3) 0%,
+      transparent 70%
+    );
+  z-index: 1;
+}
+
+.certifications-hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--ocean-deep) 0%,
+    var(--ocean-dark) 20%,
+    var(--ocean-accent) 40%,
+    var(--ocean-primary) 60%,
+    var(--ocean-secondary) 80%,
+    var(--ocean-light) 100%
+  );
+  z-index: 2;
+}
+
 .certifications-hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
+  background: transparent !important;
+  padding: 0 !important;
 }
 
 .certifications-hero-title {
   font-family: var(--font-family-heading);
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #ffffff;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.95) 50%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 20px rgba(0, 119, 182, 0.3);
+  animation: fadeInUp 1s ease-out;
 }
 
 .certifications-hero-subtitle {
   font-family: var(--font-family);
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   color: rgba(255, 255, 255, 0.9);
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ============================================
@@ -47,7 +131,7 @@
 
 .certifications-main {
   padding: 100px 0;
-  background: #ffffff;
+  background: transparent;
 }
 
 .certifications-grid-modern {
@@ -63,8 +147,8 @@
   align-items: flex-start;
   gap: 25px;
   padding: 40px;
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-  border: 2px solid #0a2f4a;
+  background: transparent;
+  border: 2px solid var(--ocean-light);
   border-radius: 16px;
   transition: all 0.3s ease;
   position: relative;
@@ -78,15 +162,19 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), #2abaa3);
+  background: linear-gradient(
+    90deg,
+    var(--ocean-primary),
+    var(--ocean-secondary)
+  );
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
 
 .certification-item-modern:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(10, 47, 74, 0.1);
-  border-color: #0d3a5c;
+  box-shadow: 0 10px 30px rgba(0, 169, 157, 0.15);
+  border-color: var(--ocean-primary);
 }
 
 .certification-item-modern:hover::before {
@@ -96,7 +184,11 @@
 .certification-badge-modern {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #0d3a5c 0%, #0c4b65 100%);
+  background: linear-gradient(
+    135deg,
+    var(--ocean-primary) 0%,
+    var(--ocean-secondary) 100%
+  );
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -121,49 +213,107 @@
 .certification-name-modern {
   font-family: var(--font-family-heading);
   font-size: 1.5rem;
-  font-weight: 600;
-  color: #0a1f44;
-  margin-bottom: 15px;
+  font-weight: 700;
+  color: var(--ocean-primary);
+  margin-bottom: 1rem;
   line-height: 1.3;
 }
 
 .certification-desc-modern {
   font-family: var(--font-family);
   font-size: 1rem;
-  color: #64748b;
+  color: var(--ocean-dark);
   line-height: 1.6;
   margin: 0;
 }
 
 /* ============================================
-   CERTIFICATIONS CTA SECTION
+   CERTIFICATIONS CTA SECTION - Logo-Inspired Theme
    ============================================ */
 
 .certifications-cta {
   padding: 80px 0;
-  background: #f8fafc;
-  text-align: center;
+  background: linear-gradient(
+    135deg,
+    var(--ocean-deep) 0%,
+    var(--ocean-dark) 20%,
+    var(--ocean-accent) 40%,
+    var(--ocean-primary) 60%,
+    var(--ocean-secondary) 80%,
+    var(--ocean-light) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+/* Remove white background from CTA container */
+.certifications-cta .container {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.certifications-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(
+      circle at 25% 75%,
+      rgba(10, 58, 47, 0.3) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 75% 25%,
+      rgba(15, 88, 71, 0.3) 0%,
+      transparent 60%
+    );
+  z-index: 1;
 }
 
 .certifications-cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
   max-width: 600px;
   margin: 0 auto;
+  background: transparent !important;
+  padding: 0 !important;
 }
 
 .certifications-cta p {
   font-family: var(--font-family);
-  font-size: 1.125rem;
-  color: #64748b;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
   margin-bottom: 2rem;
 }
 
-.certifications-cta .btn {
-  padding: 1rem 2rem;
-  font-size: 1rem;
+.certifications-cta .btn-primary {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
   font-weight: 600;
+  border-radius: 50px;
   text-decoration: none;
-  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+}
+
+.certifications-cta .btn-primary:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 169, 157, 0.3);
+  color: #ffffff;
+  text-decoration: none;
 }
 
 /* ============================================
@@ -284,5 +434,135 @@
   .certifications-cta .btn {
     padding: 0.875rem 1.5rem;
     font-size: 0.9rem;
+  }
+}
+
+/* ============================================
+   PROFESSIONAL CTA SECTION - Hero-Inspired Theme
+   ============================================ */
+
+.certifications-cta-professional {
+  padding: 100px 0;
+  background: #47c2b85d;
+  position: relative;
+  overflow: hidden;
+}
+
+.certifications-cta-professional::before {
+  display: none;
+}
+
+.certifications-cta-content-professional {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.certifications-cta-title {
+  font-family: var(--font-family-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: none;
+}
+
+.certifications-cta-description {
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  text-shadow: none;
+}
+
+.btn-primary-certifications {
+  background: linear-gradient(
+    135deg,
+    var(--ocean-secondary) 0%,
+    var(--ocean-accent) 100%
+  );
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(15, 127, 122, 0.3);
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary-certifications::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.btn-primary-certifications:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(15, 127, 122, 0.4);
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.btn-primary-certifications:hover::before {
+  left: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certifications-cta-professional {
+    padding: 80px 0;
+  }
+
+  
+  .certifications-cta-title {
+    font-size: 2rem;
+  }
+
+  .certifications-cta-description {
+    font-size: 1.1rem;
+  }
+
+  .btn-primary-certifications {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .certifications-cta-professional {
+    padding: 60px 0;
+  }
+
+  .certifications-cta-title {
+    font-size: 1.75rem;
+  }
+
+  .certifications-cta-description {
+    font-size: 1rem;
+  }
+
+  .btn-primary-certifications {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
   }
 }

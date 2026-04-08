@@ -1,22 +1,64 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { ChevronDown, X } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    // Add/remove body class for overlay
+    if (!isMenuOpen) {
+      document.body.classList.add("nav-menu-open");
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.classList.remove("nav-menu-open");
+      document.body.style.overflow = "";
+    }
   };
 
   const closeMenu = () => {
     setIsMenuOpen(false);
     setProductsDropdownOpen(false);
+    setServicesDropdownOpen(false);
+    // Remove body class and restore scroll
+    document.body.classList.remove("nav-menu-open");
+    document.body.style.overflow = "";
   };
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMenuOpen && !event.target.closest(".navbar")) {
+        closeMenu();
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }
+  }, [isMenuOpen]);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      document.body.classList.remove("nav-menu-open");
+      document.body.style.overflow = "";
+    };
+  }, []);
 
   const toggleProductsDropdown = () => {
     setProductsDropdownOpen(!productsDropdownOpen);
+  };
+
+  const toggleServicesDropdown = () => {
+    setServicesDropdownOpen(!servicesDropdownOpen);
   };
 
   const isActive = (path) => {
@@ -24,6 +66,12 @@ const Navbar = () => {
       return (
         location.pathname === "/products" ||
         location.pathname.startsWith("/products/")
+      );
+    }
+    if (path === "/services") {
+      return (
+        location.pathname === "/services" ||
+        location.pathname.startsWith("/services/")
       );
     }
     return location.pathname === path;
@@ -36,14 +84,14 @@ const Navbar = () => {
           <Link to="/" className="logo-link">
             <img
               src="/logo.webp"
-              alt="Knot & Sail"
+              alt="Ocean Infinity"
               className="logo-image logo-first"
             />
           </Link>
           {/* <Link to="/" className="logo-link">
             <img
               src="/asp.webp"
-              alt="Knot & Sail"
+              alt="Ocean Infinity"
               className="logo-image logo-second"
             />
           </Link> */}
@@ -53,8 +101,10 @@ const Navbar = () => {
           <h1 className="nav-company-name">ASP GLOBAL MARINE TRADING LLC</h1>
           <p className="nav-group-name">Part of Ocean Serenity Group</p>
         </div> */}
-
-        <div className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
+        <div
+          className={`nav-menu ${isMenuOpen ? "active" : ""}`}
+          onClick={(e) => e.stopPropagation()}
+        >
           <ul className="nav-list">
             <li>
               <Link
@@ -74,136 +124,69 @@ const Navbar = () => {
                 <span className="nav-text">About Us</span>
               </Link>
             </li>
-            <li>
-              <Link
-                to="/services"
-                className={`nav-link ${isActive("/services") ? "active" : ""}`}
-                onClick={closeMenu}
+            <li className="nav-item-dropdown">
+              <button
+                className={`nav-link dropdown-toggle ${
+                  isActive("/services") ? "active" : ""
+                }`}
+                onClick={toggleServicesDropdown}
               >
                 <span className="nav-text">Services</span>
-              </Link>
-            </li>
-            {/* <li
-              className={`nav-dropdown ${productsDropdownOpen ? "active" : ""}`}
-            >
-              <button
-                className={`nav-link dropdown-toggle ${isActive("/products") ? "active" : ""}`}
-                onClick={toggleProductsDropdown}
-              >
-                <span className="nav-text">Products</span>
+                <ChevronDown
+                  size={16}
+                  className={`dropdown-arrow ${servicesDropdownOpen ? "open" : ""}`}
+                />
               </button>
-              <div className="dropdown-menu">
-                <Link
-                  to="/products"
-                  className="dropdown-item dropdown-main"
-                  onClick={closeMenu}
-                >
-                  View All Products
-                </Link>
-                <div className="dropdown-divider"></div>
-                <Link
-                  to="/products/engine-stores"
+              <div
+                className={`dropdown-menu ${servicesDropdownOpen ? "show" : ""}`}
+              >
+                {/* <Link
+                  to="/services"
                   className="dropdown-item"
                   onClick={closeMenu}
                 >
-                  Engine Stores
-                </Link>
+                  All Services
+                </Link> */}
                 <Link
-                  to="/products/deck-stores-general"
+                  to="/services/safety-services"
                   className="dropdown-item"
                   onClick={closeMenu}
                 >
-                  Deck Stores & General Marine Stores
+                  Safety Services
                 </Link>
                 <Link
-                  to="/products/engine-spares-2stroke"
+                  to="/services/technical-services"
                   className="dropdown-item"
                   onClick={closeMenu}
                 >
-                  Engine Spares - 2-Stroke
+                  Technical Services
                 </Link>
                 <Link
-                  to="/products/engine-spares-4stroke"
+                  to="/services/dry-docking-services"
                   className="dropdown-item"
                   onClick={closeMenu}
                 >
-                  Engine Spares - 4-Stroke
-                </Link>
-                <Link
-                  to="/products/turbochargers-auxiliary"
-                  className="dropdown-item"
-                  onClick={closeMenu}
-                >
-                  Turbochargers & Auxiliary Engine Products
-                </Link>
-                <Link
-                  to="/products/purifiers"
-                  className="dropdown-item"
-                  onClick={closeMenu}
-                >
-                  Purifiers & Separators
-                </Link>
-                <Link
-                  to="/products/air-compressor-spares"
-                  className="dropdown-item"
-                  onClick={closeMenu}
-                >
-                  Air Compressor Spares
-                </Link>
-                <Link
-                  to="/products/hydraulic-systems"
-                  className="dropdown-item"
-                  onClick={closeMenu}
-                >
-                  Hydraulic Systems & Components
-                </Link>
-                <Link
-                  to="/products/boilers-incinerators-heat-exchangers"
-                  className="dropdown-item"
-                  onClick={closeMenu}
-                >
-                  Boilers, Incinerators & Heat Exchangers
-                </Link>
-                <Link
-                  to="/products/pumps-marine-industrial"
-                  className="dropdown-item"
-                  onClick={closeMenu}
-                >
-                  Pumps – Marine & Industrial
-                </Link>
-                <Link
-                  to="/products/hvac-compressors"
-                  className="dropdown-item"
-                  onClick={closeMenu}
-                >
-                  HVAC Compressors & Spares
-                </Link>
-                <Link
-                  to="/products/lsa-ffa"
-                  className="dropdown-item"
-                  onClick={closeMenu}
-                >
-                  LSA & FFA (Life-Saving & Fire-Fighting Equipment)
+                  Dry Docking Services
                 </Link>
               </div>
-            </li> */}
-            {/* <li>
+            </li>
+            <li>
               <Link
-                to="/authorizations"
-                className={`nav-link ${isActive("/authorizations") ? "active" : ""}`}
+                to="/products/lsa-ffa"
+                className={`nav-link ${isActive("/products/lsa-ffa") ? "active" : ""}`}
                 onClick={closeMenu}
               >
-                <span className="nav-text">Authorizations</span>
+                <span className="nav-text">Products</span>
               </Link>
-            </li> */}
+            </li>
             <li>
-              {/* <Link
+              <Link
                 to="/certifications"
                 className={`nav-link ${isActive("/certifications") ? "active" : ""}`}
                 onClick={closeMenu}
               >
                 <span className="nav-text">Certifications</span>
-              </Link> */}
+              </Link>
             </li>
             <li>
               <Link

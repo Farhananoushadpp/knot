@@ -1,81 +1,81 @@
 /**
- * Knot & Sail - CSS Variables
+ * Ocean Infinity - CSS Variables
  * 
- * Deep Ocean Corporate Theme - Best for ASP
- * Theme: Deep Ocean Corporate (Maritime Industrial)
+ * Deep Ocean Green Theme
+ * Theme: Ocean Infinity Green Palette
  */
 
 :root {
-  /* 🌊 New Ocean Blue Theme */
-  /* Primary Colors */
-  --primary-color: #01013f; /* Deep Navy Blue */
-  --primary-dark: #01013f;
-  --primary-light: #030c54;
+  /* 🌊 Ocean Teal Theme */
+  /* Primary Colors - Ocean Teal Palette */
+  --primary-color: #0f7f7a; /* Ocean Teal */
+  --primary-dark: #0a3d4a; /* Deep Sea Blue */
+  --primary-light: #6fd1c7; /* Soft Aqua */
 
-  /* Secondary Colors */
-  --secondary-color: #030c54; /* Dark Navy */
-  --secondary-dark: #030c54;
-  --secondary-light: #022f8e;
+  /* Secondary Colors - Ocean Teal Palette */
+  --secondary-color: #0a3d4a; /* Deep Sea Blue */
+  --secondary-dark: #2b2b2b; /* Charcoal Grey */
+  --secondary-light: #f5f7f8; /* Light Grey */
 
-  /* Accent Colors */
-  --accent-color: #1c70c8; /* Ocean Blue */
-  --accent-dark: #1c70c8;
-  --accent-light: #51a2d5;
+  /* Accent Colors - Ocean Teal Palette */
+  --accent-color: #ff6b6b; /* Coral Accent */
+  --accent-dark: #ffc857; /* Sunset Yellow */
+  --accent-light: #6fd1c7; /* Soft Aqua */
 
   /* Interactive States */
-  --hover-color: #51a2d5; /* Light Ocean Blue */
-  --hover-dark: #1c70c8;
-  --hover-light: #7dbcde;
+  --hover-color: #6fd1c7; /* Soft Aqua */
+  --hover-dark: #0a3d4a;
+  --hover-light: #0f7f7a;
 
   /* Light / Background Colors */
-  --light-bg: #7dbcde; /* Soft Sky Blue */
-  --light-bg-dark: #51a2d5;
-  --light-bg-light: #a8d5e8;
+  --light-bg: #f5f7f8; /* Light Grey */
+  --light-bg-dark: #0f7f7a;
+  --light-bg-light: #ffffff;
 
   /* Text Colors */
-  --text-light: #f8fafc; /* Light Gray White */
-  --text-dark: #01013f; /* Deep Navy for light backgrounds */
-
+  --text-light: #ffffff; /* Pure White */
+  --text-dark: #2b2b2b; /* Charcoal Grey */
   /* Background Colors */
-  --background-dark: #030c54;
-  --background-light: #7dbcde;
+  --background-dark: #0a3d4a;
+  --background-light: #f5f7f8;
   --white-color: #ffffff;
 
-  /* 🔥 New Ocean Blue Gradients */
-  --ocean-gradient: linear-gradient(180deg, #01013f, #030c54, #1c70c8);
-  --ocean-gradient-reverse: linear-gradient(180deg, #7dbcde, #51a2d5, #022f8e);
+  /* 🔥 Ocean Teal Gradients */
+  --ocean-gradient: linear-gradient(180deg, #0f7f7a, #0a3d4a, #6fd1c7);
+  --ocean-gradient-reverse: linear-gradient(180deg, #ffffff, #f5f7f8, #0f7f7a);
   --primary-gradient: linear-gradient(
     135deg,
-    #01013f 0%,
-    #030c54 50%,
-    #022f8e 100%
+    #0f7f7a 0%,
+    #0a3d4a 50%,
+    #6fd1c7 100%
   );
-  --accent-gradient: linear-gradient(135deg, #1c70c8 0%, #51a2d5 100%);
+  --accent-gradient: linear-gradient(135deg, #ff6b6b 0%, #6fd1c7 100%);
   --hero-gradient: linear-gradient(
     135deg,
-    #01013f 0%,
-    #022f8e 50%,
-    #7dbcde 100%
+    #0f7f7a 0%,
+    #0a3d4a 50%,
+    #ffffff 100%
   );
 
-  /* 🎯 Table & Card Colors - New Ocean Theme */
-  --table-header-bg: #030c54; /* Deep navy blue */
-  --table-header-text: #f8fafc; /* Light gray white */
-  --table-border: #7dbcde; /* Light ocean blue */
-  --table-row-alt: #f8fafc; /* Very light ocean */
+  /* 🎯 Table & Card Colors - Ocean Teal Theme */
+  --table-header-bg: #0a3d4a; /* Deep Sea Blue */
+  --table-header-text: #ffffff; /* Pure White */
+  --table-border: #0f7f7a; /* Ocean Teal */
+  --table-row-alt: #f5f7f8; /* Light Grey */
   --card-bg: #ffffff;
   --card-shadow:
-    0 4px 6px -1px rgba(1, 1, 63, 0.1), 0 2px 4px -1px rgba(1, 1, 63, 0.06);
-  --card-border: rgba(28, 112, 200, 0.1);
+    0 4px 6px -1px rgba(15, 127, 122, 0.1),
+    0 2px 4px -1px rgba(15, 127, 122, 0.06);
+  --card-border: rgba(15, 127, 122, 0.1);
 
-  /* 🎨 Hover States - New Ocean */
-  --hover-primary: #01013f;
-  --hover-secondary: #030c54;
-  --hover-accent: #1c70c8;
-  --hover-bg: #f0f9ff;
-  --hover-ocean: #7dbcde;
+  /* 🎨 Hover States - Ocean Teal */
+  --hover-primary: #0f7f7a;
+  --hover-secondary: #0a3d4a;
+  --hover-accent: #ff6b6b;
+  --hover-bg: #f5f7f8;
+  --hover-ocean: #6fd1c7;
 
-  /* Knot & Sail - Enhanced Typography - Professional Font Stack for Maritime Corporate */
+  /* Ocean Infinity - Enhanced Typography - Professional Font Stack for Ocean Technology */
   --font-family:
     "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-family-heading:
@@ -86,6 +86,8 @@
   --font-family-serif:
     "Open Sans", "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont,
     sans-serif;
+  --font-family-ocean: "Poppins", "Montserrat", "Inter", sans-serif;
+  /* Font Sizes - Ocean Infinity Scale */
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -96,8 +98,10 @@
   --font-size-4xl: 2.25rem;
   --font-size-5xl: 3rem;
   --font-size-6xl: 3.75rem;
+  --font-size-hero: 4.5rem;
+  --font-size-display: 5rem;
 
-  /* Spacing - Spacious Layout */
+  /* Spacing - Ocean Infinity Spacing System */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -108,38 +112,51 @@
   --spacing-4xl: 80px;
   --spacing-5xl: 96px;
   --spacing-6xl: 128px;
+  --spacing-section: 120px;
+  --spacing-container: 24px;
+  --spacing-grid: 30px;
 
-  /* Border Radius - Clean */
+  /* Border Radius - Ocean Infinity Design System */
+  --radius-xs: 2px;
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
   --radius-2xl: 24px;
+  --radius-3xl: 32px;
   --radius-full: 50%;
+  --radius-pill: 9999px;
+  --radius-ocean: 20px;
 
-  /* Shadows - New Ocean tinted */
-  --shadow-sm: 0 1px 2px rgba(1, 1, 63, 0.05);
-  --shadow-md: 0 4px 6px rgba(1, 1, 63, 0.08);
-  --shadow-lg: 0 10px 15px rgba(1, 1, 63, 0.1);
-  --shadow-xl: 0 20px 25px rgba(1, 1, 63, 0.12);
-  --shadow-primary: 0 10px 25px rgba(1, 1, 63, 0.2);
-  --shadow-ocean: 0 8px 30px rgba(28, 112, 200, 0.25);
+  /* Shadows - Ocean Teal tinted */
+  --shadow-sm: 0 1px 2px rgba(15, 127, 122, 0.05);
+  --shadow-md: 0 4px 6px rgba(15, 127, 122, 0.08);
+  --shadow-lg: 0 10px 15px rgba(15, 127, 122, 0.1);
+  --shadow-xl: 0 20px 25px rgba(15, 127, 122, 0.12);
+  --shadow-primary: 0 10px 25px rgba(15, 127, 122, 0.2);
+  --shadow-ocean: 0 8px 30px rgba(15, 127, 122, 0.25);
 
-  /* Transitions - Smooth */
+  /* Transitions - Ocean Infinity Smooth */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
+  --transition-ocean: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-  /* Container */
+  /* Container - Ocean Infinity Layout */
   --container-max-width: 1200px;
   --container-padding: 24px;
+  --container-wide: 1400px;
+  --container-narrow: 800px;
 
-  /* Z-index */
+  /* Z-index - Ocean Infinity Layering */
   --z-dropdown: 1000;
   --z-sticky: 1020;
   --z-fixed: 1030;
   --z-modal-backdrop: 1040;
   --z-modal: 1050;
+  --z-tooltip: 1060;
+  --z-ocean: 1070;
 
   /* Smooth Scroll */
   scroll-behavior: smooth;
@@ -271,6 +288,42 @@ html {
 a,
 button {
   transition: all 0.3s ease;
+}
+
+/* Ocean Infinity Design System Extensions */
+:root {
+  /* Ocean Infinity Brand Colors - Ocean Teal Palette */
+  --ocean-primary: #0a3d4a; /* Deep Sea Blue - for header/footer */
+  --ocean-secondary: #0f7f7a; /* Ocean Teal - for buttons and primary elements */
+  --ocean-accent: #124b3a96; /* Coral Accent - for CTAs */
+  --ocean-light: #6fd1c7; /* Soft Aqua - for hover effects */
+  --ocean-dark: #2b2b2b; /* Charcoal Grey - for text */
+  --ocean-deep: #0a3d4a; /* Deep Sea Blue */
+
+  /* Ocean Infinity Semantic Colors */
+  --color-success: #0f7f7a; /* Ocean Teal */
+  --color-warning: #ffc857; /* Sunset Yellow */
+  --color-error: #ff6b6b; /* Coral Accent */
+  --color-info: #6fd1c7; /* Soft Aqua */
+
+  /* Ocean Infinity Component Specific */
+  --button-primary-bg: var(--ocean-primary);
+  --button-primary-hover: var(--ocean-secondary);
+  --button-secondary-bg: transparent;
+  --button-secondary-border: var(--ocean-primary);
+  --button-secondary-hover: var(--ocean-primary);
+
+  /* Ocean Infinity Layout */
+  --header-height: 80px;
+  --footer-height: 200px;
+  --sidebar-width: 280px;
+
+  /* Ocean Infinity Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 }
 
 /* Reduced motion for accessibility */

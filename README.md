@@ -1,6 +1,6 @@
-# ASP Global Marine Trading LLC Website
+# Ocean Infinity Website
 
-A professional corporate website for ASP Global Marine Trading LLC built with **React, HTML, and CSS** featuring a Modern Marine Green theme.
+A professional corporate website for Ocean Infinity built with **React, HTML, and CSS** featuring a Modern Deep Ocean Blue theme.
 
 ## 🛠️ Technology Stack
 
@@ -13,7 +13,7 @@ A professional corporate website for ASP Global Marine Trading LLC built with **
 ## 🌊 Features
 
 - **Modern React Architecture**: Built with functional components and hooks
-- **Modern Marine Green Theme**: Professional marine-inspired color palette
+- **Modern Deep Ocean Green Theme**: Professional ocean-inspired green color palette
 - **Fully Responsive**: Mobile-first design with hamburger menu
 - **Smooth Animations**: Scroll reveal effects and hover transitions
 - **SEO Optimized**: Semantic HTML5 structure and meta tags
@@ -23,11 +23,11 @@ A professional corporate website for ASP Global Marine Trading LLC built with **
 
 ## 🎨 Color Theme
 
-- **Primary**: #3BBFA7 (Modern Marine Green)
-- **Secondary**: #2DA87A (Darker Marine Green)
-- **Accent**: #E6F7F4 (Light Background Accent)
-- **Background**: #F8FFFD (Very Light Marine)
-- **Text**: #0A2E2A (Dark Marine Text)
+- **Primary**: #167e65 (Ocean Green)
+- **Secondary**: #0f5847 (Deep Ocean Green)
+- **Accent**: #0d4c3d (Dark Ocean Green)
+- **Background**: #F0F8FF (Alice Blue/Ocean Mist)
+- **Text**: #020d0a (Very Dark Green)
 - **White**: #FFFFFF (Clean White Sections)
 
 ## 📁 Project Structure
@@ -142,12 +142,12 @@ Update the content directly in each component file:
 
 ## 📞 Contact Information
 
-**ASP Global Marine Trading LLC**
+**Ocean Infinity**
 
-- 📍 Location: Dubai, UAE
-- 📞 Phone: +971 4 572 4542
-- 📱 Mobile: +971 52 547 8137
-- ✉️ Email: info@aspglobalmarine.com
+- 📍 Location: Global Operations
+- 📞 Phone: +1 234 567 8900
+- 📱 Mobile: +1 234 567 8900
+- ✉️ Email: info@oceaninfinity.com
 
 ## 📄 License
 
@@ -163,5 +163,5 @@ This project is licensed under the MIT License.
 
 ---
 
-**Built with ❤️ for ASP Global Marine Trading LLC**
-_Driven by Quality. Propelled by Trust._
+**Built with ❤️ for Ocean Infinity**
+_Exploring the Infinite Ocean._

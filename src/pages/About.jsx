@@ -32,24 +32,24 @@ const About = () => {
   const heroSlides = [
     {
       id: 1,
-      image: "/about1.webp",
-      heading: "Knot & Sail Maritime Excellence",
+      image: "/ocean-infinity-hero-1.webp",
+      heading: "Ocean Infinity - Pioneering Ocean Technology",
       description:
-        "Your premier partner in the UAE's maritime industry, delivering comprehensive marine solutions with unmatched expertise and commitment to operational excellence.",
+        "Leading the future of ocean operations with advanced robotics, autonomous systems, and data-driven solutions that transform how we explore and understand our oceans.",
     },
     {
       id: 2,
-      image: "/about2.webp",
-      heading: "Trusted Maritime Solutions Provider",
+      image: "/ocean-infinity-hero-2.webp",
+      heading: "Global Leader in Marine Innovation",
       description:
-        "Setting the benchmark for excellence in the UAE's maritime industry through innovation, customer-centric approach, and long-term partnerships with ship owners and managers.",
+        "Delivering cutting-edge subsea robotics and offshore services worldwide, setting new standards for safety, efficiency, and environmental sustainability in maritime operations.",
     },
     {
       id: 3,
-      image: "/about3.webp",
-      heading: "Comprehensive Marine Services",
+      image: "/ocean-infinity-hero-3.webp",
+      heading: "Advanced Ocean Data Solutions",
       description:
-        "From technical manpower supply to specialized marine services, we provide reliable solutions that enhance operational performance and minimize downtime for your vessels.",
+        "Harnessing intelligent data acquisition and analysis to provide precise, actionable insights that optimize offshore operations and protect marine environments.",
     },
   ];
 
@@ -80,14 +80,18 @@ const About = () => {
 
   // Card images for the carousel
   const cardImages = [
-    { id: 1, src: "/1.webp", title: "Knot & Sail Excellence" },
-    { id: 2, src: "/2.webp", title: "UAE Maritime Operations" },
-    { id: 3, src: "/3.webp", title: "Marine Solutions" },
-    { id: 4, src: "/4.webp", title: "Safety Standards" },
-    { id: 5, src: "/5.webp", title: "Technical Expertise" },
-    { id: 6, src: "/products/deck/1.webp", title: "Marine Services" },
-    { id: 7, src: "/products/enginestores/1.webp", title: "Technical Support" },
-    { id: 8, src: "/products/lsa&ffa/1.webp", title: "Safety Equipment" },
+    { id: 1, src: "/1.webp", title: "Ocean Infinity Excellence" },
+    { id: 2, src: "/map.jpeg", title: "Global Maritime Operations" },
+    { id: 3, src: "/quality.jpg", title: "Ocean Technology Solutions" },
+    { id: 4, src: "/safety.webp", title: "Ocean Safety Standards" },
+    { id: 5, src: "/5.webp", title: "Advanced Ocean Technology" },
+    { id: 6, src: "/products/deck/1.webp", title: "Ocean Services" },
+    {
+      id: 7,
+      src: "/products/enginestores/1.webp",
+      title: "Ocean Technical Support",
+    },
+    { id: 8, src: "/products/lsa&ffa/1.webp", title: "Ocean Safety Equipment" },
   ];
 
   const [activeCard, setActiveCard] = useState(0);
@@ -181,9 +185,26 @@ const About = () => {
           ))}
         </div>
       </section>
-
-      <section className="about-section" id="who-we-are">
-        <div className="container">
+      <section
+        className="about-section"
+        id="who-we-are"
+        style={{ backgroundColor: "#ffffff" }}
+      >
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+            section.about-section#who-we-are {
+              background: #ffffff !important;
+              background-color: #ffffff !important;
+            }
+            html body section.about-section#who-we-are {
+              background: #ffffff !important;
+              background-color: #ffffff !important;
+            }
+          `,
+          }}
+        />
+        <div>
           <div className="section-header">
             {/* <span className="section-label">Company Overview</span> */}
             <h2>Who We Are</h2>
@@ -217,53 +238,48 @@ const About = () => {
                   />
                 ))}
               </div>
-              <div>
-                <p>
-                  At Knot & Sail, our mission is to set a benchmark for
-                  excellence in the UAE's maritime industry by combining
-                  innovation with a customer-centric approach. We continuously
-                  invest in advanced technology and industry best practices to
-                  ensure that we meet and exceed our clients' expectations. As a
-                  company that values long-term partnerships, we strive to be
-                  the preferred choice for ship owners and managers seeking
-                  reliable and comprehensive maritime solutions.
-                </p>
-              </div>
+              <p>
+                <b>Ocean Infinity</b> is a global leader in ocean technology and
+                marine operations, delivering innovative, data-driven solutions
+                that advance safety, efficiency, and sustainability across the
+                maritime and offshore sectors. Our commitment to operational
+                excellence and continuous innovation positions us at the
+                forefront of modern ocean services.
+              </p>
             </div>
-
             <div className="about-content-text">
               <h3 className="about-subtitle">
                 Your Trusted Partner in the UAE Marine Industry
               </h3>
               <div className="ocean-group-text-birds">
-                Premier Marine Service Provider
+                Part of Ocean Serenity Group
               </div>
               <p>
-                Knot & Sail is a premier service provider in the UAE marine
-                market, offering a complete range of reliable and high-quality
-                solutions for ship owners and ship management companies. With a
-                strong presence across all UAE ports, we are committed to
-                delivering excellence in maritime services, ensuring vessels
-                operate smoothly, efficiently, and in compliance with
-                international standards. Our expertise spans across various
-                aspects of ship support, from maintenance and repairs to
-                logistics and technical assistance, making us a trusted partner
-                in the industry.
+                We operate in accordance with internationally recognized quality
+                and safety standards, ensuring every project meets rigorous
+                regulatory and operational requirements. Through strategic
+                collaboration with leading classification societies and industry
+                partners, we provide dependable, compliant solutions across
+                complex marine environments.
               </p>
               <p>
-                Our company takes pride in its ability to provide tailored
-                solutions that cater to the unique needs of both local and
-                international clients. Backed by a team of experienced
-                professionals, we prioritize efficiency, safety, and
-                sustainability in every service we offer. Whether it's vessel
-                supply, engineering support, or regulatory compliance
-                assistance, Knot & Sail is dedicated to enhancing operational
-                performance and minimizing downtime for our clients.
+                Our core capabilities include subsea robotics, autonomous and
+                remotely operated survey operations, offshore support services,
+                and advanced data acquisition and analysis. Powered by
+                cutting-edge technology and a multidisciplinary team of
+                specialists, we deliver precise, reliable results that optimize
+                performance and reduce operational risk.
+              </p>
+              <p>
+                At Ocean Infinity, we partner with clients to unlock deeper
+                insights from the ocean environment delivering intelligent
+                solutions that keep operations safe, efficient, and
+                future-ready.
               </p>
 
               <div className="about-cta">
-                <Link to="/products" className="btn btn-primary">
-                  Explore our Products
+                <Link to="/services" className="btn btn-primary">
+                  Explore our services
                 </Link>
                 <Link to="/contact" className="btn btn-outline">
                   Get Quote
@@ -271,30 +287,14 @@ const About = () => {
               </div>
             </div>
           </div>
-
-          <div className="stats-section-modern">
-            <div className="stats-item-modern">
-              <div className="stats-number-modern">5+</div>
-              <div className="stats-label-modern">Years Experience</div>
-            </div>
-            <div className="stats-item-modern">
-              <div className="stats-number-modern">200+</div>
-              <div className="stats-label-modern">Global Clients</div>
-            </div>
-            <div className="stats-item-modern">
-              <div className="stats-number-modern">10+</div>
-              <div className="stats-label-modern">Countries Served</div>
-            </div>
-            <div className="stats-item-modern">
-              <div className="stats-number-modern">4200+</div>
-              <div className="stats-label-modern">Products</div>
-            </div>
-          </div>
         </div>
       </section>
-
       {/* Mission & Vision - Modern Design */}
-      <section className="mission-vision-modern" id="mission-vision">
+      <section
+        className="mission-vision-modern"
+        id="mission-vision"
+        style={{ backgroundColor: "#0c886314" }}
+      >
         <div className="container">
           <div className="mission-vision-header-modern">
             <h2 className="mission-vision-title-modern">Mission & Vision</h2>
@@ -303,38 +303,39 @@ const About = () => {
             </p>
           </div>
 
-          <div className="mission-vision-grid-modern">
-            <div className="mission-card-modern">
-              <div className="mission-icon-modern">
-                <Target size={32} />
+          <div className="template-card-grid">
+            <div className="template-card">
+              <div className="template-card-icon">
+                <Target size={24} />
               </div>
-              <div className="mission-content-modern">
-                <h3 className="mission-title-modern">Our Mission</h3>
-                <p className="mission-desc-modern">
-                  At Knot & Sail, our mission is to provide reliable,
-                  high-quality, and cost-effective marine solutions to ship
-                  owners and management companies across all UAE ports. We are
-                  committed to ensuring seamless operations through expert
-                  services, innovative technology, and round-the-clock support,
-                  delivering excellence in every aspect of the maritime
-                  industry.
+              <h3 className="template-card-title">Our Mission</h3>
+              <div className="template-card-content">
+                <p>
+                  To advance ocean operations through innovative technology,
+                  skilled expertise, and data-driven solutions that enhance
+                  safety, efficiency, and sustainability across the maritime and
+                  offshore sectors. We are committed to delivering reliable,
+                  high-quality services that meet client objectives, uphold
+                  international standards, and support responsible use of the
+                  world’s oceans.
                 </p>
               </div>
             </div>
 
-            <div className="vision-card-modern">
-              <div className="vision-icon-modern">
-                <Eye size={32} />
+            <div className="template-card">
+              <div className="template-card-icon">
+                <Eye size={24} />
               </div>
-              <div className="vision-content-modern">
-                <h3 className="vision-title-modern">Our Vision</h3>
-                <p className="vision-desc-modern">
-                  Our vision is to be the leading marine service provider in the
-                  UAE, setting the benchmark for quality, efficiency, and
-                  customer satisfaction. We aim to build long-term partnerships
-                  with local and international clients by continuously enhancing
-                  our capabilities, adopting sustainable practices, and staying
-                  ahead in the ever-evolving maritime industry.
+              <h3 className="template-card-title">Our Vision</h3>
+              <div className="template-card-content">
+                <p>
+                  To be the world’s most trusted and innovative ocean technology
+                  company, transforming how the oceans are understood, explored,
+                  and sustainably utilized. Ocean Infinity envisions a future
+                  where advanced robotics, intelligent data, and responsible
+                  operations unlock new possibilities for maritime and offshore
+                  industries while protecting the marine environment for
+                  generations to come.
                 </p>
               </div>
             </div>
@@ -343,7 +344,10 @@ const About = () => {
       </section>
 
       {/* Quality Policy */}
-      <section className="why-choose-modern">
+      <section
+        className="why-choose-modern"
+        style={{ backgroundColor: "#ffffff" }}
+      >
         <div className="container">
           <div className="why-header-modern">
             <h2 className="why-title-modern">Quality Policy</h2>
@@ -352,13 +356,16 @@ const About = () => {
             </p>
           </div>
 
-          <div className="why-grid-modern">
-            <div className="why-card-modern">
-              <div className="quality-icon">
-                <Users size={36} />
+          <div
+            className="template-card-grid"
+            style={{ gridTemplateColumns: "repeat(4, 1fr)" }}
+          >
+            <div className="template-card">
+              <div className="template-card-icon">
+                <Users size={24} />
               </div>
-              <div className="why-content-modern">
-                <h3>Customer Satisfaction</h3>
+              <h3 className="template-card-title">Customer Satisfaction</h3>
+              <div className="template-card-content">
                 <p>
                   We prioritize client needs by delivering tailored,
                   high-quality services that ensure operational efficiency and
@@ -366,13 +373,12 @@ const About = () => {
                 </p>
               </div>
             </div>
-
-            <div className="why-card-modern">
-              <div className="quality-icon">
-                <CheckCircle size={36} />
+            <div className="template-card">
+              <div className="template-card-icon">
+                <CheckCircle size={24} />
               </div>
-              <div className="why-content-modern">
-                <h3>Compliance & Standards</h3>
+              <h3 className="template-card-title">Compliance & Standards</h3>
+              <div className="template-card-content">
                 <p>
                   We adhere to local and international maritime regulations,
                   ensuring our services meet industry best practices.
@@ -380,12 +386,12 @@ const About = () => {
               </div>
             </div>
 
-            <div className="why-card-modern">
-              <div className="why-icon-modern">
-                <Settings size={48} />
+            <div className="template-card">
+              <div className="template-card-icon">
+                <Settings size={24} />
               </div>
-              <div className="why-content-modern">
-                <h3>Skilled Workforce</h3>
+              <h3 className="template-card-title">Skilled Workforce</h3>
+              <div className="template-card-content">
                 <p>
                   Our team consists of highly trained professionals who use
                   advanced technology and the latest techniques to maintain
@@ -394,28 +400,15 @@ const About = () => {
               </div>
             </div>
 
-            <div className="why-card-modern">
-              <div className="why-icon-modern">
-                <Anchor size={48} />
+            <div className="template-card">
+              <div className="template-card-icon">
+                <Anchor size={24} />
               </div>
-              <div className="why-content-modern">
-                <h3>Continuous Improvement</h3>
+              <h3 className="template-card-title">Continuous Improvement</h3>
+              <div className="template-card-content">
                 <p>
-                  We regularly evaluate and enhance our processes to improve
-                  service quality, efficiency, and environmental responsibility.
-                </p>
-              </div>
-            </div>
-
-            <div className="why-card-modern">
-              <div className="why-icon-modern">
-                <Package size={48} />
-              </div>
-              <div className="why-content-modern">
-                <h3>Safety & Sustainability</h3>
-                <p>
-                  We implement strict safety protocols and use eco-friendly
-                  solutions to minimize our environmental impact.
+                  We constantly enhance our processes and services to stay ahead
+                  of industry trends and exceed client expectations.
                 </p>
               </div>
             </div>
@@ -424,7 +417,10 @@ const About = () => {
       </section>
 
       {/* Safety Policy */}
-      <section className="why-choose-modern">
+      <section
+        className="why-choose-modern"
+        style={{ backgroundColor: "#0c886314" }}
+      >
         <div className="container">
           <div className="why-header-modern">
             <h2 className="why-title-modern">Safety Policy</h2>
@@ -433,13 +429,18 @@ const About = () => {
             </p>
           </div>
 
-          <div className="why-grid-modern">
-            <div className="why-card-modern">
-              <div className="quality-icon">
-                <ShieldCheck size={36} />
+          <div
+            className="template-card-grid"
+            style={{ gridTemplateColumns: "repeat(4, 1fr)" }}
+          >
+            <div className="template-card">
+              <div className="template-card-icon">
+                <ShieldCheck size={24} />
               </div>
-              <div className="why-content-modern">
-                <h3>Zero Tolerance for Safety Violations</h3>
+              <h3 className="template-card-title">
+                Zero Tolerance for Safety Violations
+              </h3>
+              <div className="template-card-content">
                 <p>
                   We uphold a strict zero-tolerance approach toward any actions
                   or practices that compromise safety standards.
@@ -447,12 +448,14 @@ const About = () => {
               </div>
             </div>
 
-            <div className="why-card-modern">
-              <div className="quality-icon">
-                <Users size={36} />
+            <div className="template-card">
+              <div className="template-card-icon">
+                <Users size={24} />
               </div>
-              <div className="why-content-modern">
-                <h3>Employee Training & Awareness</h3>
+              <h3 className="template-card-title">
+                Employee Training & Awareness
+              </h3>
+              <div className="template-card-content">
                 <p>
                   We provide ongoing training and development to all employees,
                   ensuring they are equipped with the necessary skills and
@@ -461,12 +464,14 @@ const About = () => {
               </div>
             </div>
 
-            <div className="why-card-modern">
-              <div className="quality-icon">
-                <Target size={36} />
+            <div className="template-card">
+              <div className="template-card-icon">
+                <Target size={24} />
               </div>
-              <div className="why-content-modern">
-                <h3>Risk Assessment & Mitigation</h3>
+              <h3 className="template-card-title">
+                Risk Assessment & Mitigation
+              </h3>
+              <div className="template-card-content">
                 <p>
                   Before beginning any service, we conduct thorough risk
                   assessments to identify potential hazards and implement
@@ -475,30 +480,16 @@ const About = () => {
               </div>
             </div>
 
-            <div className="why-card-modern">
-              <div className="quality-icon">
-                <CheckCircle size={36} />
+            <div className="template-card">
+              <div className="template-card-icon">
+                <CheckCircle size={24} />
               </div>
-              <div className="why-content-modern">
-                <h3>Compliance with Regulations</h3>
+              <h3 className="template-card-title">Safety Compliance</h3>
+              <div className="template-card-content">
                 <p>
-                  Our services are fully compliant with local and international
-                  safety regulations, ensuring that we meet or exceed all legal
-                  requirements.
-                </p>
-              </div>
-            </div>
-
-            <div className="why-card-modern">
-              <div className="quality-icon">
-                <TrendingUp size={36} />
-              </div>
-              <div className="why-content-modern">
-                <h3>Continuous Safety Improvement</h3>
-                <p>
-                  We continuously review and enhance our safety procedures to
-                  stay ahead of potential risks and maintain a proactive safety
-                  culture.
+                  We strictly adhere to international maritime safety
+                  regulations and maintain comprehensive safety management
+                  systems.
                 </p>
               </div>
             </div>
@@ -506,8 +497,14 @@ const About = () => {
         </div>
       </section>
 
+      {/* Certifications Section */}
+
       {/* Clients We Serve - Modern Design */}
-      <section className="clients-modern" id="clients">
+      <section
+        className="clients-modern"
+        id="clients"
+        style={{ backgroundColor: "#ffffff" }}
+      >
         <div className="container">
           <div className="clients-header-modern">
             <h2 className="clients-title-modern">Clients We Serve</h2>
@@ -516,14 +513,17 @@ const About = () => {
             </p>
           </div>
 
-          <div className="clients-grid-modern">
-            <div className="client-item-modern">
-              <div className="client-icon-modern">
-                <Ship size={32} />
+          <div
+            className="template-card-grid"
+            style={{ gridTemplateColumns: "repeat(4, 1fr)" }}
+          >
+            <div className="template-card">
+              <div className="template-card-icon">
+                <Ship size={24} />
               </div>
-              <div className="client-content-modern">
-                <h3 className="client-title-modern">Ship Owners</h3>
-                <ul className="client-list-modern">
+              <h3 className="template-card-title">Ship Owners</h3>
+              <div className="template-card-content">
+                <ul className="template-card-list">
                   <li>Bulk Carriers</li>
                   <li>Container Lines</li>
                   <li>Tankers</li>
@@ -532,13 +532,13 @@ const About = () => {
               </div>
             </div>
 
-            <div className="client-item-modern">
-              <div className="client-icon-modern">
-                <Settings size={32} />
+            <div className="template-card">
+              <div className="template-card-icon">
+                <Settings size={24} />
               </div>
-              <div className="client-content-modern">
-                <h3 className="client-title-modern">Ship Managers</h3>
-                <ul className="client-list-modern">
+              <h3 className="template-card-title">Ship Managers</h3>
+              <div className="template-card-content">
+                <ul className="template-card-list">
                   <li>Third-Party Managers</li>
                   <li>Fleet Companies</li>
                   <li>Technical Services</li>
@@ -546,13 +546,13 @@ const About = () => {
               </div>
             </div>
 
-            <div className="client-item-modern">
-              <div className="client-icon-modern">
-                <Wrench size={32} />
+            <div className="template-card">
+              <div className="template-card-icon">
+                <Wrench size={24} />
               </div>
-              <div className="client-content-modern">
-                <h3 className="client-title-modern">Marine Services</h3>
-                <ul className="client-list-modern">
+              <h3 className="template-card-title">Marine Services</h3>
+              <div className="template-card-content">
+                <ul className="template-card-list">
                   <li>Engineering Firms</li>
                   <li>Repair & Maintenance</li>
                   <li>Survey & Inspection</li>
@@ -560,13 +560,13 @@ const About = () => {
               </div>
             </div>
 
-            <div className="client-item-modern">
-              <div className="client-icon-modern">
-                <Anchor size={32} />
+            <div className="template-card">
+              <div className="template-card-icon">
+                <Anchor size={24} />
               </div>
-              <div className="client-content-modern">
-                <h3 className="client-title-modern">Offshore Operators</h3>
-                <ul className="client-list-modern">
+              <h3 className="template-card-title">Offshore Operators</h3>
+              <div className="template-card-content">
+                <ul className="template-card-list">
                   <li>Platform Operators</li>
                   <li>Drilling Companies</li>
                   <li>FPSO Operators</li>

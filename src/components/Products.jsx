@@ -103,7 +103,7 @@ const Products = () => {
     const subject = `Inquiry about ${productName}`;
     const body = `Hi,\n\nI'm interested in ${productName}. Please provide more details.\n\nThank you.`;
     window.open(
-      `mailto:sales@aspglobalmarine.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
+      `mailto:info@oceaninfinity.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
       "_blank",
     );
   };

@@ -56,21 +56,6 @@ const SEO = ({
       />
       <meta property="og:locale" content="en_US" />
 
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@KnotSail" />
-      <meta name="twitter:creator" content="@KnotSail" />
-      <meta name="twitter:title" content={title || defaultTitle} />
-      <meta
-        name="twitter:description"
-        content={description || defaultDescription}
-      />
-      <meta name="twitter:image" content={ogImage || defaultImage} />
-      <meta
-        name="twitter:image:alt"
-        content={`${title || "Knot & Sail"} - Marine Services UAE`}
-      />
-
       {/* Additional SEO Meta Tags */}
       <meta
         name="robots"

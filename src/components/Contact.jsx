@@ -1,5 +1,5 @@
 /**
- * Knot & Sail - Contact Section
+ * Ocean Infinity - Contact Section
  * Standard professional design with clean layout
  */
 
@@ -15,8 +15,10 @@ import {
   X,
   User,
   Building,
-  MessageSquare,
   AlertCircle,
+  FileText,
+  Upload,
+  Paperclip,
 } from "lucide-react";
 import "../styles/components/Contact.css";
 
@@ -29,6 +31,9 @@ const Contact = () => {
     subject: "",
     message: "",
     urgencyLevel: "normal",
+    tradingList: null,
+    vatCertificate: null,
+    enquiryAttachment: null,
   });
   const [showNFC, setShowNFC] = useState(false);
   const [selectedPerson, setSelectedPerson] = useState(null);
@@ -49,6 +54,17 @@ const Contact = () => {
       formDataObj.append("message", formData.message);
       formDataObj.append("urgency", formData.urgencyLevel);
 
+      // Handle file uploads
+      if (formData.tradingList) {
+        formDataObj.append("tradingList", formData.tradingList);
+      }
+      if (formData.vatCertificate) {
+        formDataObj.append("vatCertificate", formData.vatCertificate);
+      }
+      if (formData.enquiryAttachment) {
+        formDataObj.append("enquiryAttachment", formData.enquiryAttachment);
+      }
+
       // Netlify Forms - automatically handles submission
       // Netlify will send to info@knotandsail.com based on your Netlify dashboard settings
       const response = await fetch("/", {
@@ -68,6 +84,9 @@ const Contact = () => {
           subject: "",
           message: "",
           urgencyLevel: "normal",
+          tradingList: null,
+          vatCertificate: null,
+          enquiryAttachment: null,
         });
       } else {
         throw new Error("Form submission failed");
@@ -83,11 +102,21 @@ const Contact = () => {
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    const { name, value, files } = e.target;
+
+    if (files) {
+      // Handle file inputs
+      setFormData({
+        ...formData,
+        [name]: files[0] || null,
+      });
+    } else {
+      // Handle regular inputs
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   const showPersonNFC = (person) => {
@@ -112,12 +141,12 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+971 52 775 6765", "+971 58 146 4580"],
+      details: ["+971 52 775 6765"],
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@knotandsail.com", "operation@knotandsail.com"],
+      details: ["info@oceaninfinitymarine.com"],
     },
     {
       icon: Clock,
@@ -147,22 +176,17 @@ const Contact = () => {
       website: "www.knotandsail.com",
       address: "Dubai - UAE",
     },
-    yoosaf: {
-      name: "Yoosaf N",
-      title: "Marine Equipment Specialist",
-      phone: "+971 58 146 4580",
-      email: "operation@knotandsail.com",
-      website: "www.knotandsail.com",
-      address: "Dubai - UAE",
-    },
   };
 
   return (
-    <section id="contact" className="contact-std">
+    <section
+      id="contact"
+      className="contact-std"
+      style={{ backgroundColor: "#ffffff" }}
+    >
       <div className="std-container">
         {/* Section Header */}
         <div className="section-title-center">
-          <MessageSquare size={32} />
           <h2>Contact Our Marine Experts</h2>
           <p>
             Connect with our team for comprehensive marine services and
@@ -209,48 +233,8 @@ const Contact = () => {
                     {/* <small>Scan for direct contact</small> */}
                   </div>
                 </div>
-
-                <div className="qr-code-card">
-                  <div className="qr-code-image">
-                    <img
-                      src="/qr-yoosaf.svg"
-                      alt="Yoosaf N QR Code"
-                      onError={(e) => {
-                        // Fallback placeholder QR code
-                        e.target.src =
-                          "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23f0f0f0'/%3E%3Crect x='10' y='10' width='30' height='30' fill='%23000'/%3E%3Crect x='20' y='20' width='10' height='10' fill='%23f0f0f0'/%3E%3Crect x='80' y='10' width='30' height='30' fill='%23000'/%3E%3Crect x='90' y='20' width='10' height='10' fill='%23f0f0f0'/%3E%3Crect x='10' y='80' width='30' height='30' fill='%23000'/%3E%3Crect x='20' y='90' width='10' height='10' fill='%23f0f0f0'/%3E%3Crect x='45' y='45' width='30' height='30' fill='%23000'/%3E%3Crect x='55' y='55' width='10' height='10' fill='%23f0f0f0'/%3E%3Ctext x='60' y='105' text-anchor='middle' font-family='Arial' font-size='10' fill='%23666'%3EYoosaf N%3C/text%3E%3C/svg%3E";
-                      }}
-                    />
-                  </div>
-                  <div className="qr-code-info">
-                    <h5>Yoosaf N</h5>
-                    <p>Operation Manager</p>
-                    {/* <small>Scan for direct contact</small> */}
-                  </div>
-                </div>
               </div>
             </div>
-
-            {/* NFC Card Buttons */}
-            {/* <div className="nfc-section">
-              <h4>Digital Business Cards</h4>
-              <div className="nfc-buttons">
-                <button
-                  className="nfc-btn"
-                  onClick={() => showPersonNFC("arun")}
-                >
-                  <CreditCard size={16} />
-                  Arun V.V
-                </button>
-                <button
-                  className="nfc-btn"
-                  onClick={() => showPersonNFC("yoosaf")}
-                >
-                  <CreditCard size={16} />
-                  Yoosaf N
-                </button>
-              </div>
-            </div> */}
           </div>
 
           {/* Contact Form */}
@@ -363,6 +347,86 @@ const Contact = () => {
                     Critical - Immediate response
                   </option>
                 </select>
+              </div>
+
+              {/* File Upload Fields */}
+              <div className="form-row-std">
+                <div className="form-group-std">
+                  <label>
+                    <FileText size={16} /> Trade License
+                  </label>
+                  <div className="file-upload-wrapper">
+                    <input
+                      type="file"
+                      name="tradingList"
+                      onChange={handleChange}
+                      accept=".pdf,.doc,.docx,.xls,.xlsx"
+                      className="file-input"
+                      id="tradingList"
+                    />
+                    <label htmlFor="tradingList" className="file-input-label">
+                      <Upload size={16} />
+                      <span className="file-text">
+                        {formData.tradingList
+                          ? formData.tradingList.name
+                          : "Choose file (PDF, DOC, XLS)"}
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div className="form-group-std">
+                  <label>
+                    <FileText size={16} /> VAT Certificate
+                  </label>
+                  <div className="file-upload-wrapper">
+                    <input
+                      type="file"
+                      name="vatCertificate"
+                      onChange={handleChange}
+                      accept=".pdf,.jpg,.jpeg,.png"
+                      className="file-input"
+                      id="vatCertificate"
+                    />
+                    <label
+                      htmlFor="vatCertificate"
+                      className="file-input-label"
+                    >
+                      <Upload size={16} />
+                      <span className="file-text">
+                        {formData.vatCertificate
+                          ? formData.vatCertificate.name
+                          : "Choose file (PDF, JPG, PNG)"}
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div className="form-group-std">
+                <label>
+                  <Paperclip size={16} /> Enquiry Attachment
+                </label>
+                <div className="file-upload-wrapper">
+                  <input
+                    type="file"
+                    name="enquiryAttachment"
+                    onChange={handleChange}
+                    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.zip,.rar"
+                    className="file-input"
+                    id="enquiryAttachment"
+                  />
+                  <label
+                    htmlFor="enquiryAttachment"
+                    className="file-input-label"
+                  >
+                    <Upload size={16} />
+                    <span className="file-text">
+                      {formData.enquiryAttachment
+                        ? formData.enquiryAttachment.name
+                        : "Choose file (PDF, DOC, Images, ZIP)"}
+                    </span>
+                  </label>
+                </div>
               </div>
 
               <button

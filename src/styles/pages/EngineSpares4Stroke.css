@@ -18,7 +18,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  background: #ffffff;
+  background: transparent;
 }
 
 /* Section Header Bar */
@@ -77,7 +77,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
+  background: transparent;
   border-radius: 8px;
   padding: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -429,7 +429,6 @@
   .manufacturer-table-four tbody td {
     padding: 8px 4px;
   }
-
   .col-manufacturer-four {
     width: 100px;
   }

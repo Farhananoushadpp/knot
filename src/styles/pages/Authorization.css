@@ -83,7 +83,7 @@
 /* Company Overview Section */
 .company-overview {
   padding: 4rem 0;
-  background: white;
+  background: transparent;
 }
 
 .overview-content {
@@ -118,7 +118,7 @@
   align-items: center;
   gap: 1rem;
   padding: 1.5rem;
-  background: #f8fafc;
+  background: transparent;
   border-radius: 0.75rem;
   border-left: 4px solid #0e7490;
 }
@@ -173,7 +173,7 @@
 /* Main Product Section */
 .main-product-section {
   padding: 4rem 0;
-  background: #f8fafc;
+  background: transparent;
 }
 
 .product-showcase {
@@ -241,7 +241,7 @@
 /* Technical Specifications */
 .technical-specs {
   padding: 4rem 0;
-  background: white;
+  background: transparent;
 }
 
 .specs-grid {
@@ -252,7 +252,7 @@
 
 .spec-card {
   padding: 2rem;
-  background: #f8fafc;
+  background: transparent;
   border-radius: 1rem;
   text-align: center;
   transition: all 0.3s ease;
@@ -401,7 +401,7 @@
 /* Back Navigation */
 .back-navigation {
   padding: 2rem 0;
-  background: #f8fafc;
+  background: transparent;
   text-align: center;
 }
 
@@ -410,7 +410,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background: white;
+  background: transparent;
   color: #6b7280;
   border: 2px solid #e5e7eb;
   border-radius: 0.5rem;
@@ -544,7 +544,7 @@
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   letter-spacing: -1px;
   line-height: 1.1;
-  background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+  background: linear-gradient(135deg, transparent 0%, transparent 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -552,6 +552,7 @@
 
 .header-description {
   font-size: 18px;
+
   max-width: 650px;
   line-height: 1.8;
   opacity: 0.92;
@@ -650,7 +651,7 @@
 /* Benefits Section - Card Styling */
 .benefits-section {
   padding: 100px 20px;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  background: transparent;
   position: relative;
 }
 
@@ -677,7 +678,7 @@
 }
 
 .benefit-card {
-  background: #ffffff;
+  background: transparent;
   padding: 40px 35px;
   border-radius: 20px;
   text-align: center;
@@ -971,7 +972,7 @@
   display: flex;
   gap: 30px;
   padding: 35px;
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  background: transparent;
   position: relative;
 }
 
@@ -1085,7 +1086,7 @@
 }
 
 .content-section {
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  background: transparent;
   padding: 28px;
   border-radius: 16px;
   border-left: 4px solid #0c2d48;
@@ -1094,7 +1095,7 @@
 }
 
 .content-section:hover {
-  background: #ffffff;
+  background: transparent;
   box-shadow: 0 8px 30px rgba(12, 45, 72, 0.08);
   border-left-width: 6px;
 }
@@ -1219,7 +1220,7 @@
 }
 
 .series-item {
-  background: #ffffff;
+  background: transparent;
   padding: 20px;
   border-radius: 12px;
   border: 1px solid #e2e8f0;
@@ -1265,7 +1266,7 @@
   align-items: center;
   gap: 15px;
   padding: 12px;
-  background: #f8fafc;
+  background: transparent;
   border-radius: 8px;
   border-left: 3px solid #0c2d48;
 }
@@ -1298,7 +1299,7 @@
 }
 
 .industry-item {
-  background: #f8fafc;
+  background: transparent;
   color: #0c2d48;
   padding: 12px 16px;
   border-radius: 8px;
@@ -1322,7 +1323,7 @@
 }
 
 .feature-card {
-  background: #f8fafc;
+  background: transparent;
   color: #0c2d48;
   padding: 16px;
   border-radius: 8px;
@@ -1858,7 +1859,7 @@ html {
 
 /* Logo Header - White Background */
 .partner-logo-header {
-  background: #ffffff;
+  background: transparent;
   padding: 20px 25px;
   display: flex;
   justify-content: flex-end;
@@ -1866,7 +1867,7 @@ html {
 }
 
 .partner-logo-container {
-  background: #ffffff;
+  background: transparent;
   padding: 8px 16px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -2142,7 +2143,7 @@ html {
   align-items: center;
   gap: 20px;
   padding: 20px 25px;
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  background: transparent;
 }
 
 .partner-logo-container {
@@ -2230,7 +2231,7 @@ html {
 /* Partner Card Footer */
 .partner-card-footer {
   padding: 15px 25px;
-  background: #f8fafc;
+  background: transparent;
 }
 
 /* Go to the Page Button */

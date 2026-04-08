@@ -6,7 +6,7 @@
 
 .certifications {
   padding: var(--spacing-6xl) 0;
-  background: var(--white-color);
+  background: transparent;
   text-align: center;
 }
 
@@ -42,7 +42,7 @@
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: var(--white-color);
+  background: transparent;
   border-radius: var(--radius-full);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -134,7 +134,7 @@
 }
 
 .badge-placeholder {
-  background: var(--white-color);
+  background: transparent;
   padding: var(--spacing-xl) var(--spacing-2xl);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);

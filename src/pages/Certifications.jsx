@@ -6,23 +6,19 @@
  */
 
 import { Link } from "react-router-dom";
+import PageHero from "../components/PageHero.jsx";
 import "../styles/pages/Certifications.css";
 
 const Certifications = () => {
   return (
     <>
-      {/* Hero Section */}
-      <section className="certifications-hero">
-        <div className="container">
-          <div className="certifications-hero-content">
-            <h1 className="certifications-hero-title">Certifications & Compliance</h1>
-            <p className="certifications-hero-subtitle">
-              Internationally recognized certifications ensuring quality and compliance
-              with global maritime standards
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Page Hero */}
+      <PageHero
+        title="Certifications & Compliance"
+        subtitle="Internationally Recognized Standards"
+        description="At Ocean Infinity, we maintain internationally recognized certifications ensuring quality and compliance with global maritime standards, demonstrating our commitment to excellence and operational safety."
+        backgroundImage="/knot and sail images/Asset 37.webp"
+      />
 
       {/* Certifications Grid */}
       <section className="certifications-main">
@@ -83,13 +79,20 @@ const Certifications = () => {
         </div>
       </section>
 
-      {/* Back to About Link */}
-      <section className="certifications-cta">
-        <div className="container">
-          <div className="certifications-cta-content">
-            <p>Learn more about our company</p>
-            <Link to="/about" className="btn btn-primary">
-              Back to About Us
+      {/* Professional CTA Section */}
+      <section className="certifications-cta-professional">
+        <div>
+          <div className="certifications-cta-content-professional">
+            <h2 className="certifications-cta-title">
+              Discover Our Commitment to Excellence
+            </h2>
+            <p className="certifications-cta-description">
+              Our certifications reflect our dedication to quality, safety, and
+              environmental responsibility. Learn more about how Ocean Infinity
+              maintains the highest standards in maritime services.
+            </p>
+            <Link to="/about" className="btn btn-primary-certifications">
+              Learn More About Us
             </Link>
           </div>
         </div>

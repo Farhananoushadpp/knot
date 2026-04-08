@@ -6,7 +6,7 @@
 
 .about {
   padding: var(--spacing-6xl) 0;
-  background: var(--white-color);
+  background: transparent;
   position: relative;
   overflow: hidden;
 }
@@ -106,7 +106,7 @@
 }
 
 .solution-card {
-  background: var(--white-color);
+  background: transparent;
   border: 2px solid var(--border-color);
   border-radius: var(--radius-xl);
   padding: var(--spacing-2xl);
@@ -302,7 +302,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-md);
-  background: var(--white-color);
+  background: transparent;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg) var(--spacing-xl);

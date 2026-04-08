@@ -1,5 +1,5 @@
 /**
- * Knot & Sail - Home Page
+ * Ocean Infinity - Home Page
  *
  * Comprehensive home page with multiple sections
  * Technology: React functional component with JSX
@@ -18,6 +18,12 @@ import {
   CheckCircle,
   Settings,
   Clock,
+  Droplets,
+  Palette,
+  Wrench,
+  Zap,
+  Wind,
+  Cpu,
 } from "lucide-react";
 import "../styles/pages/Home.css";
 import { useState, useEffect } from "react";
@@ -25,14 +31,18 @@ import { useState, useEffect } from "react";
 const Home = () => {
   // Card images for the carousel
   const cardImages = [
-    { id: 1, src: "/1.webp", title: "Knot & Sail Excellence" },
-    { id: 2, src: "/map.jpeg", title: "UAE Maritime Operations" },
-    { id: 3, src: "/quality.jpg", title: "Marine Solutions" },
-    { id: 4, src: "/safety.webp", title: "Safety Standards" },
-    { id: 5, src: "/5.webp", title: "Technical Expertise" },
-    { id: 6, src: "/products/deck/1.webp", title: "Marine Services" },
-    { id: 7, src: "/products/enginestores/1.webp", title: "Technical Support" },
-    { id: 8, src: "/products/lsa&ffa/1.webp", title: "Safety Equipment" },
+    { id: 1, src: "/1.webp", title: "Ocean Infinity Excellence" },
+    { id: 2, src: "/map.jpeg", title: "Global Maritime Operations" },
+    { id: 3, src: "/quality.jpg", title: "Ocean Technology Solutions" },
+    { id: 4, src: "/safety.webp", title: "Ocean Safety Standards" },
+    { id: 5, src: "/5.webp", title: "Advanced Ocean Technology" },
+    { id: 6, src: "/products/deck/1.webp", title: "Ocean Services" },
+    {
+      id: 7,
+      src: "/products/enginestores/1.webp",
+      title: "Ocean Technical Support",
+    },
+    { id: 8, src: "/products/lsa&ffa/1.webp", title: "Ocean Safety Equipment" },
   ];
 
   const [activeCard, setActiveCard] = useState(0);
@@ -58,7 +68,11 @@ const Home = () => {
       <Hero />
 
       {/* Who We Are Section - Same as About Page */}
-      <section className="about-section" id="who-we-are">
+      <section
+        className="about-section"
+        id="who-we-are"
+        style={{ backgroundColor: "#ffffff" }}
+      >
         <div className="container">
           <div className="section-header">
             {/* <span className="section-label">Company Overview</span> */}
@@ -94,14 +108,12 @@ const Home = () => {
                 ))}
               </div>
               <p>
-                At Knot & Sail, our mission is to set a benchmark for excellence
-                in the UAE's maritime industry by combining innovation with a
-                customer-centric approach. We continuously invest in advanced
-                technology and industry best practices to ensure that we meet
-                and exceed our clients' expectations. As a company that values
-                long-term partnerships, we strive to be the preferred choice for
-                ship owners and managers seeking reliable and comprehensive
-                maritime solutions.
+                <b>Ocean Infinity</b> is a global leader in ocean technology and
+                marine operations, delivering innovative, data-driven solutions
+                that advance safety, efficiency, and sustainability across the
+                maritime and offshore sectors. Our commitment to operational
+                excellence and continuous innovation positions us at the
+                forefront of modern ocean services.
               </p>
             </div>
             <div className="about-content-text">
@@ -109,34 +121,34 @@ const Home = () => {
                 Your Trusted Partner in the UAE Marine Industry
               </h3>
               <div className="ocean-group-text-birds">
-                Premier Marine Service Provider
+                Part of Ocean Serenity Group
               </div>
               <p>
-                Knot & Sail is a premier service provider in the UAE marine
-                market, offering a complete range of reliable and high-quality
-                solutions for ship owners and ship management companies. With a
-                strong presence across all UAE ports, we are committed to
-                delivering excellence in maritime services, ensuring vessels
-                operate smoothly, efficiently, and in compliance with
-                international standards. Our expertise spans across various
-                aspects of ship support, from maintenance and repairs to
-                logistics and technical assistance, making us a trusted partner
-                in the industry.
+                We operate in accordance with internationally recognized quality
+                and safety standards, ensuring every project meets rigorous
+                regulatory and operational requirements. Through strategic
+                collaboration with leading classification societies and industry
+                partners, we provide dependable, compliant solutions across
+                complex marine environments.
               </p>
               <p>
-                Our company takes pride in its ability to provide tailored
-                solutions that cater to the unique needs of both local and
-                international clients. Backed by a team of experienced
-                professionals, we prioritize efficiency, safety, and
-                sustainability in every service we offer. Whether it's vessel
-                supply, engineering support, or regulatory compliance
-                assistance, Knot & Sail is dedicated to enhancing operational
-                performance and minimizing downtime for our clients.
+                Our core capabilities include subsea robotics, autonomous and
+                remotely operated survey operations, offshore support services,
+                and advanced data acquisition and analysis. Powered by
+                cutting-edge technology and a multidisciplinary team of
+                specialists, we deliver precise, reliable results that optimize
+                performance and reduce operational risk.
+              </p>
+              <p>
+                At Ocean Infinity, we partner with clients to unlock deeper
+                insights from the ocean environment delivering intelligent
+                solutions that keep operations safe, efficient, and
+                future-ready.
               </p>
 
               <div className="about-cta">
-                <Link to="/products" className="btn btn-primary">
-                  Explore our Products
+                <Link to="/services" className="btn btn-primary">
+                  Explore our services
                 </Link>
                 <Link to="/contact" className="btn btn-outline">
                   Get Quote
@@ -144,199 +156,141 @@ const Home = () => {
               </div>
             </div>
           </div>
-
-          <div className="stats-section-modern">
-            <div className="stats-item-modern">
-              <div className="stats-number-modern">5+</div>
-              <div className="stats-label-modern">Years Experience</div>
-            </div>
-            <div className="stats-item-modern">
-              <div className="stats-number-modern">200+</div>
-              <div className="stats-label-modern">Global Clients</div>
-            </div>
-            <div className="stats-item-modern">
-              <div className="stats-number-modern">10+</div>
-              <div className="stats-label-modern">Countries Served</div>
-            </div>
-            <div className="stats-item-modern">
-              <div className="stats-number-modern">4200+</div>
-              <div className="stats-label-modern">Products</div>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* Knot & Sail Services Section - Professional Design */}
-      <section className="services-section-professional">
+      {/* Ocean Infinity Services Section */}
+      <section
+        className="services-section-professional"
+        style={{ backgroundColor: "#0c886314" }}
+      >
         <div className="container">
           <div className="services-header">
-            <h2 className="services-title">Knot & Sail Services</h2>
+            <h2 className="services-title">Our Services</h2>
             <p className="services-subtitle">
-              Professional marine solutions across all UAE ports
+              Comprehensive marine solutions and technical services
             </p>
           </div>
 
-          <div className="services-grid-professional">
-            {/* 1. Hydro Blasting */}
-            <div className="service-card-professional">
-              <div className="service-image-professional">
-                <img
-                  src="/knot and sail images/Asset 33.webp"
-                  alt="Hydro Blasting"
-                  className="service-image-img"
-                />
+          <div className="template-card-grid">
+            {/* First Row: Fabrication, Mechanical, Electrical */}
+            {/* 1. Fabrication */}
+            <div className="service-card-template">
+              <div className="service-card-icon-large">
+                <Wrench size={32} />
               </div>
-              <div className="service-content-professional">
-                <h3 className="service-title-professional">Hydro Blasting</h3>
-                <p className="service-desc-professional">
-                  Eco-friendly high-pressure water jet cleaning for rust, paint,
-                  and contaminant removal. Ensures thorough surface preparation
-                  without damage to vessel structure.
+              <h3 className="service-card-title-large">Fabrication</h3>
+              <div className="template-card-content">
+                <p>
+                  We undertake all repairs of Hull and inside tanks and
+                  Fabrication/ installation of outfitting structures.
                 </p>
               </div>
             </div>
 
-            {/* 2. Tank Cleaning */}
-            <div className="service-card-professional">
-              <div className="service-image-professional">
-                <img
-                  src="/knot and sail images/Asset 34.webp"
-                  alt="Tank Cleaning Service"
-                  className="service-image-img"
-                />
+            {/* 2. Mechanical */}
+            <div className="service-card-template">
+              <div className="service-card-icon-large">
+                <Settings size={32} />
               </div>
-              <div className="service-content-professional">
-                <h3 className="service-title-professional">
-                  Tank Cleaning Service
-                </h3>
-                <p className="service-desc-professional">
-                  Professional cleaning of fuel tanks, ballast tanks, cargo
-                  tanks, and water tanks using advanced techniques for safety,
-                  efficiency, and regulatory compliance.
+              <h3 className="service-card-title-large">Mechanical</h3>
+              <div className="template-card-content">
+                <p>
+                  With dedicated skilled Technicians stationed in India, the
+                  Middle East.
                 </p>
               </div>
             </div>
 
-            {/* 3. Antifouling Coating */}
-            <div className="service-card-professional">
-              <div className="service-image-professional">
-                <img
-                  src="/knot and sail images/Asset 35.webp"
-                  alt="Antifouling & Anticavitation Coating"
-                  className="service-image-img"
-                />
+            {/* 3. Electrical */}
+            <div className="service-card-template">
+              <div className="service-card-icon-large">
+                <Zap size={32} />
               </div>
-              <div className="service-content-professional">
-                <h3 className="service-title-professional">
-                  Antifouling & Anticavitation Coating
-                </h3>
-                <p className="service-desc-professional">
-                  Advanced coating solutions to protect hull and propulsion
-                  systems from marine growth, corrosion, and cavitation damage
-                  for enhanced fuel efficiency.
+              <h3 className="service-card-title-large">Electrical</h3>
+              <div className="template-card-content">
+                <p>
+                  Samudhra provides electrical on-board equipment services as a
+                  component of the turnkey services package for the maritime
+                  industry.
                 </p>
               </div>
             </div>
 
-            {/* 4. Painting Works */}
-            <div className="service-card-professional">
-              <div className="service-image-professional">
-                <img
-                  src="/knot and sail images/Asset 37.webp"
-                  alt="Painting Works"
-                  className="service-image-img"
-                />
+            {/* Second Row: Blasting and Painting, Tank Cleaning, Refrigeration & Air Condition */}
+            {/* 4. Blasting and Painting */}
+            <div className="service-card-template">
+              <div className="service-card-icon-large">
+                <Palette size={32} />
               </div>
-              <div className="service-content-professional">
-                <h3 className="service-title-professional">Painting Works</h3>
-                <p className="service-desc-professional">
-                  Comprehensive painting solutions from surface preparation to
-                  final coating using top-grade materials and latest application
-                  techniques.
+              <h3 className="service-card-title-large">
+                Blasting and Painting
+              </h3>
+              <div className="template-card-content">
+                <p>
+                  We Provide hydro blasting and painting services for Ocean
+                  Going to Offshore Support Services.
                 </p>
               </div>
             </div>
 
-            {/* 5. Steel Fabrication */}
-            <div className="service-card-professional">
-              <div className="service-image-professional">
-                <img
-                  src="/knot and sail images/Asset 38.webp"
-                  alt="Steel Fabrication & Pipe Welding"
-                  className="service-image-img"
-                />
+            {/* 5. Tank Cleaning */}
+            <div className="service-card-template">
+              <div className="service-card-icon-large">
+                <Droplets size={32} />
               </div>
-              <div className="service-content-professional">
-                <h3 className="service-title-professional">
-                  Steel Fabrication & Pipe Welding
-                </h3>
-                <p className="service-desc-professional">
-                  Specialized steel fabrication and pipe welding services using
-                  TIG, MIG, and ARC welding techniques for hull repairs and
-                  structural modifications.
+              <h3 className="service-card-title-large">Tank Cleaning</h3>
+              <div className="template-card-content">
+                <p>
+                  We offer tank cleaning services for offshore/ onshore and,
+                  industrial sectors.
                 </p>
               </div>
             </div>
 
-            {/* 6. Technical Manpower */}
-            <div className="service-card-professional">
-              <div className="service-image-professional">
-                <img
-                  src="/knot and sail images/Asset 39.webp"
-                  alt="Technical Manpower Supply"
-                  className="service-image-img"
-                />
+            {/* 6. Refrigeration & Air Condition */}
+            <div className="service-card-template">
+              <div className="service-card-icon-large">
+                <Wind size={32} />
               </div>
-              <div className="service-content-professional">
-                <h3 className="service-title-professional">
-                  Technical Manpower Supply
-                </h3>
-                <p className="service-desc-professional">
-                  Certified marine professionals including mechanical fitters,
-                  welders, electricians, and technicians for reliable workforce
-                  solutions.
+              <h3 className="service-card-title-large">
+                Refrigeration & Air Condition
+              </h3>
+              <div className="template-card-content">
+                <p>
+                  We have a strong in-house team with qualified technicians
+                  carrying out HVAC jobs for Vessels of all sizes.
                 </p>
               </div>
             </div>
 
-            {/* 7. Riding Squad Services */}
-            <div className="service-card-professional">
-              <div className="service-image-professional">
-                <img
-                  src="/knot and sail images/Asset 40.webp"
-                  alt="Riding Squad Services"
-                  className="service-image-img"
-                />
+            {/* Third Row: Hydraulic Services, Automation */}
+            {/* 7. Hydraulic Services */}
+            <div className="service-card-template">
+              <div className="service-card-icon-large">
+                <Droplets size={32} />
               </div>
-              <div className="service-content-professional">
-                <h3 className="service-title-professional">
-                  Riding Squad Services
-                </h3>
-                <p className="service-desc-professional">
-                  Global riding squad support for maintenance and repairs during
-                  voyages to reduce downtime and maintain class and CAP
-                  standards.
+              <h3 className="service-card-title-large">Hydraulic Services</h3>
+              <div className="template-card-content">
+                <p>
+                  Our team of Engineers and Hydraulic Technicians work with our
+                  clients offering offering them various solutions for new
+                  installation /repair and maintenance jobs of Hydraulic system
+                  in various ports in UAE.
                 </p>
               </div>
             </div>
 
-            {/* 8. Quality Assurance */}
-            <div className="service-card-professional">
-              <div className="service-image-professional">
-                <img
-                  src="/knot and sail images/Asset 41.webp"
-                  alt="Quality & Safety Compliance"
-                  className="service-image-img"
-                />
+            {/* 8. Automation */}
+            <div className="service-card-template">
+              <div className="service-card-icon-large">
+                <Cpu size={32} />
               </div>
-              <div className="service-content-professional">
-                <h3 className="service-title-professional">
-                  Quality & Safety Compliance
-                </h3>
-                <p className="service-desc-professional">
-                  Strict adherence to international maritime standards with
-                  comprehensive safety protocols and continuous improvement
-                  practices.
+              <h3 className="service-card-title-large">Automation</h3>
+              <div className="template-card-content">
+                <p>
+                  Our Automation division provides solutions for comprehensive
+                  repair and maintenance of marine automation systems.
                 </p>
               </div>
             </div>
@@ -344,136 +298,119 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section - Modern Redesign */}
-      <section className="why-choose-modern">
+      {/* Why Choose Us Section - Responsive Design */}
+      <section className="why-choose-section">
         <div className="container">
-          <div className="why-header-modern">
-            <h2 className="why-title-modern">Why Choose Us</h2>
-            <p className="why-subtitle-modern">
-              Trusted partner for marine equipment solutions worldwide
+          <div className="why-choose-header">
+            <h2 className="section-title">why choose us</h2>
+            <p className="section-subtitle">
+              Delivering excellence in marine equipment solutions with unmatched
+              quality and reliability
             </p>
           </div>
 
-          <div className="why-grid-modern">
-            <div className="why-card-modern">
-              <div className="why-icon-modern">
-                <CheckCircle size={48} />
+          <div className="why-choose-grid">
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <CheckCircle size={35} />
               </div>
-              <div className="why-content-modern">
-                <h3 className="why-title-card-modern">Quality Assured</h3>
-                <p className="why-desc-modern">
+              <div className="why-choose-content">
+                <h3 className="why-choose-title">Quality Assured</h3>
+                <p className="why-choose-description">
                   ISO certified products meeting international maritime
                   standards
                 </p>
+                <ul className="why-choose-features">
+                  <li>Certified Quality Management</li>
+                  <li>International Standards Compliance</li>
+                  <li>Rigorous Testing Protocols</li>
+                </ul>
               </div>
             </div>
-
-            <div className="why-card-modern">
-              <div className="why-icon-modern">
-                <Ship size={48} />
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <Ship size={35} />
               </div>
-              <div className="why-content-modern">
-                <h3 className="why-title-card-modern">Global Network</h3>
-                <p className="why-desc-modern">
+              <div className="why-choose-content">
+                <h3 className="why-choose-title">Global Network</h3>
+                <p className="why-choose-description">
                   Sourcing from leading manufacturers across 50+ countries
                 </p>
+                <ul className="why-choose-features">
+                  <li>Worldwide Supplier Network</li>
+                  <li>Strategic Partnerships</li>
+                  <li>Global Logistics Support</li>
+                </ul>
               </div>
             </div>
 
-            <div className="why-card-modern">
-              <div className="why-icon-modern">
-                <Settings size={48} />
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <Settings size={35} />
               </div>
-              <div className="why-content-modern">
-                <h3 className="why-title-card-modern">Expert Team</h3>
-                <p className="why-desc-modern">
+              <div className="why-choose-content">
+                <h3 className="why-choose-title">Expert Team</h3>
+                <p className="why-choose-description">
                   18+ years of maritime industry experience and technical
                   knowledge
                 </p>
+                <ul className="why-choose-features">
+                  <li>Industry Veterans</li>
+                  <li>Technical Expertise</li>
+                  <li>24/7 Support Available</li>
+                </ul>
               </div>
             </div>
 
-            <div className="why-card-modern">
-              <div className="why-icon-modern">
-                <Anchor size={48} />
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <Anchor size={35} />
               </div>
-              <div className="why-content-modern">
-                <h3 className="why-title-card-modern">Fast Delivery</h3>
-                <p className="why-desc-modern">
+              <div className="why-choose-content">
+                <h3 className="why-choose-title">Fast Delivery</h3>
+                <p className="why-choose-description">
                   Efficient logistics ensuring timely delivery worldwide
                 </p>
+                <ul className="why-choose-features">
+                  <li>Express Shipping Options</li>
+                  <li>Real-time Tracking</li>
+                  <li>Customs Clearance Support</li>
+                </ul>
               </div>
             </div>
 
-            <div className="why-card-modern">
-              <div className="why-icon-modern">
-                <Package size={48} />
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <Package size={35} />
               </div>
-              <div className="why-content-modern">
-                <h3 className="why-title-card-modern">Best Value</h3>
-                <p className="why-desc-modern">
+              <div className="why-choose-content">
+                <h3 className="why-choose-title">Best Value</h3>
+                <p className="why-choose-description">
                   Competitive pricing without compromising on quality
                 </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Authorizations Section - Professional Design */}
-      <section className="authorizations-professional">
-        <div className="container">
-          <div className="authorizations-header-professional">
-            <h2 className="authorizations-title-professional">
-              Our Authorizations
-            </h2>
-            <p className="authorizations-subtitle-professional">
-              Official partnerships and certifications with leading marine
-              equipment manufacturers
-            </p>
-          </div>
-
-          <div className="authorizations-grid-professional">
-            <div className="authorization-item-professional">
-              <div className="authorization-badge-professional">
-                <Shield size={48} />
-              </div>
-              <div className="authorization-content-professional">
-                <h3 className="authorization-title-professional">
-                  Authorized Distributor
-                </h3>
-                <p className="authorization-desc-professional">
-                  Official distributor for leading marine equipment
-                  manufacturers
-                </p>
+                <ul className="why-choose-features">
+                  <li>Competitive Pricing</li>
+                  <li>Quality Guarantee</li>
+                  <li>Flexible Payment Terms</li>
+                </ul>
               </div>
             </div>
 
-            <div className="authorization-item-professional">
-              <div className="authorization-badge-professional">
-                <Award size={48} />
+            <div className="why-choose-card">
+              <div className="why-choose-icon">
+                <Shield size={35} />
               </div>
-              <div className="authorization-content-professional">
-                <h3 className="authorization-title-professional">
-                  Service Partner
-                </h3>
-                <p className="authorization-desc-professional">
-                  Authorized service provider for marine equipment maintenance
+              <div className="why-choose-content">
+                <h3 className="why-choose-title">Warranty Support</h3>
+                <p className="why-choose-description">
+                  Comprehensive warranty and after-sales support for all
+                  products
                 </p>
-              </div>
-            </div>
-
-            <div className="authorization-item-professional">
-              <div className="authorization-badge-professional">
-                <CheckCircle size={48} />
-              </div>
-              <div className="authorization-content-professional">
-                <h3 className="authorization-title-professional">
-                  Technical Support
-                </h3>
-                <p className="authorization-desc-professional">
-                  Authorized technical support and installation partner
-                </p>
+                <ul className="why-choose-features">
+                  <li>Extended Warranty Options</li>
+                  <li>After-sales Service</li>
+                  <li>Spare Parts Availability</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -481,7 +418,11 @@ const Home = () => {
       </section>
 
       {/* Our Valued Clients - Modern Design */}
-      <section className="valued-clients-modern" id="client-logos">
+      <section
+        className="valued-clients-modern"
+        id="client-logos"
+        style={{ backgroundColor: "#0c886314" }}
+      >
         <div className="container">
           <div className="valued-clients-header-modern">
             <h2 className="valued-clients-title-modern">Our Valued Clients</h2>
@@ -489,8 +430,7 @@ const Home = () => {
               Trusted by leading maritime companies across the globe
             </p>
           </div>
-        </div>
-        <div className="container">
+
           <div className="client-logos-slider-modern">
             <div className="client-logos-track-modern">
               {/* Generate all numbered client logos dynamically */}

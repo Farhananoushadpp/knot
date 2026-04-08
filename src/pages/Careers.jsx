@@ -46,11 +46,11 @@ const Careers = () => {
         title="Join Our Team"
         subtitle="Build Your Career in Marine Industry"
         badge="Career Opportunities"
-        backgroundImage="/ocean.webp"
+        backgroundImage="/knot and sail images/Asset 38.webp"
       />
 
       {/* Careers Introduction */}
-      <section className="careers-intro">
+      <section className="careers-intro" style={{ backgroundColor: "#ffffff" }}>
         <div className="container">
           <div className="careers-intro-content">
             <h2>Shape the Future of Marine Industry</h2>
@@ -72,7 +72,7 @@ const Careers = () => {
       </section>
 
       {/* Why Join Us */}
-      <section className="std-section">
+      <section className="std-section" style={{ backgroundColor: "#0c886314" }}>
         <div className="std-container">
           <h2 className="std-title">Why Join ASP Global Marine?</h2>
           <div className="careers-why-join">
@@ -113,7 +113,10 @@ const Careers = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="careers-contact-section">
+      <section
+        className="careers-contact-section"
+        style={{ backgroundColor: "#ffffff" }}
+      >
         <div className="std-container">
           <div className="std-content-centered">
             <h2 className="std-title">Ready to Join Our Team?</h2>

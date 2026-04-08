@@ -1,7 +1,7 @@
 {
-  "name": "asp-global-marine-website",
+  "name": "ocean-infinity-website",
   "version": "1.0.0",
-  "description": "ASP Global Marine Trading LLC - Professional corporate website with Light Ocean Green theme",
+  "description": "Ocean Infinity - Professional marine technology and robotics website with Modern Ocean theme",
   "main": "src/index.jsx",
   "scripts": {
     "start": "react-scripts start",
@@ -15,11 +15,13 @@
     "react",
     "marine",
     "offshore",
+    "robotics",
+    "technology",
     "corporate",
     "website",
-    "asp-global-marine"
+    "ocean-infinity"
   ],
-  "author": "ASP Global Marine Trading LLC",
+  "author": "Ocean Infinity",
   "license": "MIT",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

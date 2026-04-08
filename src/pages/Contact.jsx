@@ -14,16 +14,10 @@ const ContactPage = () => {
     <div className="container-full contact-page">
       {/* Hero Section - Using PageHero Component */}
       <PageHero
-        title="Get In Touch"
-        subtitle="Connect with our expert team for all your marine service needs"
-        description="We're here to help you with hydro blasting, tank cleaning, painting works, and technical manpower solutions. Reach out to us for inquiries and quotes."
-        icon={Mail}
-        badges={[
-          { text: "Quick Response" },
-          { text: "Expert Support" },
-          { text: "24/7 Availability" },
-        ]}
-        backgroundImage="/contact.jpg"
+        title="Contact Us"
+        subtitle="Get In Touch"
+        description="At Ocean Infinity, we're here to help you with all your marine service needs. Reach out to us for inquiries, quotes, and expert support for your maritime requirements."
+        backgroundImage="/knot and sail images/Asset 35.webp"
       />
 
       <Contact />

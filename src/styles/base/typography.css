@@ -6,7 +6,7 @@
  */
 
 /* Import Google Fonts - Professional Font Stack */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;600;700&family=Amsterdam+Signature&family=Birds+of+Paradise&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Amsterdam+Signature&family=Birds+of+Paradise&display=swap");
 
 /* Professional Heading Font - Montserrat */
 /* Modern, clean, and professional - perfect for corporate maritime branding */
@@ -105,6 +105,7 @@ a {
 
 a:hover {
   color: var(--hover-color);
+  text-decoration: none;
 }
 
 /* Strong and Emphasis */
@@ -114,7 +115,6 @@ b {
   font-weight: 600;
   color: var(--text-color);
 }
-
 em,
 i {
   font-style: italic;
@@ -375,12 +375,12 @@ a::after {
   left: 0;
   width: 0;
   height: 2px;
-  background: #2abaa3; /* Sea Green */
+  background: var(--ocean-primary); /* Ocean Infinity Green */
   transition: width var(--transition-normal);
 }
 
 a:hover {
-  color: #2abaa3; /* Sea Green */
+  color: var(--ocean-primary); /* Ocean Infinity Green */
 }
 
 a:hover::after {
